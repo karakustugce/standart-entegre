@@ -6,15 +6,17 @@ Tasarım & geliştirme: TCM Global.
 ## Yapı
 
 ```
-index.html                         Ana sayfa (Hero → Ürünler → Makara → Üretim → Sektörler → Süreç → Belgeler → Teklif)
-urunler/kablo-sevk-makaralari.html Ürün detay şablonu
-assets/css/site.css                Tüm stiller (tokenlar dosyanın başında)
-assets/js/site.js                  Menü, ürün ön seçimi, teklif formu
-assets/img/                        Görseller
-.github/workflows/pages.yml        main'e her push'ta GitHub Pages'e deploy
+index.html                           Ana sayfa: 3D hero → ürünler → makara ölçü aracı → kurumsal → teklif
+urunler/*.html                       Ürün sayfaları (makara, palet, sandık)
+assets/css/site.css                  Tüm stiller; renk ve yazı tokenları dosyanın başında
+assets/js/models.js                  Makara, palet ve sandığın prosedürel 3D modelleri (three.js)
+assets/js/hero.js                    Scroll ile parçalarına ayrılan makara (hero)
+assets/js/main.js                    Menü, ölçü aracı, teklif formu
+assets/img/render-*.webp             models.js ile üretilmiş stüdyo render'ları
+.github/workflows/pages.yml          main'e her push'ta GitHub Pages'e deploy
 ```
 
-Build adımı yok; dosyalar olduğu gibi yayınlanır.
+Build adımı yok. three.js jsDelivr'dan importmap ile yüklenir; WebGL yoksa hero statik render'a düşer.
 
 ## Yayına alma
 
@@ -26,6 +28,7 @@ Build adımı yok; dosyalar olduğu gibi yayınlanır.
 
 GitHub Pages'te sunucu yok. `assets/js/site.js` içindeki `FORM_ENDPOINT` değerine Formspree / Web3Forms ya da bir n8n webhook URL'si yazılınca form çalışır. Boşken önizleme mesajı gösterir.
 
-## Teyit bekleyen içerik
+## İçerik kuralı
 
-`<span class="tbd">` ile işaretli her alan Abant Entegre'den doğrulama bekliyor (kapasite, tesis alanı, sertifikalar, iletişim bilgileri). Doğrulanmamış rakam veya belge yayınlanmaz.
+Sitede yalnızca doğrulanmış bilgi var: Ø 500–3200 mm makara aralığı, kullanım alanları, Gebze tesisi, hammadde tedariki.
+Kapasite, tesis alanı, sertifikalar (ISPM-15, ISO) ve iletişim bilgileri Abant Entegre'den teyit gelince eklenecek.
