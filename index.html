@@ -4,404 +4,150 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Abant Entegre</title>
-<meta name="description" content="Abant Entegre: ahşap palet, kablo sevk makarası ve ahşap taşıma & ihracat sandığı üreticisi. Ø 500–3200 mm kablo makaraları, Gebze üretim tesisi.">
+<meta name="description" content="Ahşap palet, kablo sevk makarası ve taşıma & ihracat sandığı. Ø 500–3200 mm kablo makaraları, Gebze üretim tesisi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="mark" viewBox="0 0 34 34">
-    <circle cx="17" cy="17" r="15.5" fill="none" stroke="currentColor" stroke-width="2"/>
-    <circle cx="17" cy="17" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/>
-    <rect x="14.6" y="14.6" width="4.8" height="4.8" fill="currentColor"/>
-    <path d="M17 1.5v5M17 27.5v5M1.5 17h5M27.5 17h5" stroke="currentColor" stroke-width="2"/>
-  </symbol>
-</svg>
-
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Abant Entegre ana sayfa">
-      <svg class="brand-mark"><use href="#mark"/></svg>
-      <span class="brand-name">ABANT ENTEGRE<small>AHŞAP SEVKİYAT ÇÖZÜMLERİ</small></span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">MENÜ</button>
-    <nav class="nav" id="nav" aria-label="Ana menü">
-      <a href="index.html" aria-current="page">Ana Sayfa</a>
-      <a href="#kurumsal">Kurumsal</a>
-      <a href="#urunler">Ürünlerimiz</a>
-      <a href="#iletisim">İletişim</a>
-      <a class="btn btn--primary" href="#teklif">Teklif Al</a>
-    </nav>
-  </div>
+<header class="top pad">
+  <a class="word" href="index.html">Abant Entegre</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menü</button>
+  <nav class="menu" id="menu" aria-label="Ana menü">
+    <a href="#urunler">Ürünlerimiz</a>
+    <a href="#kurumsal">Kurumsal</a>
+    <a href="#iletisim">İletişim</a>
+    <a class="u" href="#teklif">Teklif Al</a>
+  </nav>
 </header>
 
 <main>
-  <!-- 01 HERO -->
   <section class="hero">
-    <div class="wrap">
-      <div class="hero-copy">
-        <span class="label">Ahşap palet · Kablo sevk makarası · Taşıma sandığı</span>
-        <h1>Endüstriyel sevkiyat için <em>ahşap çözümler.</em></h1>
-        <p class="lead">Paletlerden kablo makaralarına, taşıma ve ihracat sandıklarından özel üretim çözümlerine. İhtiyacınızı ölçü ve adetle iletin, doğru ürünü birlikte belirleyelim.</p>
-        <div class="hero-ctas">
-          <a class="btn" href="#urunler">Ürünleri Keşfet <span class="arr">→</span></a>
-          <a class="btn btn--primary" href="#teklif">Teklif Al <span class="arr">→</span></a>
-        </div>
-        <div class="spec-strip">
-          <div><span class="label">Makara çapı</span><strong>Ø 500–3200 mm</strong></div>
-          <div><span class="label">Ürün ailesi</span><strong>3</strong></div>
-          <div><span class="label">Üretim tesisi</span><strong>Gebze</strong></div>
+    <div class="hero-text">
+      <h1>Endüstriyel sevkiyat için ahşap çözümler.</h1>
+      <div class="hero-foot">
+        <p>Palet, kablo sevk makarası, taşıma ve ihracat sandığı. Standart ölçülerde ya da yükünüze göre.</p>
+        <div class="actions">
+          <a class="u" href="#urunler">Ürünleri keşfet</a>
+          <a class="u" href="#teklif">Teklif al</a>
         </div>
       </div>
-      <figure class="hero-figure">
-        <img src="assets/img/saha-makaralar.jpg" alt="Açık sahada sıralanmış, sevkiyata hazır ahşap kablo makaraları; arkada dağlar ve bulutlu gökyüzü" width="1076" height="1358" fetchpriority="high">
-        <figcaption><span class="label">Sevkiyat sahası</span><span class="label num">AE / 01</span></figcaption>
-      </figure>
+    </div>
+    <div class="hero-img">
+      <img src="assets/img/saha-makaralar.jpg" alt="Açık sahada sıralanmış ahşap kablo makaraları, arkada dağlar" width="1076" height="1358" fetchpriority="high">
     </div>
   </section>
 
-  <!-- 02 PRODUCT FAMILIES -->
-  <section class="section section--surface" id="urunler">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="label">Ürünlerimiz</span>
-          <h2>Üç ürün ailesi, tek üretim zinciri.</h2>
-        </div>
-        <p class="lead">Standart ölçülerin yanında, yükünüze ve sevkiyat yönteminize göre özel ölçüde üretim. Her ürün sayfasında teknik bilgi ve doğrudan teklif formu bulunur.</p>
-      </div>
-
-      <div class="products">
-        <a class="product" href="#teklif" data-product="palet">
-          <div class="product-drawing">
-            <span class="label sheet-no num">AE-P · Palet</span>
-            <svg class="dwg" viewBox="0 0 240 160" aria-hidden="true">
-              <line class="dim" x1="20" y1="22" x2="220" y2="22"/>
-              <line class="dim" x1="20" y1="17" x2="20" y2="27"/><line class="dim" x1="220" y1="17" x2="220" y2="27"/>
-              <text x="120" y="17" text-anchor="middle">1200</text>
-              <rect class="fillwood" x="20" y="34" width="200" height="10"/>
-              <rect x="20" y="44" width="22" height="22"/><rect x="109" y="44" width="22" height="22"/><rect x="198" y="44" width="22" height="22"/>
-              <rect class="fillwood" x="20" y="66" width="200" height="8"/>
-              <line class="center" x1="120" y1="28" x2="120" y2="80"/>
-              <rect x="20" y="96" width="200" height="52"/>
-              <g class="thin">
-                <line x1="20" y1="104" x2="220" y2="104"/><line x1="20" y1="113" x2="220" y2="113"/><line x1="20" y1="122" x2="220" y2="122"/>
-                <line x1="20" y1="131" x2="220" y2="131"/><line x1="20" y1="140" x2="220" y2="140"/>
-              </g>
-              <g class="hidden-l"><line x1="42" y1="96" x2="42" y2="148"/><line x1="109" y1="96" x2="109" y2="148"/><line x1="131" y1="96" x2="131" y2="148"/><line x1="198" y1="96" x2="198" y2="148"/></g>
-              <text x="226" y="126">800</text>
-            </svg>
-          </div>
-          <div class="product-body">
-            <h3>Ahşap Paletler</h3>
-            <p>EUR palet ve özel ölçülü paletler. Depolama, iç lojistik ve ihracat sevkiyatı için.</p>
-            <div class="row"><span class="link-arrow">İncele</span><span class="link-arrow" data-rfq="palet">Teklif Al</span></div>
-          </div>
-        </a>
-
-        <a class="product is-main" href="urunler/kablo-sevk-makaralari.html">
-          <div class="product-drawing">
-            <span class="label sheet-no num">AE-M · Makara</span>
-            <svg class="dwg" viewBox="0 0 240 160" aria-hidden="true">
-              <circle class="fillwood" cx="68" cy="80" r="58"/>
-              <circle cx="68" cy="80" r="17"/>
-              <rect x="63" y="75" width="10" height="10"/>
-              <g class="thin"><circle cx="68" cy="50" r="2.4"/><circle cx="68" cy="110" r="2.4"/><circle cx="38" cy="80" r="2.4"/><circle cx="98" cy="80" r="2.4"/>
-                <line x1="30" y1="36" x2="30" y2="124"/><line x1="49" y1="25" x2="49" y2="135"/><line x1="87" y1="25" x2="87" y2="135"/><line x1="106" y1="36" x2="106" y2="124"/></g>
-              <line class="center" x1="4" y1="80" x2="132" y2="80"/><line class="center" x1="68" y1="16" x2="68" y2="144"/>
-              <rect class="fillwood" x="160" y="22" width="7" height="116"/>
-              <rect class="fillwood" x="213" y="22" width="7" height="116"/>
-              <rect x="167" y="60" width="46" height="40"/>
-              <g class="thin"><line x1="167" y1="68" x2="213" y2="68"/><line x1="167" y1="92" x2="213" y2="92"/></g>
-              <line class="center" x1="150" y1="80" x2="230" y2="80"/>
-              <line class="dim" x1="146" y1="22" x2="146" y2="138"/>
-              <line class="dim" x1="141" y1="22" x2="151" y2="22"/><line class="dim" x1="141" y1="138" x2="151" y2="138"/>
-              <text x="142" y="154" text-anchor="middle">Ø 500–3200</text>
-            </svg>
-          </div>
-          <div class="product-body">
-            <h3>Kablo Sevk Makaraları</h3>
-            <p>Ø 500 mm’den Ø 3200 mm’ye kadar. Enerji, telekomünikasyon, fiber optik kablolar ve çelik halatlar için.</p>
-            <div class="row"><span class="link-arrow">İncele</span><span class="link-arrow" data-rfq="makara">Teklif Al</span></div>
-          </div>
-        </a>
-
-        <a class="product" href="#teklif" data-product="sandik">
-          <div class="product-drawing">
-            <span class="label sheet-no num">AE-S · Sandık</span>
-            <svg class="dwg" viewBox="0 0 240 160" aria-hidden="true">
-              <rect class="fillwood" x="30" y="24" width="180" height="96"/>
-              <g class="thin">
-                <line x1="30" y1="48" x2="210" y2="48"/><line x1="30" y1="72" x2="210" y2="72"/><line x1="30" y1="96" x2="210" y2="96"/>
-              </g>
-              <rect x="30" y="24" width="180" height="10"/><rect x="30" y="110" width="180" height="10"/>
-              <rect x="30" y="34" width="10" height="76"/><rect x="200" y="34" width="10" height="76"/><rect x="115" y="34" width="10" height="76"/>
-              <line x1="40" y1="110" x2="115" y2="34"/><line x1="46" y1="110" x2="115" y2="40"/>
-              <line x1="125" y1="34" x2="200" y2="110"/><line x1="125" y1="40" x2="194" y2="110"/>
-              <rect x="38" y="120" width="30" height="14"/><rect x="105" y="120" width="30" height="14"/><rect x="172" y="120" width="30" height="14"/>
-              <line class="dim" x1="30" y1="148" x2="210" y2="148"/>
-              <line class="dim" x1="30" y1="143" x2="30" y2="153"/><line class="dim" x1="210" y1="143" x2="210" y2="153"/>
-              <text x="120" y="160" text-anchor="middle">ÖZEL ÖLÇÜ</text>
-            </svg>
-          </div>
-          <div class="product-body">
-            <h3>Taşıma &amp; İhracat Sandıkları</h3>
-            <p>Makine, ekipman ve ihracat yükleri için ölçüye göre üretilen ahşap sandıklar.</p>
-            <div class="row"><span class="link-arrow">İncele</span><span class="link-arrow" data-rfq="sandik">Teklif Al</span></div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MAIN PRODUCT: reel range -->
-  <section class="section section--steel" id="makara">
-    <div class="wrap reel-range">
-      <div class="copy">
-        <span class="label">Ana ürün grubu</span>
-        <h2>Ø 500 mm’den Ø 3200 mm’ye kablo sevk makaraları.</h2>
-        <p class="lead">Kablonun kesitine, uzunluğuna ve taşıma yöntemine göre ölçülendirilen ahşap makaralar.</p>
-        <ul class="subcats subcats-wrap">
-          <li><span class="num">M-01</span><span>Enerji kabloları</span></li>
-          <li><span class="num">M-02</span><span>Telekomünikasyon kabloları</span></li>
-          <li><span class="num">M-03</span><span>Fiber optik kablolar</span></li>
-          <li><span class="num">M-04</span><span>Çelik halat &amp; tel</span></li>
-        </ul>
-        <div><a class="btn btn--primary" href="urunler/kablo-sevk-makaralari.html">Makaraları İncele <span class="arr">→</span></a></div>
-      </div>
-      <div class="scale">
-        <div class="scale-figure">
-          <svg viewBox="0 0 780 340" role="img" aria-label="Makara çap aralığı: en küçük 500 milimetre, en büyük 3200 milimetre, aynı ölçekte çizilmiş">
-            <line class="s-line" x1="0" y1="290" x2="780" y2="290"/>
-            <!-- scale 1 mm = 0.08 px; circles stand on the ground line -->
-            <circle class="s-circle min" cx="30" cy="270" r="20"/>
-            <circle class="s-circle" cx="102" cy="250" r="40"/>
-            <circle class="s-circle" cx="218" cy="226" r="64"/>
-            <circle class="s-circle" cx="390" cy="194" r="96"/>
-            <circle class="s-circle max" cx="626" cy="162" r="128"/>
-            <g>
-              <line class="s-tick major" x1="30" y1="290" x2="30" y2="302"/>
-              <line class="s-tick" x1="102" y1="290" x2="102" y2="298"/>
-              <line class="s-tick" x1="218" y1="290" x2="218" y2="298"/>
-              <line class="s-tick" x1="390" y1="290" x2="390" y2="298"/>
-              <line class="s-tick major" x1="626" y1="290" x2="626" y2="302"/>
-            </g>
-            <text class="s-text hi" x="30" y="322" text-anchor="middle">Ø 500</text>
-            <text class="s-text" x="102" y="320" text-anchor="middle">1000</text>
-            <text class="s-text" x="218" y="320" text-anchor="middle">1600</text>
-            <text class="s-text" x="390" y="320" text-anchor="middle">2400</text>
-            <text class="s-text hi" x="626" y="322" text-anchor="middle">Ø 3200 mm</text>
-            <line class="s-line" x1="770" y1="34" x2="770" y2="290"/>
-            <line class="s-line" x1="764" y1="34" x2="776" y2="34"/>
-            <text class="s-text" x="760" y="28" text-anchor="end">3,2 m</text>
-          </svg>
-        </div>
-        <p class="label" style="margin-top:14px">Çizimler aynı ölçekte · 1 : 12,5</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 03 PRODUCTION CAPABILITY -->
-  <section class="section" id="kurumsal">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="label">Üretim gücü</span>
-          <h2>Tomruktan sevkiyata, kendi tesislerimizde.</h2>
-        </div>
-        <p class="lead">Tomruk kesimi, hammadde tedariki ve ürün imalatı aynı yapının içinde. Bu bölümdeki rakamlar Abant Entegre’nin teyidiyle yayına alınacak.</p>
-      </div>
-      <div class="cap-grid">
-        <div class="cap"><span class="label">Makara çap aralığı</span><strong>500–3200 mm</strong><p>Tek ölçü aralığında enerji, telekom ve fiber makaraları.</p></div>
-        <div class="cap"><span class="label">Tesis alanı</span><strong class="tbd-val">— m²</strong><span class="tbd">Teyit bekliyor</span></div>
-        <div class="cap"><span class="label">Tomruk kesim kapasitesi</span><strong class="tbd-val">— m³/yıl</strong><span class="tbd">Teyit bekliyor</span></div>
-        <div class="cap"><span class="label">Yıllık makara üretimi</span><strong class="tbd-val">— adet</strong><span class="tbd">Teyit bekliyor</span></div>
-      </div>
-      <div class="facility">
-        <article>
-          <span class="label">Gebze tesisi</span>
-          <h3>Makara, sandık ve palet üretimi</h3>
-          <p>Üç ürün ailesinin imalatı ve sevkiyata hazırlığı Gebze tesisinde yapılır.</p>
-        </article>
-        <article>
-          <span class="label">Hammadde</span>
-          <h3>Tomruk kesimi ve ithal tedarik</h3>
-          <p>Tomruk kesimine ek olarak tahta ve sıkıştırılmış takoz ithalat yoluyla da tedarik edilir. <span class="tbd">Kesim tesisi lokasyonu</span></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 04 INDUSTRIES -->
-  <section class="section section--surface">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="label">Hizmet verilen sektörler</span>
-          <h2>Kablonun ve yükün olduğu her sektör.</h2>
-        </div>
-        <p class="lead">Makaralarımız enerji, telekomünikasyon ve fiber optik kablo üreticileriyle çelik halat sevkiyatında kullanılır.</p>
-      </div>
-      <div class="industries">
-        <div class="industry">
-          <svg viewBox="0 0 36 36" class="dwg" aria-hidden="true"><path d="M20 3 8 20h9l-2 13 13-18h-9z"/></svg>
-          <h3>Enerji</h3><p>Orta ve yüksek gerilim enerji kablolarının sevkiyatı.</p>
-        </div>
-        <div class="industry">
-          <svg viewBox="0 0 36 36" class="dwg" aria-hidden="true"><path d="M18 8v26M12 34l6-26 6 26M14 24h8M9 5a13 13 0 0 1 18 0M12.5 9a8 8 0 0 1 11 0"/></svg>
-          <h3>Telekomünikasyon</h3><p>Haberleşme ve data kabloları için makaralar.</p>
-        </div>
-        <div class="industry">
-          <svg viewBox="0 0 36 36" class="dwg" aria-hidden="true"><path d="M3 12c8 0 10 12 18 12h12M3 18h30M3 24c8 0 10-12 18-12h12"/><circle cx="33" cy="18" r="1.5"/></svg>
-          <h3>Fiber optik</h3><p>Hassas fiber kablolar için düzgün sarım yüzeyi.</p>
-        </div>
-        <div class="industry">
-          <svg viewBox="0 0 36 36" class="dwg" aria-hidden="true"><path d="M4 10c6 0 6 8 12 8s6-8 12-8M4 18c6 0 6 8 12 8s6-8 12-8M4 26c6 0 6-8 12-8"/></svg>
-          <h3>Çelik halat &amp; tel</h3><p>Yüksek ağırlıktaki halat ve tel sarımları.</p>
-        </div>
-        <div class="industry">
-          <svg viewBox="0 0 36 36" class="dwg" aria-hidden="true"><rect x="3" y="11" width="30" height="16"/><path d="M9 11v16M15 11v16M21 11v16M27 11v16M3 31h30"/></svg>
-          <h3>Lojistik &amp; ihracat</h3><p>Palet ve sandık ile yurt içi ve yurt dışı sevkiyat. <span class="tbd">Teyit bekliyor</span></p>
+  <section class="sec pad" id="urunler">
+    <div class="row">
+      <p class="k">Ürünlerimiz</p>
+      <div>
+        <div class="plist">
+          <a class="pitem" href="urunler/kablo-sevk-makaralari.html">
+            <h3>Kablo sevk makaraları</h3>
+            <p>Ø 500 mm’den 3200 mm’ye. Enerji, telekom, fiber optik kablo ve çelik halat için.</p>
+            <span class="go">İncele →</span>
+            <img class="peek" src="assets/img/makara-yakin.jpg" alt="" aria-hidden="true">
+          </a>
+          <a class="pitem" href="#teklif" data-rfq="palet">
+            <h3>Ahşap paletler</h3>
+            <p>EUR palet ve özel ölçülü paletler. Depolama, iç lojistik ve ihracat için.</p>
+            <span class="go">Teklif al →</span>
+          </a>
+          <a class="pitem" href="#teklif" data-rfq="sandik">
+            <h3>Taşıma ve ihracat sandıkları</h3>
+            <p>Makine ve ekipman yükleri için ölçüye göre üretilen ahşap sandıklar.</p>
+            <span class="go">Teklif al →</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 05 PROCESS -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="label">From timber to industry</span>
-          <h2>Tomruktan sanayiye.</h2>
-        </div>
-        <p class="lead">Her ürün aynı sırayla ilerler. Adımların ayrıntıları Abant Entegre’nin üretim akışına göre netleştirilecek.</p>
-      </div>
-      <ol class="process">
-        <li><h3>Tomruk &amp; hammadde</h3><p>Tomruk kabulü, ithal tahta ve sıkıştırılmış takoz tedariki.</p></li>
-        <li><h3>Kesim</h3><p>Tomruğun ölçüye göre biçilmesi ve tasnifi.</p></li>
-        <li><h3>Kurutma / ısıl işlem</h3><p>Nem ve standart gereksinimine göre işlem. <span class="tbd">Teyit bekliyor</span></p></li>
-        <li><h3>Üretim &amp; montaj</h3><p>Makara, palet ve sandıkların imalatı.</p></li>
-        <li><h3>Kalite kontrol</h3><p>Ölçü ve dayanım kontrolleri. <span class="tbd">Teyit bekliyor</span></p></li>
-        <li><h3>Sevkiyat</h3><p>Yüklemeye hazır teslim.</p></li>
-      </ol>
-    </div>
-  </section>
+  <figure class="band" style="margin:0">
+    <img src="assets/img/makara-sira.jpg" alt="Sevkiyat sahasında yan yana duran farklı çaplarda ahşap kablo makaraları" width="1076" height="380" loading="lazy">
+  </figure>
 
-  <!-- 06 STANDARDS -->
-  <section class="section section--surface">
-    <div class="wrap standards">
-      <div class="section-head" style="grid-template-columns:1fr;margin:0">
-        <div>
-          <span class="label">Standartlar &amp; sertifikalar</span>
-          <h2>Belgeler, doğrulandıkça burada.</h2>
+  <section class="sec pad">
+    <div class="row">
+      <p class="k">Kablo sevk makaraları</p>
+      <div>
+        <p class="big">Kablonun kesitine ve uzunluğuna göre ölçülendirilmiş makaralar. <span class="muted">Küçük sarımlardan üç metreyi aşan enerji kablolarına kadar.</span></p>
+        <div class="facts">
+          <div class="fact"><strong>Ø 500–3200</strong><span>Milimetre cinsinden yanak çapı aralığı</span></div>
+          <div class="fact"><strong>4</strong><span>Kablo tipi: enerji, telekom, fiber optik, çelik halat</span></div>
+          <div class="fact"><strong>Gebze</strong><span>Makara, palet ve sandık üretim tesisi</span></div>
         </div>
-        <p class="lead">Yalnızca güncel ve geçerli belgeler yayınlanır. Her belge, ilgili ürün sayfasında da gösterilir.</p>
-      </div>
-      <div class="cert-list">
-        <div class="cert"><span class="cert-code">ISPM-15</span><p>Uluslararası sevkiyatta ahşap ambalaj için ısıl işlem ve işaretleme standardı.</p><span class="tbd">Teyit bekliyor</span></div>
-        <div class="cert"><span class="cert-code">ISO 9001</span><p>Kalite yönetim sistemi.</p><span class="tbd">Teyit bekliyor</span></div>
-        <div class="cert"><span class="cert-code">Diğer</span><p>Müşteri şartnamelerine uygunluk ve varsa sektörel belgeler.</p><span class="tbd">Teyit bekliyor</span></div>
+        <div class="uses">
+          <div><b>Enerji kabloları</b><span>Orta ve yüksek gerilim hatları</span></div>
+          <div><b>Telekomünikasyon</b><span>Haberleşme ve data kabloları</span></div>
+          <div><b>Fiber optik</b><span>Hassas sarım gerektiren kablolar</span></div>
+          <div><b>Çelik halat ve tel</b><span>Ağır ve yoğun sarımlar</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 07 RFQ -->
-  <section class="section" id="teklif">
-    <div class="wrap rfq">
-      <div class="rfq-aside">
-        <span class="label">Teklif Al</span>
-        <h2>Projeniz için doğru ürünü birlikte belirleyelim.</h2>
-        <p class="lead">Ürün grubu, ölçü ve adet bilgisi teklifin hızını belirler. Teknik çiziminiz varsa ekleyin.</p>
-        <ol>
-          <li><span class="num">01</span><span>Formu doldurun, varsa teknik çizimi ekleyin.</span></li>
-          <li><span class="num">02</span><span>Satış ekibimiz ölçü ve adet bilgisini değerlendirir.</span></li>
-          <li><span class="num">03</span><span>Size özel fiyat ve termin ile dönüş yapılır. <span class="tbd">Dönüş süresi</span></span></li>
+  <section class="sec pad" id="kurumsal" style="padding-top:0">
+    <div class="row">
+      <p class="k">Üretim</p>
+      <div>
+        <p class="big">Tomruktan sevkiyata, üretimin tamamı kendi yapımızda.</p>
+        <div class="twocol">
+          <div><h3>Gebze tesisi</h3><p>Kablo sevk makaraları, taşıma sandıkları ve paletler Gebze’de üretilip sevkiyata hazırlanır.</p></div>
+          <div><h3>Hammadde</h3><p>Tomruk kesiminin yanında tahta ve sıkıştırılmış takoz ithalat yoluyla da tedarik edilir.</p></div>
+        </div>
+        <ol class="steps">
+          <li>Tomruk</li><li>Kesim</li><li>İmalat</li><li>Kontrol</li><li>Sevkiyat</li>
         </ol>
       </div>
+    </div>
+  </section>
 
-      <form class="rfq-form" id="rfqForm" novalidate>
-        <fieldset class="field">
+  <section class="sec pad rfq" id="teklif">
+    <div class="rfq-grid">
+      <div class="rfq-intro">
+        <h2>Teklif alın.</h2>
+        <p>Ürün grubunu, ölçüyü ve adedi paylaşın; size fiyat ve termin ile dönüş yapalım. Teknik çiziminiz varsa ekleyin.</p>
+      </div>
+      <form id="rfqForm" novalidate>
+        <fieldset class="choice">
           <legend>Ürün grubu</legend>
-          <div class="seg" role="radiogroup">
-            <label><input type="radio" name="urun_grubu" id="ug-makara" value="Kablo Sevk Makarası" checked>Kablo makarası</label>
-            <label><input type="radio" name="urun_grubu" id="ug-palet" value="Ahşap Palet">Palet</label>
-            <label><input type="radio" name="urun_grubu" id="ug-sandik" value="Taşıma & İhracat Sandığı">Sandık</label>
-            <label><input type="radio" name="urun_grubu" id="ug-diger" value="Özel Üretim / Diğer">Özel üretim</label>
-          </div>
+          <label><input type="radio" name="urun_grubu" id="ug-makara" value="Kablo Sevk Makarası" checked><span>Kablo makarası</span></label>
+          <label><input type="radio" name="urun_grubu" id="ug-palet" value="Ahşap Palet"><span>Palet</span></label>
+          <label><input type="radio" name="urun_grubu" id="ug-sandik" value="Taşıma ve İhracat Sandığı"><span>Sandık</span></label>
+          <label><input type="radio" name="urun_grubu" id="ug-diger" value="Özel Üretim"><span>Özel üretim</span></label>
         </fieldset>
-        <div class="field-row">
-          <div class="field"><label for="f-olcu">Ölçü veya teknik ihtiyaç</label><input id="f-olcu" name="olcu" placeholder="Örn. Ø 1600 mm, fiber kablo"></div>
-          <div class="field"><label for="f-adet">Adet</label><input id="f-adet" name="adet" inputmode="numeric" placeholder="Örn. 250"></div>
+        <div class="fields">
+          <div class="f"><label for="f-olcu">Ölçü / teknik ihtiyaç</label><input id="f-olcu" name="olcu" placeholder="Ø 1600 mm, fiber"></div>
+          <div class="f"><label for="f-adet">Adet</label><input id="f-adet" name="adet" inputmode="numeric" placeholder="250"></div>
+          <div class="f"><label for="f-ad">Ad soyad</label><input id="f-ad" name="ad_soyad" autocomplete="name" required></div>
+          <div class="f"><label for="f-firma">Firma</label><input id="f-firma" name="firma" autocomplete="organization" required></div>
+          <div class="f"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" required></div>
+          <div class="f"><label for="f-mail">E-posta</label><input id="f-mail" name="eposta" type="email" autocomplete="email" required></div>
+          <div class="f wide"><label for="f-aciklama">Not</label><textarea id="f-aciklama" name="aciklama" placeholder="Teslim yeri, termin, kullanım alanı"></textarea></div>
+          <div class="f wide"><label for="f-dosya">Teknik çizim (isteğe bağlı)</label><input id="f-dosya" name="dosya" type="file" accept=".pdf,.dwg,.dxf,.jpg,.jpeg,.png"></div>
         </div>
-        <div class="field-row">
-          <div class="field"><label for="f-ad">Ad Soyad</label><input id="f-ad" name="ad_soyad" autocomplete="name" required></div>
-          <div class="field"><label for="f-firma">Firma</label><input id="f-firma" name="firma" autocomplete="organization" required></div>
-        </div>
-        <div class="field-row">
-          <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" required></div>
-          <div class="field"><label for="f-mail">E-posta</label><input id="f-mail" name="eposta" type="email" autocomplete="email" required></div>
-        </div>
-        <div class="field"><label for="f-aciklama">Açıklama <span class="opt">(isteğe bağlı)</span></label><textarea id="f-aciklama" name="aciklama" placeholder="Teslim yeri, termin, kullanım alanı…"></textarea></div>
-        <div class="field">
-          <label for="f-dosya">Teknik çizim veya şartname <span class="opt">(isteğe bağlı · PDF, DWG, JPG)</span></label>
-          <div class="file-drop"><input id="f-dosya" name="dosya" type="file" accept=".pdf,.dwg,.dxf,.jpg,.jpeg,.png"></div>
-        </div>
-        <div class="form-status" id="formStatus" hidden></div>
-        <div class="form-foot">
-          <small>Bilgileriniz yalnızca teklif hazırlamak için kullanılır.</small>
-          <button class="btn btn--primary" type="submit">Teklif İste <span class="arr">→</span></button>
-        </div>
+        <p class="status" id="formStatus" hidden></p>
+        <button class="send" type="submit">Teklif iste <span>→</span></button>
       </form>
     </div>
   </section>
 </main>
 
-<footer class="site-footer" id="iletisim">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <a class="brand" href="index.html"><svg class="brand-mark"><use href="#mark"/></svg><span class="brand-name">ABANT ENTEGRE<small style="color:inherit">AHŞAP SEVKİYAT ÇÖZÜMLERİ</small></span></a>
-      </div>
-      <div>
-        <h4>Ürünler</h4>
-        <ul>
-          <li><a href="#urunler">Ahşap Paletler</a></li>
-          <li><a href="urunler/kablo-sevk-makaralari.html">Kablo Sevk Makaraları</a></li>
-          <li><a href="#urunler">Taşıma &amp; İhracat Sandıkları</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Gebze Tesisi</h4>
-        <ul>
-          <li>Adres <span class="tbd">Teyit bekliyor</span></li>
-          <li>Telefon <span class="tbd">Teyit bekliyor</span></li>
-          <li>E-posta <span class="tbd">Teyit bekliyor</span></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Hızlı erişim</h4>
-        <ul>
-          <li><a href="#teklif">Teklif Al</a></li>
-          <li><a href="#kurumsal">Üretim gücü</a></li>
-          <li><a href="#makara">Makara çap aralığı</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-base">
-      <span>© <span id="yr">2026</span> Abant Entegre</span>
-      <span>Tasarım &amp; geliştirme: TCM Global</span>
-    </div>
+<footer id="iletisim">
+  <div class="foot pad">
+    <div class="word">Abant Entegre</div>
+    <div><h4>Ürünler</h4><ul><li><a class="u" href="urunler/kablo-sevk-makaralari.html">Kablo sevk makaraları</a></li><li><a href="#urunler">Ahşap paletler</a></li><li><a href="#urunler">Taşıma sandıkları</a></li></ul></div>
+    <div><h4>Tesis</h4><ul><li>Gebze, Kocaeli</li><!-- adres / telefon / e-posta: Abant'tan gelecek --></ul></div>
+    <div><h4>Teklif</h4><ul><li><a class="u" href="#teklif">Teklif formu</a></li></ul></div>
   </div>
+  <div class="foot-base pad"><span>© <span id="yr">2026</span> Abant Entegre</span><span>TCM Global</span></div>
 </footer>
 
-<div class="mobile-cta">
-  <a class="btn" href="#urunler">Ürünler</a>
-  <a class="btn btn--primary" href="#teklif">Teklif Al <span class="arr">→</span></a>
-</div>
+<a class="qbar" href="#teklif">Teklif al →</a>
 
 <script src="assets/js/site.js"></script>
 </body>
