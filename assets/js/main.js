@@ -1,4 +1,4 @@
-/* Abant Entegre — interface script (no dependencies) */
+/* Standart Entegre — interface script (no dependencies) */
 (function () {
   "use strict";
   // GitHub Pages has no backend. Paste a Formspree / Web3Forms / n8n webhook URL here.

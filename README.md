@@ -1,6 +1,6 @@
-# Abant Entegre — web sitesi
+# Standart Entegre — web sitesi
 
-Ahşap palet, kablo sevk makarası ve taşıma & ihracat sandığı üreticisi Abant Entegre için statik B2B sitesi.
+Ahşap palet, kablo sevk makarası ve taşıma & ihracat sandığı üreticisi Standart Entegre için statik B2B sitesi.
 Tasarım & geliştirme: TCM Global.
 
 ## Yapı
@@ -22,7 +22,7 @@ Build adımı yok. three.js jsDelivr'dan importmap ile yüklenir; WebGL yoksa he
 
 1. Repo → Settings → Pages → Source: **GitHub Actions**.
 2. `main`'e push → site `https://<kullanici>.github.io/<repo>/` adresinde yayında.
-3. Domain alındığında: kök dizine `CNAME` dosyası (tek satır, örn. `www.abantentegre.com`) + DNS'te `CNAME www → <kullanici>.github.io`.
+3. Domain alındığında: kök dizine `CNAME` dosyası (tek satır, örn. `www.standartentegre.com`) + DNS'te `CNAME www → <kullanici>.github.io`.
 
 ## Teklif formu
 
@@ -31,4 +31,4 @@ GitHub Pages'te sunucu yok. `assets/js/site.js` içindeki `FORM_ENDPOINT` değer
 ## İçerik kuralı
 
 Sitede yalnızca doğrulanmış bilgi var: Ø 500–3200 mm makara aralığı, kullanım alanları, Gebze tesisi, hammadde tedariki.
-Kapasite, tesis alanı, sertifikalar (ISPM-15, ISO) ve iletişim bilgileri Abant Entegre'den teyit gelince eklenecek.
+Kapasite, tesis alanı, sertifikalar (ISPM-15, ISO) ve iletişim bilgileri Standart Entegre'den teyit gelince eklenecek.
