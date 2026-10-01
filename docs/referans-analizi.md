@@ -1,48 +1,102 @@
-# Referans analizi: kategori, ürün sayfası ve SEO yapısı
+# Referans site analizi
 
-Tarih: Ekim 2026 · Hazırlayan: TCM Global
+Standart Entegre web sitesi · TCM Global · Ekim 2026
 
-## Ne gördük
+Brief'te verilen beş referans site; **ürün kategorileri**, **ürün sayfaları** ve **içerik / SEO yapısı** açısından incelendi. Amaç tasarımı kopyalamak değil, sektörde işe yarayan bilgi mimarisini almak ve eksiklerini kapatmak.
 
-| Site | Güçlü yanı | Sitemize aldığımız |
-|---|---|---|
-| **Sanmak Makara** | Makarayı kablo tipine göre alt kategorilere ayırıyor (enerji, telekom, fiber, iletken halat, kontrplak/MDF). Her alt kategoride çap aralığı tekrar yazılıyor. Hakkımızda; kuruluş + tesis alanı (m²) + yıllık kapasite (m³ kereste, adet makara) + çalışan + ISPM-15'i tek sayfada anlatıyor. Sertifikalar ayrı blok. TR / EN / AR dil seçeneği. | Kablo tipine göre alt bölümler ve her birinde **55 cm – 3,20 m** ölçü bilgisi. Kurumsal sayfasında hikâye + tesis + kapasite + belgeler kurgusu. Arapça dahil çok dilli yapı. |
-| **Yeşilyayla Kereste** | Üretimi 4 numaralı aşamada anlatıyor (hammadde → işleme → kurutma → sevkiyat). Kurumsal menüsü alt başlıklara ayrılmış (Hakkımızda, Vizyon & Misyon, Belgeler, Katalog). | Kurumsal sayfasında 5 aşamalı üretim akışı. Belgeler bölümü, belge eklendikçe görünür. |
-| **İsmet Acun** | Teknik kapasiteyi rakamla gösteriyor, "Nasıl Başardık?" zaman çizelgesi, **Karton Makara** ayrı ürün. | Kapasite rakamları için alan (veri gelince görünür). Karton makaralar ayrı ürün sayfası. |
-| **Çarkıt Makara** | Sade menü (Anasayfa, Hakkımızda, Ürünlerimiz, İletişim). Detaylı kategori yok. | Menü sadeliği. |
-| **Abant Entegre (mevcut)** | Ürün omurgası: palet, kablo sevk makarası, taşıma sandığı. | Ürün ailesi omurgası. |
+İsmet Acun ve Abant Entegre siteleri otomatik okumaya kapalı (robots.txt / bağlantı zaman aşımı). Bu ikisi arama sonuçları, dizin kayıtları ve brief üzerinden değerlendirildi.
 
-İsmet Acun ve Abant Entegre siteleri otomatik okumaya kapalı; arama sonuçları ve brief üzerinden değerlendirildi.
+---
 
-## Kurduğumuz yapı
+## 1. Site site bulgular
+
+### Sanmak Makara (Bursa, Mudanya) · en güçlü referans
+- **Menü:** Ana Sayfa · Kurumsal (Hakkımızda, Misyon & Vizyon, Sertifikalar) · Ürünler · Medya · İletişim. TR / EN / AR.
+- **Kategori ağacı:**
+  - Ahşap Kablo Makaraları → Enerji · Telekomünikasyon · Fiber · İletken Halat ve Tel · Kontrplak/MDF
+  - Çelik, Demir Kablo Makaraları
+  - Ahşap Paletler · Ahşap Kafes Sandıkları · Makara Kapatma Tahtası
+- **URL:** düz ve anahtar kelimeli, ör. `/tr/ahsap-kablo-sevk-makaralari`, `/tr/ahsap-enerji-kablo-makaralari`.
+- **Ürün sayfası:** title = H1 = anahtar kelime ("Ahşap Enerji Kablo Makaraları"). 150–200 kelime metin, çap aralığı (40–320 cm), 3 görsellik galeri, ilgili ürün linkleri, telefon / WhatsApp / e-posta. Teknik tablo ve teklif formu **yok**.
+- **Ana kategori sayfası:** ağaç türü (kızılçam, karaçam, köknar), montajlı / demonte seçeneği, ISPM-15 ısıl işlem, 4 üretim videosu.
+- **Hakkımızda:** kuruluş (2010) + konum + tesis alanı (15.000 m²: 10.000 açık, 5.000 kapalı) + yıllık kapasite (15.000 m³ kereste, 40.000 makara) + 30+ çalışan + ISPM-15. Sertifikalar ayrı blok (ISO 9001, ISO 10002, palet, sandık, ahşap ambalaj işaretleme yetkisi).
+- **Aldığımız:** kablo tipine göre alt bölümler, her alt bölümde ölçü tekrarı, Kurumsal'da hikâye + tesis + kapasite + belge kurgusu, Arapça dahil çok dilli yapı.
+- **Daha iyisini yaptığımız:** teknik tablo, ürün başına teklif formu, SSS, yapısal veri (JSON-LD), hreflang.
+
+### Çarkıt Makara (Denizli)
+- **Menü:** Anasayfa · Hakkımızda · Ürünlerimiz · İletişim. Yalnızca TR.
+- **Ürünler:** tek sayfa, üç başlık: Ahşap Enerji Kablo Makaraları · Ahşap Telekomünikasyon Kablo Makaraları · Özel Ahşap Kablo Makaraları. Ölçü aralığı **550–3000 mm**, DIN standardına atıf. Ürün detay sayfası **yok**, sadece 5 görsel.
+- **SEO:** title "Çarkıt Makara – Denizli Ahşap Makara" (şehir + ürün). H1 ve H2'ler slogan; anahtar kelime taşımıyor.
+- **Aldığımız:** "Özel ölçü" alt kategorisi ve ölçüyü milimetre ile vermek.
+- **Kaçındığımız:** slogan başlıklar, detay sayfası olmayan tek sayfalık ürün listesi.
+
+### Yeşilyayla Kereste (1964'ten beri)
+- **Menü:** Ana Sayfa · Kurumsal (Hakkımızda, Vizyon & Misyon, Belgeler, Firma Logo, Katalog) · Ürünler · Bize Ulaşın. TR / EN.
+- **Ürünler:** tek sayfa, "Ahşap, Tahta Kablo Makarası Çeşitleri" başlığı altında enerji, telekom, fiber, iletken halat. 10 görsellik galeri; spesifikasyon yok, teknik bilgi PDF katalogda.
+- **Üretim süreci:** 4 numaralı aşama (hammadde seçimi → işleme → doğal kurutma → paketleme ve sevkiyat).
+- **SEO:** sayfa metni az, anahtar kelimeler meta etiketlerde; ürün detay URL'si yok.
+- **Aldığımız:** aşamalı üretim süreci (bizde 5 adım), Kurumsal altında Belgeler bölümü.
+- **Kaçındığımız:** bilgiyi PDF'e gömmek (Google okuyamıyor), meta etiketlere kelime doldurmak.
+
+### İsmet Acun (Burdur)
+- **Ürün yelpazesi** (dizin kayıtları): ahşap makara, **karton makara**, metal makara. Makara üretip ihraç eden firma olarak konumlanıyor.
+- **Site:** TR ve EN ayrı sayfa setleri (`/urunlerimiz/` ve `/products/`, `/iletisim/` ve `/contact-us/`). Kurumsal tarafında "Hakkımızda" ve **"Nasıl Başardık?"** (gelişim hikâyesi) sayfaları.
+- **Brief'teki rolü:** teknik bilgi ve üretim gücünü rakamla anlatmak.
+- **Aldığımız:** karton makarayı ayrı ürün olarak sunmak, kapasiteyi rakamla gösteren alanlar (veri gelince açılıyor), dil başına ayrı URL'ler.
+
+### Abant Entegre (mevcut site)
+- **Ürün omurgası:** Ahşap Palet / EUR Palet · Kablo Sevk Makarası · Taşıma Sandıkları. Makara sayfası `/urunlerimiz/kablo-sevk-makarasi/`.
+- **İçerik:** makara çapı 500–3200 mm; enerji, çelik halat, telekom, fiber optik kullanımı; tomruk kesimi + ithal tahta ve sıkıştırılmış takoz; Gebze tesisinde makara, sandık ve palet üretimi.
+- **Aldığımız:** ürün omurgası ve kurumsal anlatım. Ölçü aralığı yeni talimata göre **55 cm – 3,20 m** olarak güncellendi.
+
+---
+
+## 2. Karşılaştırma
+
+| | Sanmak | Çarkıt | Yeşilyayla | İsmet Acun | **Standart Entegre (yeni)** |
+|---|---|---|---|---|---|
+| Makara alt kategorileri | 5 | 3 | 4 (liste) | ahşap / karton / metal | 4 kablo tipi + standart / özel ölçü |
+| Ürün detay sayfası | var (kısa) | yok | yok | var | var: 5 ürün × 5 dil |
+| Ölçü bilgisi | çap aralığı | 550–3000 mm | yok | — | 55 cm – 3,20 m, her makara içeriğinde |
+| Teknik tablo | yok | yok | PDF | — | var |
+| Teklif formu | yok (tel / WhatsApp) | yok | yok | — | var, ürün ön seçili, dosya ekli |
+| Kapasite rakamları | var | yok | yok | var | alan hazır, veri bekleniyor |
+| Belgeler | var | DIN atfı | var | — | alan hazır, veri bekleniyor |
+| Dil | TR / EN / AR | TR | TR / EN | TR / EN | TR / EN / FR / AR / ES |
+| SEO teknik | düz URL | şehir + ürün başlığı | meta etiket | ayrı dil URL'leri | title = H1 = URL, hreflang, JSON-LD, sitemap |
+
+---
+
+## 3. Kurduğumuz yapı
 
 ```
 Ana sayfa
-├── Ürünler (kategori sayfası)
+├── Ürünler
 │   ├── Makaralar
 │   │   ├── Ahşap Kablo Makaraları   → kablo sevk makarası, ahşap makara, ağaç makara, standart makara
-│   │   │     (enerji · telekomünikasyon · fiber optik · çelik halat · standart ve özel ölçü)
+│   │   │     (enerji · telekom · fiber optik · çelik halat · standart ve özel ölçü)
 │   │   └── Karton Makaralar          → karton makara
 │   └── Ahşap Ambalaj
 │       ├── Ahşap Paletler
 │       ├── Taşıma ve İhracat Sandıkları
 │       └── Mermer Kasası             → mermer kasası, mermer sandığı
-├── Kurumsal (hikâye · tesis · kapasite · üretim süreci · belgeler)
+├── Kurumsal  (hikâye · tesis ve kapasite · üretim süreci · belgeler)
 └── Teklif Al
+Ana sayfa bölümleri: 3D makara · ürünler · ölçü aracı · hizmet verilen sektörler · kurumsal · teklif
 ```
 
-## SEO kurgusu
+---
 
-- Her ürün tek bir ana anahtar kelimeyi hedefler; başlık (title), H1, meta açıklama ve URL aynı kelimeyi taşır.
-- Hedef kelimeler: **Kablo Sevk Makaraları, Ahşap Makara, Ağaç Makara, Standart Makara, Karton Makaralar, Mermer Kasası.** Metin içinde doğal geçer, liste halinde doldurulmaz.
-- Ölçü bilgisi (55 cm – 3,20 m) makara sayfalarında başlık altında, teknik tabloda ve alt kategorilerde tekrar edilir.
-- Beş dil: TR (kök), EN, FR, AR (sağdan sola), ES. Her sayfada `hreflang` bağlantıları, dil başına `sitemap.xml` kaydı.
-- Yapısal veri (JSON-LD): Organization, BreadcrumbList, Product.
-- Temiz URL: `/urunler/ahsap-kablo-makaralari/`, `/en/products/wooden-cable-reels/` vb.
+## 4. Referanslarda olup bizde henüz olmayanlar
 
-## Firmadan beklenen bilgiler
+| Eksik | Kimde var | Öneri | Gerekli olan |
+|---|---|---|---|
+| Kablo tipine göre **ayrı alt sayfalar** (ör. "ahşap enerji kablo makaraları") | Sanmak | Şu an makara sayfasında bölüm olarak var. Ayrı sayfa olursa her alt tip kendi aramasında öne çıkar. | Onay (içerik hazır) |
+| Ağaç türü, montajlı / demonte, ısıl işlem bilgisi | Sanmak | Makara teknik tablosuna eklenmeli | Firmadan teyit |
+| Üretim videoları / ürün galerisi | Sanmak, Yeşilyayla | Ürün sayfalarına galeri alanı | Fotoğraf ve video |
+| Sertifika logoları | Sanmak, Yeşilyayla | Alan hazır; belge gelince açılır | Belge görselleri |
+| Kapasite rakamları | Sanmak, İsmet Acun | Alan hazır; veri gelince açılır | m², m³, adet, çalışan |
+| WhatsApp hattı | Sanmak | Teklif formunun yanına | Numara |
+| PDF katalog | Yeşilyayla | İndirilebilir katalog (sayfa içeriğinin yerine değil, yanında) | Katalog |
 
-Bunlar gelmeden sitede gösterilmez (alan boşsa bölüm gizlenir):
-kuruluş yılı · tesis alanı (m²) · yıllık kereste ve makara kapasitesi · çalışan sayısı · sertifikalar (ISPM-15, ISO…) · adres, telefon, e-posta · fabrika ve ürün fotoğrafları.
-
-Kaynaklar: sanmakmakara.com, yesilyaylakereste.com.tr, carkitmakara.com, ismetacun.com (arama sonuçları), globalpiyasa.com (İsmet Acun karton makara ilanı).
+Kaynaklar: sanmakmakara.com (ana sayfa, hakkımızda, ahşap kablo sevk makaraları, ahşap enerji kablo makaraları) · carkitmakara.com (ana sayfa, ürünlerimiz) · yesilyaylakereste.com.tr (ana sayfa, ürünler) · ismetacun.com (arama dizini) · turkishexporter.com.tr (İsmet Acun kaydı) · globalpiyasa.com (İsmet Acun karton makara) · abantentegre.com (arama sonuçları)

@@ -5,7 +5,7 @@ label: AR
 name: العربية
 locale: ar
 og_locale: ar_AR
-slugs: { products: products, about: about, references: references }
+slugs: { products: products, about: about }
 arrow: "←"
 
 nav:
@@ -272,18 +272,10 @@ gallery:
 gallery_note: "الصور توضيحية."
 
 refs:
-  nav: "مراجعنا"
-  eyebrow: "مراجعنا"
-  h: ["من خطوط الكابلات إلى محاجر الرخام،", "قطاعات تشحن معنا."]
+  eyebrow: "القطاعات"
+  h: ["من خطوط الكابلات إلى محاجر الرخام،", "القطاعات التي نخدمها."]
   lead: "من مصنّعي كابلات الطاقة والاتصالات إلى شركات الرخام ومصدّري الآلات، نصنع تغليف الشحن لقطاعات متعددة."
-  logos_h: "شركات نعمل معها"
-  sectors_h: "القطاعات التي نخدمها"
   uses: "المنتجات المستخدمة"
-  more: "جميع المراجع"
-  title: "مراجعنا · Standart Entegre"
-  desc: "مراجع Standart Entegre: بكرات كابلات ومنصات وصناديق وصناديق رخام لمصنّعي كابلات الطاقة والاتصالات ومنتجي الحبال الفولاذية وشركات الرخام ومصدّري الآلات."
-  page_h: "مراجعنا"
-  cta_h: "لنصنع لقطاعك أيضاً."
   sectors:
     - key: enerji
       name: "مصنّعو كابلات الطاقة"

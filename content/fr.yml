@@ -5,7 +5,7 @@ label: FR
 name: Français
 locale: fr-FR
 og_locale: fr_FR
-slugs: { products: produits, about: entreprise, references: references }
+slugs: { products: produits, about: entreprise }
 arrow: "→"
 
 nav:
@@ -272,18 +272,10 @@ gallery:
 gallery_note: "Images d’illustration."
 
 refs:
-  nav: "Références"
-  eyebrow: "Références"
-  h: ["De la ligne de câblage à la carrière de marbre,", "les secteurs qui expédient avec nous."]
+  eyebrow: "Secteurs"
+  h: ["De la ligne de câblage à la carrière de marbre,", "les secteurs que nous servons."]
   lead: "Des câbliers énergie et télécoms aux entreprises du marbre et aux exportateurs de machines, nous fabriquons l’emballage d’expédition de nombreux secteurs."
-  logos_h: "Entreprises partenaires"
-  sectors_h: "Secteurs servis"
   uses: "Produits utilisés"
-  more: "Toutes les références"
-  title: "Références · Standart Entegre"
-  desc: "Références Standart Entegre : tourets, palettes, caisses et caisses à marbre pour câbliers énergie et télécoms, fabricants de câbles d’acier, entreprises du marbre et exportateurs de machines."
-  page_h: "Références"
-  cta_h: "Fabriquons aussi pour votre secteur."
   sectors:
     - key: enerji
       name: "Câbliers énergie"

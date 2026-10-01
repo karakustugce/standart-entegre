@@ -37,8 +37,7 @@ def page_paths(code):
     pre = prefix(code)
     paths = {("home", None): pre,
              ("products", None): f"{pre}{L['slugs']['products']}/",
-             ("about", None): f"{pre}{L['slugs']['about']}/",
-             ("references", None): f"{pre}{L['slugs']['references']}/"}
+             ("about", None): f"{pre}{L['slugs']['about']}/"}
     for p in site["products"]:
         paths[("product", p["key"])] = f"{pre}{L['slugs']['products']}/{L['products'][p['key']]['slug']}/"
     return paths
@@ -86,9 +85,6 @@ for code in site["languages"]:
         elif kind == "products":
             title, desc, og = L["meta"]["products_title"], L["meta"]["products_desc"], "assets/img/render-makara.webp"
             crumbs.append((L["products_page_h"], base + path))
-        elif kind == "references":
-            title, desc, og = L["refs"]["title"], L["refs"]["desc"], "assets/img/kurumsal/04-makara-saha.jpg"
-            crumbs.append((L["refs"]["page_h"], base + path))
         elif kind == "about":
             title, desc, og = L["meta"]["about_title"], L["meta"]["about_desc"], site["gallery"][0]["src"]
             crumbs.append((L["nav"]["about"], base + path))
@@ -110,10 +106,10 @@ for code in site["languages"]:
                     alternates=alternates, x_default=base + ALL[default][(kind, key)],
                     jsonld=json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False).replace("</", "<\\/"))
         js = dict(L["js"], locale=L["locale"])
-        tpl = {"home": "home.html", "products": "products.html", "about": "about.html", "product": "product.html", "references": "references.html"}[kind]
+        tpl = {"home": "home.html", "products": "products.html", "about": "about.html", "product": "product.html"}[kind]
         html = env.get_template(tpl).render(
             S=site, L=L, page=page, root=root, link=link, products=products, prod=prod,
-            home_path=paths[("home", None)], products_path=paths[("products", None)], about_path=paths[("about", None)], refs_path=paths[("references", None)],
+            home_path=paths[("home", None)], products_path=paths[("products", None)], about_path=paths[("about", None)],
             js_strings=json.dumps(js, ensure_ascii=False).replace("</", "<\\/"))
         dest = OUT / path / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)

@@ -5,7 +5,7 @@ label: TR
 name: Türkçe
 locale: tr-TR
 og_locale: tr_TR
-slugs: { products: urunler, about: kurumsal, references: referanslar }
+slugs: { products: urunler, about: kurumsal }
 arrow: "→"
 
 nav:
@@ -272,18 +272,10 @@ gallery:
 gallery_note: "Görseller temsilidir."
 
 refs:
-  nav: "Referanslar"
-  eyebrow: "Referanslar"
-  h: ["Kablo hattından mermer ocağına,", "sevkiyatı bize emanet eden sektörler."]
+  eyebrow: "Sektörler"
+  h: ["Kablo hattından mermer ocağına,", "hizmet verdiğimiz sektörler."]
   lead: "Enerji ve telekom kablosu üreticilerinden mermer firmalarına ve makine ihracatçılarına kadar, farklı sektörlerin sevkiyat ambalajını üretiyoruz."
-  logos_h: "Çalıştığımız firmalar"
-  sectors_h: "Hizmet verdiğimiz sektörler"
   uses: "Kullandığı ürünler"
-  more: "Tüm referanslar"
-  title: "Referanslar · Standart Entegre"
-  desc: "Standart Entegre referansları: enerji ve telekom kablosu üreticileri, çelik halat firmaları, mermer ve doğal taş firmaları, makine ihracatçıları için kablo makarası, palet, sandık ve mermer kasası."
-  page_h: "Referanslar"
-  cta_h: "Sizin sektörünüz için de üretelim."
   sectors:
     - key: enerji
       name: "Enerji kablosu üreticileri"

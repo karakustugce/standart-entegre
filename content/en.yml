@@ -5,7 +5,7 @@ label: EN
 name: English
 locale: en-GB
 og_locale: en_GB
-slugs: { products: products, about: about, references: references }
+slugs: { products: products, about: about }
 arrow: "→"
 
 nav:
@@ -272,18 +272,10 @@ gallery:
 gallery_note: "Representative images."
 
 refs:
-  nav: "References"
-  eyebrow: "References"
-  h: ["From cable lines to marble quarries,", "the industries that ship with us."]
+  eyebrow: "Industries"
+  h: ["From cable lines to marble quarries,", "the industries we serve."]
   lead: "From power and telecom cable makers to marble companies and machinery exporters, we make shipping packaging for a wide range of industries."
-  logos_h: "Companies we work with"
-  sectors_h: "Industries we serve"
   uses: "Products used"
-  more: "All references"
-  title: "References · Standart Entegre"
-  desc: "Standart Entegre references: cable reels, pallets, crates and marble crates for power and telecom cable makers, steel rope producers, marble companies and machinery exporters."
-  page_h: "References"
-  cta_h: "Let’s build for your industry too."
   sectors:
     - key: enerji
       name: "Power cable manufacturers"

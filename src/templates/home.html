@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import card, show, rfq_form, refs_block with context %}
+{% from "_macros.html" import card, show, rfq_form, sectors_block with context %}
 {% block head %}
 <link rel="preload" as="image" href="{{ root }}assets/img/render-makara.webp">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
@@ -73,9 +73,6 @@
       <p class="fine" dir="{{ L.dir }}">{{ L.tool.fine }}</p>
     </div>
   </div>
-  <div class="uses" style="margin-top:clamp(56px,8vw,120px)">
-    {% for u in L.home.uses %}<div><b>{{ u[0] }}</b><span>{{ u[1] }}</span></div>{% endfor %}
-  </div>
 </section>
 
 <section class="sec px about-teaser" id="kurumsal">
@@ -91,7 +88,7 @@
   </div>
 </section>
 
-<section class="sec px refs" id="referanslar" style="padding-top:0">
+<section class="sec px refs" id="sektorler" style="padding-top:0">
   <div class="head">
     <p class="eyebrow">{{ L.refs.eyebrow }}</p>
     <div class="head-main">
@@ -99,8 +96,7 @@
       <p class="intro-p">{{ L.refs.lead }}</p>
     </div>
   </div>
-  {{ refs_block() }}
-  <p class="more"><a class="lnk" href="{{ link(refs_path) }}">{{ L.refs.more }} {{ L.arrow }}</a></p>
+  {{ sectors_block() }}
 </section>
 
 <section class="sec px rfq" id="teklif">

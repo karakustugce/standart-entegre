@@ -5,7 +5,7 @@ label: ES
 name: Español
 locale: es-ES
 og_locale: es_ES
-slugs: { products: productos, about: empresa, references: referencias }
+slugs: { products: productos, about: empresa }
 arrow: "→"
 
 nav:
@@ -272,18 +272,10 @@ gallery:
 gallery_note: "Imágenes ilustrativas."
 
 refs:
-  nav: "Referencias"
-  eyebrow: "Referencias"
-  h: ["De la línea de cable a la cantera de mármol,", "los sectores que envían con nosotros."]
+  eyebrow: "Sectores"
+  h: ["De la línea de cable a la cantera de mármol,", "los sectores a los que servimos."]
   lead: "Desde fabricantes de cable de energía y telecomunicaciones hasta empresas de mármol y exportadores de maquinaria, fabricamos el embalaje de envío de muchos sectores."
-  logos_h: "Empresas con las que trabajamos"
-  sectors_h: "Sectores a los que servimos"
   uses: "Productos utilizados"
-  more: "Todas las referencias"
-  title: "Referencias · Standart Entegre"
-  desc: "Referencias de Standart Entegre: bobinas, palets, cajas y cajas para mármol para fabricantes de cable, productores de cable de acero, empresas de mármol y exportadores de maquinaria."
-  page_h: "Referencias"
-  cta_h: "Fabriquemos también para su sector."
   sectors:
     - key: enerji
       name: "Fabricantes de cable de energía"
