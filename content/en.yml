@@ -5,7 +5,7 @@ label: EN
 name: English
 locale: en-GB
 og_locale: en_GB
-slugs: { products: products, about: about }
+slugs: { products: products, about: about, references: references }
 arrow: "→"
 
 nav:
@@ -270,6 +270,45 @@ gallery:
   palet: "Pallet stock"
   sevkiyat: "Crate, marble crate and cardboard reel"
 gallery_note: "Representative images."
+
+refs:
+  nav: "References"
+  eyebrow: "References"
+  h: ["From cable lines to marble quarries,", "the industries that ship with us."]
+  lead: "From power and telecom cable makers to marble companies and machinery exporters, we make shipping packaging for a wide range of industries."
+  logos_h: "Companies we work with"
+  sectors_h: "Industries we serve"
+  uses: "Products used"
+  more: "All references"
+  title: "References · Standart Entegre"
+  desc: "Standart Entegre references: cable reels, pallets, crates and marble crates for power and telecom cable makers, steel rope producers, marble companies and machinery exporters."
+  page_h: "References"
+  cta_h: "Let’s build for your industry too."
+  sectors:
+    - key: enerji
+      name: "Power cable manufacturers"
+      desc: "Large-diameter wooden cable reels for medium and high voltage cable."
+      products: [makara]
+    - key: telekom
+      name: "Telecom and fibre optic cable makers"
+      desc: "Wooden reels and cardboard reels for communication, data and fibre cable."
+      products: [makara, karton]
+    - key: halat
+      name: "Steel rope and wire producers"
+      desc: "Reinforced reels for heavy windings; cardboard reels for light wire."
+      products: [makara, karton]
+    - key: mermer
+      name: "Marble and natural stone companies"
+      desc: "Marble crates and boxes for slab and block shipments."
+      products: [mermer, sandik]
+    - key: makine
+      name: "Machinery and equipment exporters"
+      desc: "Made-to-size export crates and pallets for heavy loads."
+      products: [sandik, palet]
+    - key: lojistik
+      name: "Logistics and warehousing"
+      desc: "EUR and custom pallets for storage and in-plant logistics."
+      products: [palet]
 
 rfq:
   eyebrow: "Request a quote"

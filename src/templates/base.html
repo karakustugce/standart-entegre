@@ -33,6 +33,7 @@
     <nav class="nav" id="nav" aria-label="{{ L.nav.menu }}">
       <a href="{{ link(products_path) }}"{% if page.kind in ['products','product'] %} aria-current="page"{% endif %}>{{ L.nav.products }}</a>
       <a href="{{ link(about_path) }}"{% if page.kind == 'about' %} aria-current="page"{% endif %}>{{ L.nav.about }}</a>
+      <a href="{{ link(refs_path) }}"{% if page.kind == 'references' %} aria-current="page"{% endif %}>{{ L.refs.nav }}</a>
       <a href="{{ link(home_path) }}#olcu">{{ L.nav.tool }}</a>
       <a href="{{ link(home_path) }}#teklif" class="nav-contact">{{ L.nav.contact }}</a>
       <div class="langs" role="group" aria-label="{{ L.nav.language }}">
@@ -53,7 +54,7 @@
       <div class="langs ftr-langs">{% for a in page.alternates %}<a href="{{ a.rel }}" hreflang="{{ a.lang }}" lang="{{ a.lang }}"{% if a.lang == L.lang %} aria-current="true"{% endif %}>{{ a.name }}</a>{% endfor %}</div>
     </div>
     <div><h4>{{ L.footer.products }}</h4><ul>{% for p in products %}<li><a href="{{ link(p.path) }}">{{ p.t.name }}</a></li>{% endfor %}</ul></div>
-    <div><h4>{{ L.footer.company }}</h4><ul><li><a href="{{ link(about_path) }}">{{ L.nav.about }}</a></li><li><a href="{{ link(home_path) }}#olcu">{{ L.nav.tool }}</a></li><li><a href="{{ link(home_path) }}#teklif">{{ L.nav.quote }}</a></li></ul></div>
+    <div><h4>{{ L.footer.company }}</h4><ul><li><a href="{{ link(about_path) }}">{{ L.nav.about }}</a></li><li><a href="{{ link(refs_path) }}">{{ L.refs.nav }}</a></li><li><a href="{{ link(home_path) }}#olcu">{{ L.nav.tool }}</a></li><li><a href="{{ link(home_path) }}#teklif">{{ L.nav.quote }}</a></li></ul></div>
     <div><h4>{{ L.footer.facility }}</h4><ul>
       <li>{{ S.company.city }}</li>
       {% if S.company.address %}<li>{{ S.company.address }}</li>{% endif %}

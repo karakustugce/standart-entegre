@@ -5,7 +5,7 @@ label: FR
 name: Français
 locale: fr-FR
 og_locale: fr_FR
-slugs: { products: produits, about: entreprise }
+slugs: { products: produits, about: entreprise, references: references }
 arrow: "→"
 
 nav:
@@ -270,6 +270,45 @@ gallery:
   palet: "Stock de palettes"
   sevkiyat: "Caisse, caisse à marbre et bobine en carton"
 gallery_note: "Images d’illustration."
+
+refs:
+  nav: "Références"
+  eyebrow: "Références"
+  h: ["De la ligne de câblage à la carrière de marbre,", "les secteurs qui expédient avec nous."]
+  lead: "Des câbliers énergie et télécoms aux entreprises du marbre et aux exportateurs de machines, nous fabriquons l’emballage d’expédition de nombreux secteurs."
+  logos_h: "Entreprises partenaires"
+  sectors_h: "Secteurs servis"
+  uses: "Produits utilisés"
+  more: "Toutes les références"
+  title: "Références · Standart Entegre"
+  desc: "Références Standart Entegre : tourets, palettes, caisses et caisses à marbre pour câbliers énergie et télécoms, fabricants de câbles d’acier, entreprises du marbre et exportateurs de machines."
+  page_h: "Références"
+  cta_h: "Fabriquons aussi pour votre secteur."
+  sectors:
+    - key: enerji
+      name: "Câbliers énergie"
+      desc: "Tourets en bois de grand diamètre pour câbles moyenne et haute tension."
+      products: [makara]
+    - key: telekom
+      name: "Câbliers télécoms et fibre optique"
+      desc: "Tourets en bois et bobines en carton pour câbles de communication, de données et fibre."
+      products: [makara, karton]
+    - key: halat
+      name: "Fabricants de câbles et fils d’acier"
+      desc: "Tourets renforcés pour enroulements lourds ; bobines en carton pour fils légers."
+      products: [makara, karton]
+    - key: mermer
+      name: "Entreprises du marbre et de la pierre"
+      desc: "Caisses à marbre et caisses pour tranches et blocs."
+      products: [mermer, sandik]
+    - key: makine
+      name: "Exportateurs de machines et d’équipements"
+      desc: "Caisses d’exportation et palettes sur mesure pour charges lourdes."
+      products: [sandik, palet]
+    - key: lojistik
+      name: "Logistique et entreposage"
+      desc: "Palettes EUR et sur mesure pour stockage et logistique interne."
+      products: [palet]
 
 rfq:
   eyebrow: "Demander un devis"

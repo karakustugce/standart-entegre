@@ -80,3 +80,15 @@ gallery:
     src: assets/img/kurumsal/05-palet-stok.jpg
   - key: sevkiyat
     src: assets/img/kurumsal/06-sevkiyat.jpg
+
+# ---------------------------------------------------------------
+# Referanslar (müşteri logoları). Boşken logo alanı gizlenir,
+# yalnızca sektörler görünür. Logoları assets/img/referanslar/
+# klasörüne yükleyin (SVG veya şeffaf PNG, yatay).
+# sector: tr dilindeki sektör anahtarlarından biri (enerji, telekom,
+# halat, mermer, makine, lojistik)
+# ---------------------------------------------------------------
+references: []
+#  - name: "Firma Adı A.Ş."
+#    logo: assets/img/referanslar/firma.svg
+#    sector: enerji

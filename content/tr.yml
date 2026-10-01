@@ -5,7 +5,7 @@ label: TR
 name: Türkçe
 locale: tr-TR
 og_locale: tr_TR
-slugs: { products: urunler, about: kurumsal }
+slugs: { products: urunler, about: kurumsal, references: referanslar }
 arrow: "→"
 
 nav:
@@ -270,6 +270,45 @@ gallery:
   palet: "Palet stoku"
   sevkiyat: "Sandık, mermer kasası ve karton makara"
 gallery_note: "Görseller temsilidir."
+
+refs:
+  nav: "Referanslar"
+  eyebrow: "Referanslar"
+  h: ["Kablo hattından mermer ocağına,", "sevkiyatı bize emanet eden sektörler."]
+  lead: "Enerji ve telekom kablosu üreticilerinden mermer firmalarına ve makine ihracatçılarına kadar, farklı sektörlerin sevkiyat ambalajını üretiyoruz."
+  logos_h: "Çalıştığımız firmalar"
+  sectors_h: "Hizmet verdiğimiz sektörler"
+  uses: "Kullandığı ürünler"
+  more: "Tüm referanslar"
+  title: "Referanslar · Standart Entegre"
+  desc: "Standart Entegre referansları: enerji ve telekom kablosu üreticileri, çelik halat firmaları, mermer ve doğal taş firmaları, makine ihracatçıları için kablo makarası, palet, sandık ve mermer kasası."
+  page_h: "Referanslar"
+  cta_h: "Sizin sektörünüz için de üretelim."
+  sectors:
+    - key: enerji
+      name: "Enerji kablosu üreticileri"
+      desc: "Orta ve yüksek gerilim kablolar için büyük çaplı ahşap kablo sevk makaraları."
+      products: [makara]
+    - key: telekom
+      name: "Telekom ve fiber optik kablo üreticileri"
+      desc: "Haberleşme, data ve fiber kablolar için ahşap makara ve karton makaralar."
+      products: [makara, karton]
+    - key: halat
+      name: "Çelik halat ve tel üreticileri"
+      desc: "Ağır ve yoğun sarımlar için güçlendirilmiş makaralar; hafif teller için karton makaralar."
+      products: [makara, karton]
+    - key: mermer
+      name: "Mermer ve doğal taş firmaları"
+      desc: "Plaka ve blok sevkiyatı için mermer kasası ve sandıklar."
+      products: [mermer, sandik]
+    - key: makine
+      name: "Makine ve ekipman ihracatçıları"
+      desc: "Ağır yükler için ölçüye göre ihracat sandığı ve palet."
+      products: [sandik, palet]
+    - key: lojistik
+      name: "Lojistik ve depolama"
+      desc: "Depolama ve iç lojistik için EUR ve özel ölçü paletler."
+      products: [palet]
 
 rfq:
   eyebrow: "Teklif Al"

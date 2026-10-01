@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import card, show, rfq_form with context %}
+{% from "_macros.html" import card, show, rfq_form, refs_block with context %}
 {% block head %}
 <link rel="preload" as="image" href="{{ root }}assets/img/render-makara.webp">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
@@ -89,6 +89,18 @@
       <div><a class="btn btn-ink" href="{{ link(about_path) }}"><span>{{ L.home.about_more }}</span> <i>{{ L.arrow }}</i></a></div>
     </div>
   </div>
+</section>
+
+<section class="sec px refs" id="referanslar" style="padding-top:0">
+  <div class="head">
+    <p class="eyebrow">{{ L.refs.eyebrow }}</p>
+    <div class="head-main">
+      <h2>{{ L.refs.h[0] }} <span>{{ L.refs.h[1] }}</span></h2>
+      <p class="intro-p">{{ L.refs.lead }}</p>
+    </div>
+  </div>
+  {{ refs_block() }}
+  <p class="more"><a class="lnk" href="{{ link(refs_path) }}">{{ L.refs.more }} {{ L.arrow }}</a></p>
 </section>
 
 <section class="sec px rfq" id="teklif">

@@ -5,7 +5,7 @@ label: ES
 name: Español
 locale: es-ES
 og_locale: es_ES
-slugs: { products: productos, about: empresa }
+slugs: { products: productos, about: empresa, references: referencias }
 arrow: "→"
 
 nav:
@@ -270,6 +270,45 @@ gallery:
   palet: "Stock de palets"
   sevkiyat: "Caja, caja para mármol y bobina de cartón"
 gallery_note: "Imágenes ilustrativas."
+
+refs:
+  nav: "Referencias"
+  eyebrow: "Referencias"
+  h: ["De la línea de cable a la cantera de mármol,", "los sectores que envían con nosotros."]
+  lead: "Desde fabricantes de cable de energía y telecomunicaciones hasta empresas de mármol y exportadores de maquinaria, fabricamos el embalaje de envío de muchos sectores."
+  logos_h: "Empresas con las que trabajamos"
+  sectors_h: "Sectores a los que servimos"
+  uses: "Productos utilizados"
+  more: "Todas las referencias"
+  title: "Referencias · Standart Entegre"
+  desc: "Referencias de Standart Entegre: bobinas, palets, cajas y cajas para mármol para fabricantes de cable, productores de cable de acero, empresas de mármol y exportadores de maquinaria."
+  page_h: "Referencias"
+  cta_h: "Fabriquemos también para su sector."
+  sectors:
+    - key: enerji
+      name: "Fabricantes de cable de energía"
+      desc: "Bobinas de madera de gran diámetro para cable de media y alta tensión."
+      products: [makara]
+    - key: telekom
+      name: "Fabricantes de cable de telecomunicaciones y fibra"
+      desc: "Bobinas de madera y de cartón para cable de comunicación, datos y fibra."
+      products: [makara, karton]
+    - key: halat
+      name: "Productores de cable y alambre de acero"
+      desc: "Bobinas reforzadas para enrollados pesados; bobinas de cartón para alambre ligero."
+      products: [makara, karton]
+    - key: mermer
+      name: "Empresas de mármol y piedra natural"
+      desc: "Cajas para mármol y cajas para el envío de tablas y bloques."
+      products: [mermer, sandik]
+    - key: makine
+      name: "Exportadores de maquinaria y equipos"
+      desc: "Cajas de exportación y palets a medida para cargas pesadas."
+      products: [sandik, palet]
+    - key: lojistik
+      name: "Logística y almacenaje"
+      desc: "Palets EUR y a medida para almacenaje y logística interna."
+      products: [palet]
 
 rfq:
   eyebrow: "Pedir presupuesto"

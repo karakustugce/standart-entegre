@@ -50,3 +50,24 @@
 {% macro facts_list(items) -%}
 <div class="facts">{% for f in items %}<div class="fact"><strong>{{ f[0] }}</strong><span>{{ f[1] }}</span></div>{% endfor %}</div>
 {%- endmacro %}
+
+{% macro refs_block() -%}
+{% if S.references %}
+<div class="logos-wrap">
+  <h3 class="sub-h">{{ L.refs.logos_h }}</h3>
+  <ul class="logos">{% for r in S.references %}<li title="{{ r.name }}">{% if r.logo %}<img src="{{ root }}{{ r.logo }}" alt="{{ r.name }}" loading="lazy">{% else %}<span>{{ r.name }}</span>{% endif %}</li>{% endfor %}</ul>
+</div>
+{% endif %}
+<div class="sectors-wrap">
+  <h3 class="sub-h">{{ L.refs.sectors_h }}</h3>
+  <ul class="sectors">
+    {% for sct in L.refs.sectors %}<li class="sector" id="sektor-{{ sct.key }}">
+      <h4>{{ sct.name }}</h4>
+      <p>{{ sct.desc }}</p>
+      <div class="sector-uses"><span>{{ L.refs.uses }}</span>{% for k in sct.products %}{% set pp = products|selectattr('key','equalto',k)|first %}<a href="{{ link(pp.path) }}">{{ pp.t.name }}</a>{% endfor %}</div>
+      {% set firms = S.references|selectattr('sector','equalto',sct.key)|list if S.references else [] %}
+      {% if firms %}<p class="sector-firms">{{ firms|map(attribute='name')|join(' · ') }}</p>{% endif %}
+    </li>{% endfor %}
+  </ul>
+</div>
+{%- endmacro %}
