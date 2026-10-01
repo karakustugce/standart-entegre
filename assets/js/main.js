@@ -1,13 +1,15 @@
 /* Standart Entegre — interface script (no dependencies) */
 (function () {
   "use strict";
-  // GitHub Pages has no backend. Paste a Formspree / Web3Forms / n8n webhook URL here.
-  var FORM_ENDPOINT = "";
+  // Texts come from the page (content/<lang>.yml → js); the form endpoint from content/site.yml.
+  var T = {};
+  try { T = JSON.parse(document.getElementById("i18n").textContent); } catch (e) {}
+  var LOC = T.locale || "tr-TR";
+  if (LOC.indexOf("ar") === 0) LOC = "ar-u-nu-latn";
 
   var $ = function (id) { return document.getElementById(id); };
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var ids = { makara: "ug-makara", palet: "ug-palet", sandik: "ug-sandik", diger: "ug-diger" };
-  function pick(key) { var el = $(ids[key]); if (el) el.checked = true; }
+  function pick(key) { var el = $("ug-" + key); if (el) el.checked = true; }
   function go(id) { var el = $(id); if (el) el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }); }
 
   /* header: transparent over the dark hero, solid elsewhere */
@@ -27,11 +29,11 @@
     burger.addEventListener("click", function () {
       var open = nav.classList.toggle("open");
       burger.setAttribute("aria-expanded", String(open));
-      burger.textContent = open ? "Kapat" : "Menü";
+      burger.textContent = open ? burger.dataset.close : burger.dataset.open;
       if (open) hdr.classList.add("is-solid"); else hdrState();
     });
     nav.addEventListener("click", function (e) {
-      if (e.target.closest("a")) { nav.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); burger.textContent = "Menü"; hdrState(); }
+      if (e.target.closest("a")) { nav.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); burger.textContent = burger.dataset.open; hdrState(); }
     });
   }
 
@@ -61,13 +63,13 @@
     var person = el("g", { transform: "translate(" + px + "," + GY + ") scale(" + k + ")" });
     el("circle", { cx: 0, cy: -1640, r: 108, class: "sv-person" }, person);
     el("path", { class: "sv-person", d: "M-62,-1512 L-196,-1452 C-222,-1440 -232,-1410 -234,-1380 L-246,-980 L-190,-980 L-170,-1300 L-160,-900 L-128,0 L-36,0 L0,-800 L36,0 L128,0 L160,-900 L170,-1300 L190,-980 L246,-980 L234,-1380 C232,-1410 222,-1440 196,-1452 L62,-1512 Z" }, person);
-    el("text", { x: px, y: GY - ph - 26, "text-anchor": "middle", class: "sv-txt" }).textContent = "1,75 m";
+    el("text", { x: px, y: GY - ph - 26, "text-anchor": "middle", class: "sv-txt" }).textContent = T.person || "1,75 m";
     // container doors
     var dx = 150, dw = 2340 * S, dh = 2280 * S, hch = 2580 * S;
     el("rect", { x: dx, y: GY - hch, width: dw, height: hch, class: "sv-door hc" });
     el("rect", { x: dx, y: GY - dh, width: dw, height: dh, class: "sv-door" });
-    el("text", { x: dx + 10, y: GY - hch - 10, class: "sv-txt" }).textContent = "High-cube konteyner kapısı ≈ 2,58 m";
-    el("text", { x: dx + 10, y: GY - dh + 20, class: "sv-txt" }).textContent = "Standart kapı ≈ 2,28 m";
+    el("text", { x: dx + 10, y: GY - hch - 10, class: "sv-txt" }).textContent = T.door_hc || "";
+    el("text", { x: dx + 10, y: GY - dh + 20, class: "sv-txt" }).textContent = T.door_std || "";
 
     // reel face, unit radius 100
     var reel = el("g", { class: "reelg" });
@@ -87,10 +89,11 @@
     var dtx = el("text", { class: "sv-txt strong", "text-anchor": "start" }, dim);
 
     var out = $("dOut"), note = $("dNote");
-    function fmt(n) { return n.toLocaleString("tr-TR"); }
+    function fmt(n) { try { return n.toLocaleString(LOC); } catch (e) { return String(n); } }
     function update() {
       var D = +range.value, R = D * S / 2;
-      range.style.setProperty("--fill", ((D - 500) / 2700 * 100) + "%");
+      var mn = +range.min, mx = +range.max;
+      range.style.setProperty("--fill", ((D - mn) / (mx - mn) * 100) + "%");
       reel.style.transform = "translate(" + CX + "px," + (GY - R) + "px) scale(" + (R / 100) + ")";
       var x = CX + R + 20;
       dl.setAttribute("x1", x); dl.setAttribute("x2", x); dl.setAttribute("y1", GY - 2 * R); dl.setAttribute("y2", GY);
@@ -101,9 +104,9 @@
       if (x + 10 > 846) dtx.setAttribute("x", x - 8);
       dtx.textContent = "Ø " + fmt(D);
       out.innerHTML = fmt(D) + "<small>mm</small>";
-      if (D <= 2200) note.innerHTML = "<b>Standart konteynere uygun.</b> Kapı yüksekliği yaklaşık 2,28 m olan konteynerlere yüklenebilir.";
-      else if (D <= 2500) note.innerHTML = "<b>High-cube konteyner gerekebilir.</b> Standart kapı yüksekliğini aşar; ≈ 2,58 m kapılı konteynerler değerlendirilebilir.";
-      else note.innerHTML = "<b>Açık üst veya flat-rack sevkiyat.</b> Bu çaptaki makaralar genellikle kapalı konteyner kapısından geçmez.";
+      if (D <= 2200) note.innerHTML = T.note_std || "";
+      else if (D <= 2500) note.innerHTML = T.note_hc || "";
+      else note.innerHTML = T.note_open || "";
     }
     range.addEventListener("input", update); update();
 
@@ -119,20 +122,40 @@
   /* ---------- RFQ form ---------- */
   var form = $("rfqForm"), status = $("formStatus");
   var file = $("f-dosya"), fileName = $("fileName");
-  if (file && fileName) file.addEventListener("change", function () { fileName.textContent = file.files[0] ? file.files[0].name : "PDF, DWG, DXF veya görsel · isteğe bağlı"; });
+  if (file && fileName) file.addEventListener("change", function () { fileName.textContent = file.files[0] ? file.files[0].name : (T.file_hint || ""); });
   function say(msg, err) { status.hidden = false; status.textContent = msg; status.classList.toggle("err", !!err); }
   if (form) form.addEventListener("submit", function (e) {
     e.preventDefault();
     var missing = [].filter.call(form.querySelectorAll("[required]"), function (i) { return !i.value.trim(); });
-    if (missing.length) { say("Ad soyad, firma, telefon ve e-posta alanlarını doldurun.", true); missing[0].focus(); return; }
+    if (missing.length) { say(T.err_required, true); missing[0].focus(); return; }
     var mail = $("f-mail");
-    if (!/^\S+@\S+\.\S+$/.test(mail.value)) { say("E-posta adresini kontrol edin; örnek: ad@firma.com", true); mail.focus(); return; }
-    if (!FORM_ENDPOINT) { say("Önizleme: form henüz bir alıcıya bağlı değil.", false); return; }
+    if (!/^\S+@\S+\.\S+$/.test(mail.value)) { say(T.err_email, true); mail.focus(); return; }
+    var FORM_ENDPOINT = form.dataset.endpoint || "";
+    if (!FORM_ENDPOINT) { say(T.preview, false); return; }
     var btn = form.querySelector("button[type=submit]"); btn.disabled = true;
     fetch(FORM_ENDPOINT, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
-      .then(function (r) { if (!r.ok) throw 0; form.reset(); pick("makara"); say("Talebiniz iletildi. Ekibimiz en kısa sürede dönüş yapacak.", false); })
-      .catch(function () { say("Talep gönderilemedi. Bağlantınızı kontrol edip tekrar deneyin.", true); })
+      .then(function (r) { if (!r.ok) throw 0; form.reset(); pick("makara"); say(T.sent, false); })
+      .catch(function () { say(T.failed, true); })
       .finally(function () { btn.disabled = false; });
+  });
+
+  /* ---------- flowing image show (Kurumsal) ---------- */
+  [].forEach.call(document.querySelectorAll("[data-show]"), function (show) {
+    var items = show.querySelectorAll(".show-item"), dots = show.querySelectorAll(".show-dots button");
+    var cap = show.querySelector("[data-show-cap]"), i = 0, timer = null;
+    if (items.length < 2) return;
+    function set(n) {
+      items[i].classList.remove("is-on"); if (dots[i]) dots[i].removeAttribute("aria-current");
+      i = (n + items.length) % items.length;
+      items[i].classList.add("is-on"); if (dots[i]) dots[i].setAttribute("aria-current", "true");
+      if (cap) cap.textContent = items[i].querySelector("img").alt;
+    }
+    function start() { stop(); timer = setInterval(function () { set(i + 1); }, reduce ? 9000 : 5200); }
+    function stop() { if (timer) clearInterval(timer); timer = null; }
+    [].forEach.call(dots, function (d, n) { d.addEventListener("click", function () { set(n); start(); }); });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (en) { en[0].isIntersecting ? start() : stop(); }).observe(show);
+    } else start();
   });
 
   var yr = $("yr"); if (yr) yr.textContent = new Date().getFullYear();

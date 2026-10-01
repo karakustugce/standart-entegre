@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% from "_macros.html" import show with context %}
+{% block main %}
+<section class="ab-hero" data-hero>
+  {{ show('show-bg') }}
+  <div class="ab-hero-copy px">
+    <nav class="crumb" aria-label="breadcrumb"><a href="{{ link(home_path) }}">{{ L.nav.home }}</a><span>/</span><span>{{ L.nav.about }}</span></nav>
+    <h1>{{ L.about.h1 }}</h1>
+    <p>{{ L.about.lead }}</p>
+  </div>
+</section>
+
+<section class="sec px">
+  <div class="pp-body">
+    <p class="eyebrow">{{ L.about.story_eyebrow }}</p>
+    <div class="story story-lg">{% for s in L.about.story %}<p>{{ s }}</p>{% endfor %}</div>
+  </div>
+</section>
+
+<section class="sec px" style="padding-top:0">
+  <div class="pp-body">
+    <p class="eyebrow">{{ L.about.facility_eyebrow }}</p>
+    <div>
+      <div class="facts facts-wide">
+        {% for f in L.about.facts_fixed %}<div class="fact"><strong>{{ f[0] }}</strong><span>{{ f[1] }}</span></div>{% endfor %}
+        {% for k, label in L.about.facts_labels.items() %}{% if S.company[k] %}<div class="fact"><strong>{{ S.company[k] }}</strong><span>{{ label }}</span></div>{% endif %}{% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec px" style="padding-top:0">
+  <div class="pp-body">
+    <p class="eyebrow">{{ L.about.process_eyebrow }}</p>
+    <ol class="flow">{% for s in L.about.process %}<li><b>{{ s[0] }}</b><span>{{ s[1] }}</span></li>{% endfor %}</ol>
+  </div>
+</section>
+
+{% if S.company.certificates %}
+<section class="sec px" style="padding-top:0">
+  <div class="pp-body">
+    <p class="eyebrow">{{ L.about.certs_eyebrow }}</p>
+    <ul class="certs">{% for c in S.company.certificates %}<li>{% if c.image %}<img src="{{ root }}{{ c.image }}" alt="{{ c.name }}" loading="lazy">{% endif %}<span>{{ c.name }}</span></li>{% endfor %}</ul>
+  </div>
+</section>
+{% endif %}
+
+<section class="sec px rfq" style="padding-block:clamp(72px,9vw,140px)">
+  <div class="rfq-grid">
+    <div class="rfq-intro"><h2>{{ L.about.cta_h }}</h2></div>
+    <div class="rfq-intro" style="align-content:end">
+      <p>{{ L.rfq.short_p }}</p>
+      <div><a class="btn btn-solid" href="{{ link(home_path) }}#teklif"><span>{{ L.rfq.short_cta }}</span> <i>{{ L.arrow }}</i></a></div>
+    </div>
+  </div>
+</section>
+{% endblock %}

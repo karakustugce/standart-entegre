@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% from "_macros.html" import card, show, rfq_form with context %}
+{% block head %}
+<link rel="preload" as="image" href="{{ root }}assets/img/render-makara.webp">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+{% endblock %}
+{% block main %}
+<section class="hero" data-hero>
+  <div class="stage" data-stage>
+    <img class="poster" src="{{ root }}assets/img/render-makara.webp" alt="" aria-hidden="true" width="1600" height="1200">
+    <canvas aria-label="{{ L.hero.canvas_label }}"></canvas>
+    <div class="kicker"><span><b>{{ L.hero.kicker }}</b></span><span>{{ L.hero.place }}</span></div>
+    <div class="intro">
+      <h1>{{ L.hero.h1 }}<span>.</span></h1>
+      <div class="intro-side">
+        <p>{{ L.hero.lead }}</p>
+        <div class="intro-actions">
+          <a class="btn btn-solid" href="{{ link(products_path) }}"><span>{{ L.hero.cta_products }}</span></a>
+          <a class="btn btn-ghost" href="#teklif"><span>{{ L.hero.cta_quote }}</span> <i>{{ L.arrow }}</i></a>
+        </div>
+      </div>
+    </div>
+    {% set co = L.hero.callouts %}
+    <div class="callout" data-anchor="flange"><i class="dot">1</i><div class="tag"><b>{{ co.flange[0] }}</b><span class="num">{{ co.flange[1] }}</span></div></div>
+    <div class="callout" data-anchor="drum" data-side="u"><i class="dot">2</i><div class="tag"><b>{{ co.drum[0] }}</b><span>{{ co.drum[1] }}</span></div></div>
+    <div class="callout" data-anchor="rod" data-side="d"><i class="dot">3</i><div class="tag"><b>{{ co.rod[0] }}</b><span>{{ co.rod[1] }}</span></div></div>
+    <div class="callout" data-anchor="hole"><i class="dot">4</i><div class="tag"><b>{{ co.hole[0] }}</b><span>{{ co.hole[1] }}</span></div></div>
+    <div class="parts-copy">
+      <h2>{{ L.hero.parts_h }}</h2>
+      <p>{{ L.hero.parts_p }}</p>
+      <ol class="legend"><li><i>1</i>{{ co.flange[0] }} · {{ co.flange[1] }}</li><li><i>2</i>{{ co.drum[0] }}</li><li><i>3</i>{{ co.rod[0] }}</li><li><i>4</i>{{ co.hole[0] }}</li></ol>
+    </div>
+    <div class="scrollhint" aria-hidden="true"><span>{{ L.hero.scroll }}</span><span class="bar"></span></div>
+  </div>
+</section>
+
+<section class="sec px" id="urunler">
+  <div class="head">
+    <p class="eyebrow">{{ L.home.products_eyebrow }}</p>
+    <div class="head-main">
+      <h2>{{ L.home.products_h[0] }} <span>{{ L.home.products_h[1] }}</span></h2>
+      <p class="intro-p">{{ L.home.products_intro }}</p>
+    </div>
+  </div>
+  <div class="pgrid pgrid-5">
+    {% for p in products %}{{ card(p, 'main' if loop.first else '') }}{% endfor %}
+  </div>
+  <p class="more"><a class="lnk" href="{{ link(products_path) }}">{{ L.home.all_products }} {{ L.arrow }}</a></p>
+</section>
+
+<section class="sec px scale" id="olcu" style="padding-top:0">
+  <div class="head">
+    <p class="eyebrow">{{ L.home.tool_eyebrow }}</p>
+    <h2>{{ L.home.tool_h[0] }} <span>{{ L.home.tool_h[1] }}</span></h2>
+  </div>
+  <div class="tool">
+    <div class="tool-ctrl">
+      <div class="readout">
+        <span class="lbl">{{ L.tool.label }}</span>
+        <output class="val" id="dOut" for="dRange">1600<small>mm</small></output>
+        <input class="range" id="dRange" type="range" min="{{ S.reel_min_mm }}" max="{{ S.reel_max_mm }}" step="50" value="1600" aria-label="{{ L.tool.aria }}" dir="ltr">
+        <div class="range-scale num" dir="ltr"><span>{{ S.reel_min_mm }}</span><span>{{ S.reel_max_mm }}</span></div>
+      </div>
+      <fieldset class="chips" id="cable">
+        <legend>{{ L.tool.cable_legend }}</legend>
+        {% for c in L.tool.cables %}<label><input type="radio" name="kablo" id="k-{{ loop.index }}" value="{{ L.tool.cable_values[loop.index0] }}"{% if loop.first %} checked{% endif %}><span>{{ c }}</span></label>{% endfor %}
+      </fieldset>
+      <p class="note" id="dNote"></p>
+      <div><a class="btn btn-ink" href="#teklif" id="dQuote"><span>{{ L.tool.cta }}</span> <i>{{ L.arrow }}</i></a></div>
+    </div>
+    <div class="tool-view" dir="ltr">
+      <svg id="scaleSvg" viewBox="0 0 900 470" role="img" aria-labelledby="svgT"><title id="svgT">{{ L.tool.svg_title }}</title></svg>
+      <p class="fine" dir="{{ L.dir }}">{{ L.tool.fine }}</p>
+    </div>
+  </div>
+  <div class="uses" style="margin-top:clamp(56px,8vw,120px)">
+    {% for u in L.home.uses %}<div><b>{{ u[0] }}</b><span>{{ u[1] }}</span></div>{% endfor %}
+  </div>
+</section>
+
+<section class="sec px about-teaser" id="kurumsal">
+  <div class="at-grid">
+    {{ show('show-tall') }}
+    <div class="at-copy">
+      <p class="eyebrow" style="padding:0">{{ L.home.about_eyebrow }}</p>
+      <h2>{{ L.home.about_h }}</h2>
+      <div class="story">{% for s in L.about.story[:2] %}<p>{{ s }}</p>{% endfor %}</div>
+      <div class="facts facts-3">{% for f in L.about.facts_fixed %}<div class="fact"><strong>{{ f[0] }}</strong><span>{{ f[1] }}</span></div>{% endfor %}</div>
+      <div><a class="btn btn-ink" href="{{ link(about_path) }}"><span>{{ L.home.about_more }}</span> <i>{{ L.arrow }}</i></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec px rfq" id="teklif">
+  <div class="rfq-grid">
+    <div class="rfq-intro">
+      <p class="eyebrow" style="padding:0">{{ L.rfq.eyebrow }}</p>
+      <h2>{{ L.rfq.h }}</h2>
+      <p>{{ L.rfq.p }}</p>
+      <div class="contact" id="iletisim">
+        <b>{{ S.brand }}</b>
+        <span>{{ L.rfq.facility }}: {{ S.company.city }}</span>
+        {% if S.company.phone %}<span dir="ltr">{{ S.company.phone }}</span>{% endif %}
+        {% if S.company.email %}<span>{{ S.company.email }}</span>{% endif %}
+      </div>
+    </div>
+    {{ rfq_form() }}
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}<script type="module" src="{{ root }}assets/js/hero.js"></script>{% endblock %}

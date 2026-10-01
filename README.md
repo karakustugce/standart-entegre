@@ -1,34 +1,62 @@
-# Standart Entegre — web sitesi
+# Standart Entegre · web sitesi
 
-Ahşap palet, kablo sevk makarası ve taşıma & ihracat sandığı üreticisi Standart Entegre için statik B2B sitesi.
-Tasarım & geliştirme: TCM Global.
+Kablo sevk makarası, karton makara, ahşap palet, ihracat sandığı ve mermer kasası üreticisi Standart Entegre için 5 dilli statik B2B site (TR, EN, FR, AR, ES).
+Tasarım ve geliştirme: TCM Global.
+
+## Metinleri nereden düzenlerim?
+
+Kod bilmeden, GitHub üzerinden dosyayı açıp kalem simgesiyle düzenleyebilirsiniz. `main`'e kaydettiğiniz her değişiklik 1–2 dakika içinde yayına girer.
+
+| Ne değişecek | Dosya |
+|---|---|
+| Türkçe metinler | `content/tr.yml` |
+| İngilizce / Fransızca / Arapça / İspanyolca | `content/en.yml`, `fr.yml`, `ar.yml`, `es.yml` |
+| Şirket bilgileri (kuruluş yılı, m², kapasite, telefon, e-posta, adres, sertifikalar) | `content/site.yml` → `company` |
+| Kurumsal bölümündeki akan görseller | `content/site.yml` → `gallery` |
+| Makara ölçü aralığı (550–3200 mm) | `content/site.yml` → `reel_min_mm`, `reel_max_mm` |
+| Teklif formunun gideceği adres | `content/site.yml` → `form_endpoint` |
+| Domain | `content/site.yml` → `base_url` |
+
+`company` altındaki bir alan boşsa sitede görünmez. Doldurduğunuz anda Kurumsal sayfasında belirir.
+
+### Kurumsal görsellerini gerçek fotoğraflarla değiştirmek
+
+1. Fotoğrafları `assets/img/kurumsal/` klasörüne yükleyin (önerilen 1800 × 1200 px, JPG).
+2. `content/site.yml` → `gallery` listesinde `src` satırlarını yeni dosya adlarıyla değiştirin.
+3. Açıklamaları her dil dosyasındaki `gallery:` bölümünden güncelleyin; temsili görsel notunu kaldırmak için `gallery_note: ""` yazın.
+
+### Yeni dil eklemek
+
+`content/en.yml` dosyasını kopyalayıp (örn. `de.yml`) çevirin, `content/site.yml` → `languages` listesine `de` ekleyin.
 
 ## Yapı
 
 ```
-index.html                           Ana sayfa: 3D hero → ürünler → makara ölçü aracı → kurumsal → teklif
-urunler/*.html                       Ürün sayfaları (makara, palet, sandık)
-assets/css/site.css                  Tüm stiller; renk ve yazı tokenları dosyanın başında
-assets/js/models.js                  Makara, palet ve sandığın prosedürel 3D modelleri (three.js)
-assets/js/hero.js                    Scroll ile parçalarına ayrılan makara (hero)
-assets/js/main.js                    Menü, ölçü aracı, teklif formu
-assets/img/render-*.webp             models.js ile üretilmiş stüdyo render'ları
-.github/workflows/pages.yml          main'e her push'ta GitHub Pages'e deploy
+content/            Metinler (dil başına bir dosya) ve site ayarları
+src/templates/      Sayfa şablonları (Jinja2)
+assets/css, js      Stil, 3D makara (three.js), ölçü aracı, form
+assets/img          Ürün render'ları, Kurumsal görselleri
+build.py            content + şablon → _site/ (40 sayfa, sitemap.xml, robots.txt)
+docs/               Referans analizi
+.github/workflows   main'e her push'ta build + GitHub Pages yayını
 ```
 
-Build adımı yok. three.js jsDelivr'dan importmap ile yüklenir; WebGL yoksa hero statik render'a düşer.
+## Bilgisayarda önizleme
 
-## Yayına alma
+```bash
+pip install jinja2 pyyaml
+python3 build.py
+cd _site && python3 -m http.server 8000   # http://localhost:8000
+```
 
-1. Repo → Settings → Pages → Source: **GitHub Actions**.
-2. `main`'e push → site `https://<kullanici>.github.io/<repo>/` adresinde yayında.
-3. Domain alındığında: kök dizine `CNAME` dosyası (tek satır, örn. `www.standartentegre.com`) + DNS'te `CNAME www → <kullanici>.github.io`.
+## SEO
 
-## Teklif formu
+- Her sayfada dil başına `hreflang`, `canonical`, Open Graph ve JSON-LD (Organization, Product, BreadcrumbList, FAQPage).
+- `sitemap.xml` ve `robots.txt` otomatik üretilir. Domain alınınca `base_url`'i değiştirip Google Search Console'a sitemap'i ekleyin.
+- Hedef kelimeler: Kablo Sevk Makaraları, Ahşap Makara, Ağaç Makara, Standart Makara, Karton Makaralar, Mermer Kasası. Ayrıntı: `docs/referans-analizi.md`.
 
-GitHub Pages'te sunucu yok. `assets/js/site.js` içindeki `FORM_ENDPOINT` değerine Formspree / Web3Forms ya da bir n8n webhook URL'si yazılınca form çalışır. Boşken önizleme mesajı gösterir.
+## Domain bağlama
 
-## İçerik kuralı
-
-Sitede yalnızca doğrulanmış bilgi var: Ø 500–3200 mm makara aralığı, kullanım alanları, Gebze tesisi, hammadde tedariki.
-Kapasite, tesis alanı, sertifikalar (ISPM-15, ISO) ve iletişim bilgileri Standart Entegre'den teyit gelince eklenecek.
+1. `content/site.yml` → `base_url` değerini yeni adresle değiştirin (örn. `https://www.standartentegre.com/`).
+2. Repo → Settings → Pages → Custom domain alanına adresi yazın.
+3. DNS'te `CNAME www → karakustugce.github.io` kaydını açın.

@@ -1,0 +1,331 @@
+# English content · Standart Entegre
+lang: en
+dir: ltr
+label: EN
+name: English
+locale: en-GB
+og_locale: en_GB
+slugs: { products: products, about: about }
+arrow: "→"
+
+nav:
+  products: Products
+  about: About
+  tool: Reel size
+  contact: Contact
+  quote: Request a quote
+  menu: Menu
+  close: Close
+  home: Home
+  language: Language
+
+meta:
+  home_title: "Standart Entegre · Wooden Cable Reels, Cardboard Reels, Pallets and Marble Crates"
+  home_desc: "Manufacturer of wooden cable reels, cardboard reels, wooden pallets, export crates and marble crates in Turkey. Reel flange diameters from 55 cm to 3.20 m."
+  products_title: "Products · Cable Reels, Cardboard Reels, Pallets, Crates, Marble Crates"
+  products_desc: "Standart Entegre products: wooden cable reels (55 cm – 3.20 m), cardboard reels, wooden pallets, transport and export crates, marble crates."
+  about_title: "About · Standart Entegre"
+  about_desc: "Standart Entegre: integrated wooden packaging production from log to shipment. Cable reels, pallets, crates and marble crates made in Gebze, Turkey."
+
+hero:
+  kicker: "Wooden reels · Cardboard reels · Pallets · Crates · Marble crates"
+  place: "Gebze, Turkey"
+  h1: "Wooden solutions for industrial shipping"
+  lead: "From cable reels and cardboard reels to pallets, export crates and marble crates. Standard sizes or made to fit your load."
+  cta_products: "Explore products"
+  cta_quote: "Request a quote"
+  scroll: "Take the reel apart"
+  parts_h: "Every reel is sized to your cable."
+  parts_p: "Flange diameter, drum diameter and traverse width are set by the cable’s cross-section, length and the way it ships."
+  callouts:
+    flange: ["Flange", "Ø 55 cm – 3.20 m"]
+    drum: ["Drum", "The barrel the cable winds on"]
+    rod: ["Tie rods", "Hold the flanges to the drum"]
+    hole: ["Arbor hole", "For winding and pay-off equipment"]
+  canvas_label: "Three-dimensional model of a wooden cable reel"
+
+home:
+  products_eyebrow: "Products"
+  products_h: ["From reels to marble crates,", "one production chain."]
+  products_intro: "We make wooden cable reels and cardboard reels for cable manufacturers, and wooden pallets, transport crates and marble crates for industrial and export shipping. Our wooden reels range from 55 cm to 3.20 m in flange diameter."
+  all_products: "All products"
+  tool_eyebrow: "Reel size"
+  tool_h: ["See the size,", "plan the shipment."]
+  uses:
+    - ["Power", "Medium and high voltage cables"]
+    - ["Telecom", "Communication and data cables"]
+    - ["Fibre optic", "Cables that need careful winding"]
+    - ["Marble and stone", "Slab and block shipments"]
+  about_eyebrow: "About"
+  about_h: "From log to shipment, under one roof."
+  about_more: "About the company"
+
+categories:
+  makaralar:
+    name: "Reels"
+    desc: "Wooden and cardboard reels for cable, wire and rope."
+  ambalaj:
+    name: "Wooden packaging"
+    desc: "Pallets, crates and marble crates for storage, logistics and export."
+
+products:
+  makara:
+    slug: wooden-cable-reels
+    name: "Wooden Cable Reels"
+    card: "Cable shipping reels. Ø 55 cm – 3.20 m. For power, telecom, fibre optic cable and steel rope."
+    tag: "Main product line · Ø 55 cm – 3.20 m"
+    title: "Wooden Cable Reels · Cable Drums 55 cm – 3.20 m | Standart Entegre"
+    desc: "Wooden cable reels with flange diameters from 55 cm to 3.20 m. Standard and custom wooden cable drums for power, telecom, fibre optic cable and steel wire rope."
+    h1: "Wooden cable reels"
+    lead: "Wooden reels with flange diameters from 55 cm up to 3.20 m, for winding, storing and shipping power, telecom and fibre optic cables and steel rope."
+    image_alt: "Parts of a wooden cable reel: two flanges, the drum and tie rods"
+    card_alt: "Wooden cable reel"
+    facts:
+      - ["Ø 55 cm – 3.20 m", "Flange diameter range"]
+      - ["4", "Cable types: power, telecom, fibre optic, steel rope"]
+      - ["Standard and custom", "Series sizes and project-specific builds"]
+    spec:
+      - ["Flange diameter", "55 cm – 3.20 m (550 – 3200 mm)"]
+      - ["Use", "Power, telecom and fibre optic cables; steel rope and wire"]
+      - ["Sizes", "Standard reel sizes or custom-sized to the cable"]
+      - ["Sizing inputs", "Cable cross-section, total length, bending radius and shipping method"]
+      - ["Production", "Gebze plant"]
+    sections:
+      - id: enerji
+        h: "Reels for power cable"
+        p: "Medium and high voltage power cables are heavy and thick. For these we build high-capacity wooden reels with flange diameters up to 3.20 m."
+      - id: telekom
+        h: "Reels for telecom cable"
+        p: "Mid-size wooden reels for communication and data cable. Options start at 55 cm flange diameter and are sized to the cable length."
+      - id: fiber
+        h: "Reels for fibre optic cable"
+        p: "Fibre optic cable is sensitive to bending. The drum diameter is set by the cable’s minimum bending radius, with an even winding surface."
+      - id: celik-halat
+        h: "Reels for steel rope and wire"
+        p: "Wooden reels with reinforced flanges and drum for dense, heavy windings."
+      - id: standart-makara
+        h: "Standard reels and custom sizes"
+        p: "Standard reel series in common sizes keep lead times short on repeat orders. When your cable does not fit a standard size, flange, drum and traverse are set for the project."
+      - id: agac-makara
+        h: "Wooden reel, cable drum, cable spool"
+        p: "The industry uses several names for the same product: a wooden reel, cable drum or cable spool, made of timber flanges and a drum joined by tie rods."
+    faq:
+      - ["What reel sizes do you produce?", "We produce wooden cable reels with flange diameters from 55 cm up to 3.20 m."]
+      - ["What do you need for a quote?", "Cable type, cable outer diameter, total length, the flange diameter if known, and quantity. Attach a technical drawing if you have one."]
+      - ["Do large reels fit in a container?", "A standard container door is about 2.28 m high, a high-cube door about 2.58 m. Larger reels may need open-top or flat-rack shipping."]
+    tool_link: "Open the reel size tool"
+
+  karton:
+    slug: cardboard-reels
+    name: "Cardboard Reels"
+    card: "Cardboard reels for light cable, wire and hose."
+    tag: "For light windings"
+    title: "Cardboard Reels · Cardboard Spools | Standart Entegre"
+    desc: "Cardboard reels with a paper tube barrel for light cable, wire, hose and strip. A light, economical alternative to wooden cable reels."
+    h1: "Cardboard reels"
+    lead: "Reels with a cardboard barrel for winding light cable, wire, hose and strip. Lighter than a wooden reel and economical for one-way shipments."
+    image_alt: "Two cardboard reels with paper tube barrels and pressed board flanges"
+    card_alt: "Cardboard reel"
+    facts:
+      - ["Light", "Low packaging weight"]
+      - ["Economical", "For one-way shipments"]
+      - ["Made to size", "Barrel and flange set by the product"]
+    spec:
+      - ["Barrel", "Cardboard tube"]
+      - ["Use", "Light cable, wire, hose, strip and similar products"]
+      - ["Sizing inputs", "Diameter, length and weight of the wound product"]
+      - ["Production", "Gebze plant"]
+    sections:
+      - id: kullanim
+        h: "Where are cardboard reels used?"
+        p: "For light, long products: thin cable, wire, hose and strip. Heavy power cable ships on wooden cable reels."
+      - id: ahsap-karsilastirma
+        h: "Cardboard or wooden reel?"
+        p: "Cardboard reels are light and economical; wooden reels are for heavy loads, large diameters and reuse. We help you choose the right one for your product."
+    faq: []
+
+  palet:
+    slug: wooden-pallets
+    name: "Wooden Pallets"
+    card: "EUR pallets and custom-sized pallets for storage, logistics and export."
+    tag: "EUR and custom sizes"
+    title: "Wooden Pallets · EUR and Custom Pallets | Standart Entegre"
+    desc: "Wooden pallet production: 1200 × 800 mm EUR pallets and custom-sized wooden pallets for storage, in-plant logistics and export."
+    h1: "Wooden pallets"
+    lead: "Wooden pallets in EUR size and in custom sizes for your load. For storage, in-plant logistics and export shipping."
+    image_alt: "Wooden EUR pallet"
+    card_alt: "Wooden EUR pallet"
+    facts:
+      - ["1200 × 800 mm", "EUR pallet size"]
+      - ["Custom sizes", "To the load’s footprint and weight"]
+      - ["Forklift", "Four-way entry"]
+    spec:
+      - ["Types", "EUR pallet, custom-sized pallet"]
+      - ["EUR size", "1200 × 800 × 144 mm"]
+      - ["Use", "Storage, in-plant logistics, export"]
+      - ["Production", "Gebze plant"]
+    sections:
+      - id: ozel-olcu
+        h: "Custom-sized pallets"
+        p: "Alongside the standard EUR size, we build pallets to the load’s weight, footprint and forklift entry direction."
+    faq: []
+
+  sandik:
+    slug: export-crates
+    name: "Transport and Export Crates"
+    card: "Made-to-size wooden crates for machinery, equipment and export loads."
+    tag: "Made to size"
+    title: "Wooden Export Crates · Transport Crates | Standart Entegre"
+    desc: "Wooden transport and export crates for machinery, equipment and export cargo: skid-based, framed and built to the size of the load."
+    h1: "Transport and export crates"
+    lead: "Wooden crates built to size for machinery, equipment and export loads. They protect the load and make stacking and forklift handling easier."
+    image_alt: "Closed wooden crate on skids with frame and diagonal braces"
+    card_alt: "Wooden export crate"
+    facts:
+      - ["Made to size", "To the load’s dimensions and weight"]
+      - ["Skid base", "Forklift handling"]
+      - ["Closed / slatted", "Crate type to suit the load"]
+    spec:
+      - ["Production", "To the load’s dimensions and weight"]
+      - ["Types", "Closed crate, slatted crate"]
+      - ["Use", "Machinery, equipment and export loads"]
+      - ["Handling", "Forklift-ready skid base"]
+    sections:
+      - id: olculendirme
+        h: "How is a crate sized?"
+        p: "Crate size and structure depend on the load’s dimensions, weight, centre of gravity and route. Share the load dimensions and any technical drawing."
+    faq: []
+
+  mermer:
+    slug: marble-crates
+    name: "Marble Crates"
+    card: "Wooden crates for safe shipping of marble and natural stone slabs."
+    tag: "Natural stone shipping"
+    title: "Marble Crates · Wooden Crates for Stone Slabs | Standart Entegre"
+    desc: "Marble crate production: skid-based, braced wooden crates for shipping marble, granite and natural stone slabs domestically and for export."
+    h1: "Marble crates"
+    lead: "Wooden crates for shipping marble, granite and natural stone slabs. They hold slabs upright and suit forklift loading and unloading."
+    image_alt: "Open wooden marble crate with marble slabs standing inside"
+    card_alt: "Wooden marble crate"
+    facts:
+      - ["Sized to the slab", "Crate length and height"]
+      - ["Skid base", "Forklift loading"]
+      - ["Braced frame", "Keeps its shape under load"]
+    spec:
+      - ["Use", "Marble, granite and natural stone slabs"]
+      - ["Structure", "Skid base, posts, rails and diagonal braces"]
+      - ["Sizing inputs", "Slab size, thickness and quantity"]
+      - ["Shipping", "Domestic and export"]
+    sections:
+      - id: mermer-sandigi
+        h: "Open marble crates and closed marble boxes"
+        p: "Marble crates are usually open, slatted frames that carry slabs upright. Closed marble boxes suit sensitive surfaces and long routes. We build both to your slab size."
+    faq:
+      - ["What do you need for a marble crate quote?", "Slab length, height and thickness, slabs per crate and how it ships (domestic, container, open truck)."]
+
+tool:
+  label: "Flange diameter"
+  aria: "Flange diameter in millimetres"
+  cable_legend: "Cable type"
+  cables: ["Power", "Telecom", "Fibre optic", "Steel rope"]
+  cable_values: ["Power cable", "Telecom cable", "Fibre optic cable", "Steel rope / wire"]
+  cta: "Request a quote for this size"
+  svg_title: "Selected reel diameter drawn to scale with a 1.75 m person and container door heights"
+  fine: "Drawn to scale. Container door sizes are approximate; ask our team when planning a shipment."
+
+about:
+  h1: "From log to shipment, under one roof."
+  lead: "Standart Entegre is an integrated wooden packaging manufacturer making cable reels, cardboard reels, pallets, crates and marble crates."
+  story_eyebrow: "Our story"
+  story:
+    - "“Entegre” in our name means integrated, and it describes how we work. Log cutting, timber preparation, reel and crate making and shipping all happen within one operation. We prepare our raw material by cutting logs ourselves, and we also import boards and compressed blocks."
+    - "At our Gebze plant we make wooden cable reels, cardboard reels, wooden pallets, transport and export crates and marble crates. Our customers are power and telecom cable makers, steel rope and wire producers, marble and natural stone companies and exporting manufacturers."
+    - "Every order starts from the load: the cable’s cross-section and length, the slab size, the machine’s weight. We build wooden reels with flange diameters from 55 cm to 3.20 m, in standard reel sizes and in custom sizes for each project."
+  facility_eyebrow: "Plant and capacity"
+  facts_fixed:
+    - ["Ø 55 cm – 3.20 m", "Reel flange diameter"]
+    - ["5", "Product families"]
+    - ["Gebze", "Production plant"]
+  facts_labels:
+    founded: "Founded"
+    facility_area_m2: "Plant area (m²)"
+    lumber_m3_year: "Timber per year (m³)"
+    reels_year: "Reels per year"
+    employees: "Employees"
+  process_eyebrow: "Production process"
+  process:
+    - ["Logs and raw material", "Log intake and grading; imported boards and compressed blocks."]
+    - ["Cutting", "Logs sawn to size; timber prepared."]
+    - ["Manufacturing", "Flanges, drums, pallets, crates and marble crates made and assembled."]
+    - ["Inspection", "Dimension, joint and assembly checks."]
+    - ["Shipping", "Delivered ready to load, domestic and export."]
+  certs_eyebrow: "Certificates"
+  cta_h: "Let’s find the right product for your project."
+
+gallery:
+  tomruk: "Log yard"
+  kereste: "Timber stacked for drying"
+  imalat: "Reel flange and joint detail"
+  saha: "Cable reels ready for shipment"
+  palet: "Pallet stock"
+  sevkiyat: "Crate, marble crate and cardboard reel"
+gallery_note: "Representative images."
+
+rfq:
+  eyebrow: "Request a quote"
+  h: "Let’s find the right product for your project."
+  p: "Share the product group, size and quantity. Attach a technical drawing if you have one; we’ll reply with price and lead time."
+  short_h: "Request a quote."
+  short_p: "Share size, quantity and delivery location; we’ll reply with price and lead time."
+  short_cta: "Go to the quote form"
+  product_cta: "Request a quote for this product"
+  group_legend: "Product group"
+  groups:
+    makara: "Wooden reel"
+    karton: "Cardboard reel"
+    palet: "Pallet"
+    sandik: "Crate"
+    mermer: "Marble crate"
+    diger: "Custom build"
+  f_size: "Size or technical requirement"
+  f_size_ph: "Ø 1600 mm · Power cable"
+  f_qty: "Quantity"
+  f_qty_ph: "250"
+  f_name: "Full name"
+  f_company: "Company"
+  f_phone: "Phone"
+  f_email: "Email"
+  f_note: "Notes"
+  f_note_ph: "Delivery location, lead time, application"
+  f_file: "Attach a technical drawing"
+  f_file_hint: "PDF, DWG, DXF or image · optional"
+  privacy: "Your details are used only to prepare your quote."
+  submit: "Send request"
+  facility: "Production plant"
+
+footer:
+  products: "Products"
+  company: "Company"
+  facility: "Plant"
+  design: "Design: TCM Global"
+
+related: ["Other products", "From the same production chain."]
+tech_eyebrow: "Specifications"
+detail_eyebrow: "Details"
+faq_eyebrow: "FAQ"
+products_page_h: "Products"
+products_page_lead: "Wood and cardboard solutions for every stage of shipping, from cable reels to marble crates. Our wooden reels range from 55 cm to 3.20 m in flange diameter."
+
+js:
+  note_std: "<b>Fits a standard container.</b> Can be loaded into containers with a door height of about 2.28 m."
+  note_hc: "<b>May need a high-cube container.</b> Exceeds the standard door height; consider containers with ≈ 2.58 m doors."
+  note_open: "<b>Open-top or flat-rack shipping.</b> Reels this size usually don’t pass through a closed container door."
+  person: "1.75 m"
+  door_hc: "High-cube container door ≈ 2.58 m"
+  door_std: "Standard door ≈ 2.28 m"
+  err_required: "Fill in your name, company, phone and email."
+  err_email: "Check the email address, for example name@company.com"
+  preview: "Preview: the form is not connected to a recipient yet."
+  sent: "Your request has been sent. Our team will get back to you shortly."
+  failed: "The request could not be sent. Check your connection and try again."
+  file_hint: "PDF, DWG, DXF or image · optional"

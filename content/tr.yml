@@ -1,0 +1,331 @@
+# Türkçe içerik · Standart Entegre
+lang: tr
+dir: ltr
+label: TR
+name: Türkçe
+locale: tr-TR
+og_locale: tr_TR
+slugs: { products: urunler, about: kurumsal }
+arrow: "→"
+
+nav:
+  products: Ürünler
+  about: Kurumsal
+  tool: Makara ölçüsü
+  contact: İletişim
+  quote: Teklif Al
+  menu: Menü
+  close: Kapat
+  home: Ana sayfa
+  language: Dil
+
+meta:
+  home_title: "Standart Entegre · Ahşap Kablo Makarası, Karton Makara, Palet ve Mermer Kasası"
+  home_desc: "Kablo sevk makaraları, ahşap makara ve karton makaralar ile ahşap palet, ihracat sandığı ve mermer kasası üretimi. Makara üretimi 55 cm’den 3,20 m’ye."
+  products_title: "Ürünler · Kablo Sevk Makaraları, Karton Makaralar, Palet, Sandık, Mermer Kasası"
+  products_desc: "Standart Entegre ürünleri: ahşap kablo sevk makaraları (55 cm – 3,20 m), karton makaralar, ahşap paletler, taşıma ve ihracat sandıkları, mermer kasası."
+  about_title: "Kurumsal · Standart Entegre"
+  about_desc: "Standart Entegre: tomruktan sevkiyata entegre ahşap ambalaj üretimi. Gebze tesisinde kablo sevk makarası, palet, sandık ve mermer kasası."
+
+hero:
+  kicker: "Ahşap makara · Karton makara · Palet · Sandık · Mermer kasası"
+  place: "Gebze, Türkiye"
+  h1: "Endüstriyel sevkiyat için ahşap çözümler"
+  lead: "Kablo sevk makaralarından karton makaralara, paletlerden ihracat sandıklarına ve mermer kasalarına. Standart ölçüde ya da yükünüze göre özel üretim."
+  cta_products: "Ürünleri keşfet"
+  cta_quote: "Teklif al"
+  scroll: "Makarayı inceleyin"
+  parts_h: "Her makara, kablonuza göre ölçülendirilir."
+  parts_p: "Yanak çapı, tambur çapı ve iç genişlik; kablonun kesitine, boyuna ve taşıma yöntemine göre belirlenir."
+  callouts:
+    flange: ["Yanak", "Ø 55 cm – 3,20 m"]
+    drum: ["Tambur", "Kablonun sarıldığı gövde"]
+    rod: ["Bağlantı milleri", "Yanakları tambura sabitler"]
+    hole: ["Aks deliği", "Sarma ve serme ekipmanı için"]
+  canvas_label: "Ahşap kablo sevk makarasının üç boyutlu modeli"
+
+home:
+  products_eyebrow: "Ürünler"
+  products_h: ["Makaradan mermer kasasına,", "tek üretim zinciri."]
+  products_intro: "Kablo üreticileri için ahşap kablo sevk makaraları ve karton makaralar; sanayi ve ihracat sevkiyatı için ahşap palet, taşıma sandığı ve mermer kasası üretiyoruz. Ahşap makara üretimimiz 55 cm’den 3,20 m’ye kadar yanak çapını kapsar."
+  all_products: "Tüm ürünler"
+  tool_eyebrow: "Makara ölçüsü"
+  tool_h: ["Ölçüyü görün,", "sevkiyatı planlayın."]
+  uses:
+    - ["Enerji", "Orta ve yüksek gerilim kabloları"]
+    - ["Telekomünikasyon", "Haberleşme ve data kabloları"]
+    - ["Fiber optik", "Hassas sarım gerektiren kablolar"]
+    - ["Mermer ve doğal taş", "Plaka ve blok sevkiyatı"]
+  about_eyebrow: "Kurumsal"
+  about_h: "Tomruktan sevkiyata, tek yapı içinde."
+  about_more: "Şirketimizi tanıyın"
+
+categories:
+  makaralar:
+    name: "Makaralar"
+    desc: "Kablo, tel ve halat sarımı için ahşap ve karton makaralar."
+  ambalaj:
+    name: "Ahşap ambalaj"
+    desc: "Depolama, iç lojistik ve ihracat için palet, sandık ve mermer kasası."
+
+products:
+  makara:
+    slug: ahsap-kablo-makaralari
+    name: "Ahşap Kablo Makaraları"
+    card: "Kablo sevk makaraları. Ø 55 cm – 3,20 m. Enerji, telekom, fiber optik ve çelik halat için."
+    tag: "Ana ürün grubu · Ø 55 cm – 3,20 m"
+    title: "Kablo Sevk Makaraları · Ahşap Makara 55 cm – 3,20 m | Standart Entegre"
+    desc: "Ahşap kablo sevk makaraları: 55 cm’den 3,20 m’ye yanak çapı. Enerji, telekom, fiber optik ve çelik halat için ahşap makara, ağaç makara ve standart makara üretimi."
+    h1: "Ahşap kablo sevk makaraları"
+    lead: "Yanak çapı 55 cm’den 3,20 m’ye kadar ahşap makaralar. Enerji, telekomünikasyon ve fiber optik kablolar ile çelik halatların sarımı, depolanması ve taşınması için."
+    image_alt: "Ahşap kablo sevk makarasının parçaları: iki yanak, tambur ve bağlantı milleri"
+    card_alt: "Ahşap kablo sevk makarası"
+    facts:
+      - ["Ø 55 cm – 3,20 m", "Yanak çapı aralığı"]
+      - ["4", "Kablo tipi: enerji, telekom, fiber optik, çelik halat"]
+      - ["Standart ve özel ölçü", "Seri ölçüler ve projeye özel üretim"]
+    spec:
+      - ["Yanak çapı", "55 cm – 3,20 m (550 – 3200 mm)"]
+      - ["Kullanım", "Enerji, telekomünikasyon ve fiber optik kablolar; çelik halat ve tel"]
+      - ["Ölçü seçeneği", "Standart makara ölçüleri veya kabloya göre özel ölçü"]
+      - ["Ölçülendirme", "Kablo kesiti, toplam uzunluk, bükülme yarıçapı ve taşıma yöntemi"]
+      - ["Üretim", "Gebze tesisi"]
+    sections:
+      - id: enerji
+        h: "Enerji kablosu makaraları"
+        p: "Orta ve yüksek gerilim enerji kabloları ağır ve kalın kesitlidir. Bu kablolar için yanak çapı 3,20 m’ye kadar çıkan, yüksek taşıma kapasiteli ahşap makaralar üretilir."
+      - id: telekom
+        h: "Telekomünikasyon kablosu makaraları"
+        p: "Haberleşme ve data kabloları için orta çaplı ahşap makaralar. Yanak çapı 55 cm’den başlayan seçenekler, kablonun boyuna göre ölçülendirilir."
+      - id: fiber
+        h: "Fiber optik kablo makaraları"
+        p: "Fiber optik kablolar bükülmeye hassastır. Tambur çapı, kablonun minimum bükülme yarıçapına göre belirlenir; düzgün sarım yüzeyi sağlanır."
+      - id: celik-halat
+        h: "Çelik halat ve tel makaraları"
+        p: "Yoğun ve ağır sarımlar için güçlendirilmiş yanak ve tambur yapısına sahip ahşap makaralar."
+      - id: standart-makara
+        h: "Standart makara ve özel ölçü"
+        p: "Sık kullanılan ölçülerde standart makara serileri, tekrarlayan siparişlerde hızlı termin sağlar. Kablonuz standart ölçülere uymadığında yanak, tambur ve iç genişlik projeye göre özel olarak belirlenir."
+      - id: agac-makara
+        h: "Ahşap makara mı, ağaç makara mı?"
+        p: "Sektörde ahşap makara, ağaç makara ve tahta makara aynı ürün için kullanılır: kerestenin yanak ve tambur olarak işlenip bağlantı milleriyle birleştirildiği kablo sevk makarası."
+    faq:
+      - ["Makara üretim ölçünüz nedir?", "Ahşap kablo sevk makaralarında yanak çapı 55 cm’den 3,20 m’ye kadar üretim yapıyoruz."]
+      - ["Teklif için hangi bilgiler gerekir?", "Kablo tipi, kablo dış çapı, toplam uzunluk, istenen yanak çapı (biliniyorsa) ve adet. Teknik çiziminiz varsa ekleyin."]
+      - ["Büyük çaplı makaralar konteynere sığar mı?", "Standart konteyner kapısı yaklaşık 2,28 m, high-cube kapısı yaklaşık 2,58 m yüksekliktedir. Daha büyük çaplar açık üst veya flat-rack sevkiyat gerektirebilir."]
+    tool_link: "Ölçü aracını açın"
+
+  karton:
+    slug: karton-makaralar
+    name: "Karton Makaralar"
+    card: "Hafif kablo, tel ve hortum sarımı için karton makaralar."
+    tag: "Hafif sarımlar için"
+    title: "Karton Makaralar · Karton Makara Üretimi | Standart Entegre"
+    desc: "Karton makaralar: hafif kablo, tel, hortum ve şerit sarımı için karton gövdeli makara. Ahşap kablo makaralarına hafif ve ekonomik alternatif."
+    h1: "Karton makaralar"
+    lead: "Hafif kablo, tel, hortum ve şerit ürünlerin sarımı için karton gövdeli makaralar. Ahşap makaraya göre hafif, tek yönlü sevkiyatta ekonomik bir seçenek."
+    image_alt: "Karton gövdeli ve preslenmiş yanaklı iki karton makara"
+    card_alt: "Karton makara"
+    facts:
+      - ["Hafif", "Düşük ambalaj ağırlığı"]
+      - ["Ekonomik", "Tek yönlü sevkiyat için"]
+      - ["Ölçüye göre", "Tambur ve yanak ölçüsü sarılacak ürüne göre"]
+    spec:
+      - ["Gövde", "Karton tambur"]
+      - ["Kullanım", "Hafif kablo, tel, hortum, şerit ve benzeri ürünler"]
+      - ["Ölçülendirme", "Sarılacak ürünün çapı, uzunluğu ve ağırlığına göre"]
+      - ["Üretim", "Gebze tesisi"]
+    sections:
+      - id: kullanim
+        h: "Karton makara nerede kullanılır?"
+        p: "Ağırlığı düşük, uzunluğu fazla olan ürünlerde: ince kablolar, teller, hortumlar ve şeritler. Ağır enerji kabloları için ahşap kablo sevk makaraları tercih edilir."
+      - id: ahsap-karsilastirma
+        h: "Karton makara mı, ahşap makara mı?"
+        p: "Karton makaralar hafif ve ekonomiktir; ahşap makaralar ise yüksek yük, büyük çap ve tekrar kullanım gerektiren sevkiyatlar içindir. Ürününüze uygun seçimi birlikte yapalım."
+    faq: []
+
+  palet:
+    slug: ahsap-paletler
+    name: "Ahşap Paletler"
+    card: "EUR palet ve özel ölçülü paletler. Depolama, iç lojistik ve ihracat için."
+    tag: "EUR ve özel ölçü"
+    title: "Ahşap Palet · EUR Palet ve Özel Ölçü Palet | Standart Entegre"
+    desc: "Ahşap palet üretimi: 1200 × 800 mm EUR palet ve yüke göre özel ölçülü ahşap paletler. Depolama, iç lojistik ve ihracat sevkiyatı için."
+    h1: "Ahşap paletler"
+    lead: "EUR ölçüsünde ve yükünüze göre özel ölçülerde ahşap paletler. Depolama, iç lojistik ve ihracat sevkiyatı için."
+    image_alt: "Ahşap EUR palet"
+    card_alt: "Ahşap EUR palet"
+    facts:
+      - ["1200 × 800 mm", "EUR palet ölçüsü"]
+      - ["Özel ölçü", "Yükün tabanına ve ağırlığına göre"]
+      - ["Forklift", "Dört yönden giriş"]
+    spec:
+      - ["Tipler", "EUR palet, özel ölçülü palet"]
+      - ["EUR ölçüsü", "1200 × 800 × 144 mm"]
+      - ["Kullanım", "Depolama, iç lojistik, ihracat sevkiyatı"]
+      - ["Üretim", "Gebze tesisi"]
+    sections:
+      - id: ozel-olcu
+        h: "Özel ölçülü palet"
+        p: "Standart EUR ölçüsünün yanında, yükün ağırlığına, taban ölçüsüne ve forklift giriş yönüne göre özel palet üretimi yapılır."
+    faq: []
+
+  sandik:
+    slug: tasima-ve-ihracat-sandiklari
+    name: "Taşıma ve İhracat Sandıkları"
+    card: "Makine, ekipman ve ihracat yükleri için ölçüye göre ahşap sandıklar."
+    tag: "Ölçüye göre üretim"
+    title: "Ahşap İhracat Sandığı · Taşıma Sandığı | Standart Entegre"
+    desc: "Ahşap taşıma ve ihracat sandıkları: makine, ekipman ve ihracat yükleri için kızaklı, çerçeveli ve ölçüye göre üretilen sandıklar."
+    h1: "Taşıma ve ihracat sandıkları"
+    lead: "Makine, ekipman ve ihracat yükleri için ölçüye göre üretilen ahşap sandıklar. Yükü korur, istiflemeyi ve forklift ile taşımayı kolaylaştırır."
+    image_alt: "Kızaklı, çerçeveli ve çaprazlı kapalı tip ahşap sandık"
+    card_alt: "Ahşap ihracat sandığı"
+    facts:
+      - ["Ölçüye göre", "Yükün boyut ve ağırlığına göre"]
+      - ["Kızaklı taban", "Forklift ile taşıma"]
+      - ["Kapalı / kafes", "Yüke göre sandık tipi"]
+    spec:
+      - ["Üretim", "Yükün ölçü ve ağırlığına göre"]
+      - ["Tipler", "Kapalı sandık, kafes sandık"]
+      - ["Kullanım", "Makine, ekipman ve ihracat yükleri"]
+      - ["Taşıma", "Kızaklı taban ile forklift uyumlu"]
+    sections:
+      - id: olculendirme
+        h: "Sandık nasıl ölçülendirilir?"
+        p: "Sandık ölçüsü ve yapısı; yükün boyutlarına, ağırlığına, ağırlık merkezine ve sevkiyat yoluna göre belirlenir. Yükün ölçülerini ve varsa teknik çizimini paylaşın."
+    faq: []
+
+  mermer:
+    slug: mermer-kasasi
+    name: "Mermer Kasası"
+    card: "Mermer ve doğal taş plakaların güvenli sevkiyatı için ahşap kasalar."
+    tag: "Doğal taş sevkiyatı"
+    title: "Mermer Kasası · Ahşap Mermer Sandığı | Standart Entegre"
+    desc: "Mermer kasası üretimi: mermer, granit ve doğal taş plakaların yurt içi ve ihracat sevkiyatı için kızaklı, çaprazlı ahşap mermer kasaları."
+    h1: "Mermer kasası"
+    lead: "Mermer, granit ve doğal taş plakaların sevkiyatı için ahşap kasalar. Plakaları dik konumda sabitler, yükleme ve boşaltmada forklift kullanımına uygundur."
+    image_alt: "İçinde dik duran mermer plakalarla açık tip ahşap mermer kasası"
+    card_alt: "Ahşap mermer kasası"
+    facts:
+      - ["Plaka ölçüsüne göre", "Kasa boyu ve yüksekliği"]
+      - ["Kızaklı taban", "Forklift ile yükleme"]
+      - ["Çaprazlı yapı", "Yük altında form koruma"]
+    spec:
+      - ["Kullanım", "Mermer, granit ve doğal taş plakalar"]
+      - ["Yapı", "Kızaklı taban, dikme, kuşak ve çapraz bağlantılar"]
+      - ["Ölçülendirme", "Plaka ölçüsü, kalınlığı ve adedine göre"]
+      - ["Sevkiyat", "Yurt içi ve ihracat"]
+    sections:
+      - id: mermer-sandigi
+        h: "Mermer kasası ile mermer sandığı farkı"
+        p: "Mermer kasası genellikle açık, kafes tipte üretilir ve plakaları dik konumda taşır. Kapalı mermer sandığı ise yüzeyi hassas ürünlerde ve uzun yolculuklarda tercih edilir. İki tipi de plaka ölçünüze göre üretiyoruz."
+    faq:
+      - ["Mermer kasası için hangi bilgiler gerekir?", "Plaka boyu, yüksekliği, kalınlığı, kasa başına plaka adedi ve sevkiyat şekli (yurt içi, konteyner, açık kasa)."]
+
+tool:
+  label: "Yanak çapı"
+  aria: "Yanak çapı, milimetre"
+  cable_legend: "Kablo tipi"
+  cables: ["Enerji", "Telekom", "Fiber optik", "Çelik halat"]
+  cable_values: ["Enerji kablosu", "Telekom kablosu", "Fiber optik kablo", "Çelik halat / tel"]
+  cta: "Bu ölçü için teklif al"
+  svg_title: "Seçilen makara çapı; 1,75 m boyunda bir insan ve konteyner kapı yükseklikleriyle aynı ölçekte"
+  fine: "Aynı ölçekte çizilmiştir. Konteyner kapı ölçüleri yaklaşık değerlerdir; sevkiyat planı için ekibimize danışın."
+
+about:
+  h1: "Tomruktan sevkiyata, tek yapı içinde."
+  lead: "Standart Entegre; kablo sevk makarası, karton makara, palet, sandık ve mermer kasası üreten entegre bir ahşap ambalaj üreticisidir."
+  story_eyebrow: "Hikâyemiz"
+  story:
+    - "Adımızdaki “entegre” bir üretim biçimini anlatır. Tomruk kesiminden kereste hazırlığına, makara ve sandık imalatından sevkiyata kadar işin tamamını aynı yapı içinde yürütürüz. Hammaddeyi tomruk kesimiyle kendimiz hazırlar, tahta ve sıkıştırılmış takozu ithalat yoluyla da tedarik ederiz."
+    - "Gebze tesisimizde kablo sevk makaraları, karton makaralar, ahşap paletler, taşıma ve ihracat sandıkları ile mermer kasaları üretiyoruz. Müşterilerimiz enerji ve telekomünikasyon kablosu üreticileri, çelik halat ve tel üreticileri, mermer ve doğal taş firmaları ve ihracat yapan sanayi kuruluşlarıdır."
+    - "Her siparişe yükten başlarız: kablonun kesiti ve boyu, plakanın ölçüsü, makinenin ağırlığı. Ahşap makaralarda 55 cm’den 3,20 m’ye kadar yanak çapında üretim yapıyor, standart makara ölçülerinin yanında projeye özel ölçüler de hazırlıyoruz."
+  facility_eyebrow: "Tesis ve kapasite"
+  facts_fixed:
+    - ["Ø 55 cm – 3,20 m", "Makara yanak çapı"]
+    - ["5", "Ürün ailesi"]
+    - ["Gebze", "Üretim tesisi"]
+  facts_labels:
+    founded: "Kuruluş"
+    facility_area_m2: "Tesis alanı (m²)"
+    lumber_m3_year: "Yıllık kereste (m³)"
+    reels_year: "Yıllık makara (adet)"
+    employees: "Çalışan"
+  process_eyebrow: "Üretim süreci"
+  process:
+    - ["Tomruk ve hammadde", "Tomruk kabulü ve tasnifi; ithal tahta ve sıkıştırılmış takoz tedariki."]
+    - ["Kesim", "Tomruğun ölçüye göre biçilmesi ve kerestenin hazırlanması."]
+    - ["İmalat", "Yanak, tambur, palet, sandık ve kasa üretimi; montaj."]
+    - ["Kontrol", "Ölçü, bağlantı ve montaj kontrolü."]
+    - ["Sevkiyat", "Yüklemeye hazır teslim; yurt içi ve ihracat."]
+  certs_eyebrow: "Belgeler"
+  cta_h: "Projeniz için doğru ürünü birlikte belirleyelim."
+
+gallery:
+  tomruk: "Tomruk stok sahası"
+  kereste: "Kurumaya alınmış kereste"
+  imalat: "Makara yanağı ve bağlantı detayı"
+  saha: "Sevkiyata hazır kablo makaraları"
+  palet: "Palet stoku"
+  sevkiyat: "Sandık, mermer kasası ve karton makara"
+gallery_note: "Görseller temsilidir."
+
+rfq:
+  eyebrow: "Teklif Al"
+  h: "Projeniz için doğru ürünü birlikte belirleyelim."
+  p: "Ürün grubunu, ölçüyü ve adedi paylaşın. Teknik çiziminiz varsa ekleyin; fiyat ve termin ile dönüş yapalım."
+  short_h: "Teklif alın."
+  short_p: "Ölçü, adet ve teslim yerini paylaşın; fiyat ve termin ile dönüş yapalım."
+  short_cta: "Teklif formuna git"
+  product_cta: "Bu ürün için teklif al"
+  group_legend: "Ürün grubu"
+  groups:
+    makara: "Ahşap makara"
+    karton: "Karton makara"
+    palet: "Palet"
+    sandik: "Sandık"
+    mermer: "Mermer kasası"
+    diger: "Özel üretim"
+  f_size: "Ölçü veya teknik ihtiyaç"
+  f_size_ph: "Ø 1600 mm · Enerji kablosu"
+  f_qty: "Adet"
+  f_qty_ph: "250"
+  f_name: "Ad soyad"
+  f_company: "Firma"
+  f_phone: "Telefon"
+  f_email: "E-posta"
+  f_note: "Not"
+  f_note_ph: "Teslim yeri, termin, kullanım alanı"
+  f_file: "Teknik çizim ekle"
+  f_file_hint: "PDF, DWG, DXF veya görsel · isteğe bağlı"
+  privacy: "Bilgileriniz yalnızca teklif hazırlamak için kullanılır."
+  submit: "Teklif iste"
+  facility: "Üretim tesisi"
+
+footer:
+  products: "Ürünler"
+  company: "Şirket"
+  facility: "Tesis"
+  design: "Tasarım: TCM Global"
+
+related: ["Diğer ürünler", "Aynı üretim zincirinden."]
+tech_eyebrow: "Teknik bilgi"
+detail_eyebrow: "Detaylar"
+faq_eyebrow: "Sık sorulanlar"
+products_page_h: "Ürünler"
+products_page_lead: "Kablo sevk makaralarından mermer kasasına, sevkiyatın her aşaması için ahşap ve karton çözümler. Ahşap makara üretim ölçümüz 55 cm’den 3,20 m’ye kadardır."
+
+js:
+  note_std: "<b>Standart konteynere uygun.</b> Kapı yüksekliği yaklaşık 2,28 m olan konteynerlere yüklenebilir."
+  note_hc: "<b>High-cube konteyner gerekebilir.</b> Standart kapı yüksekliğini aşar; ≈ 2,58 m kapılı konteynerler değerlendirilebilir."
+  note_open: "<b>Açık üst veya flat-rack sevkiyat.</b> Bu çaptaki makaralar genellikle kapalı konteyner kapısından geçmez."
+  person: "1,75 m"
+  door_hc: "High-cube konteyner kapısı ≈ 2,58 m"
+  door_std: "Standart kapı ≈ 2,28 m"
+  err_required: "Ad soyad, firma, telefon ve e-posta alanlarını doldurun."
+  err_email: "E-posta adresini kontrol edin; örnek: ad@firma.com"
+  preview: "Önizleme: form henüz bir alıcıya bağlı değil."
+  sent: "Talebiniz iletildi. Ekibimiz en kısa sürede dönüş yapacak."
+  failed: "Talep gönderilemedi. Bağlantınızı kontrol edip tekrar deneyin."
+  file_hint: "PDF, DWG, DXF veya görsel · isteğe bağlı"

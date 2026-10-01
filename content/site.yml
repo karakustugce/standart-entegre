@@ -1,0 +1,82 @@
+# ---------------------------------------------------------------
+# Standart Entegre · site ayarları (tüm diller için ortak)
+# Metinler dil dosyalarında: tr.yml, en.yml, fr.yml, ar.yml, es.yml
+# ---------------------------------------------------------------
+
+# Sitenin yayın adresi. Domain alınınca burayı değiştirin (sonunda / olsun).
+base_url: "https://karakustugce.github.io/standart-entegre/"
+
+brand: "Standart Entegre"
+
+# İlk dil kök dizinde yayınlanır, diğerleri /en/, /fr/ ... altında.
+languages: [tr, en, fr, ar, es]
+
+# Teklif formunun gönderileceği adres (Formspree, Web3Forms veya n8n webhook).
+# Boşken form önizleme mesajı gösterir.
+form_endpoint: ""
+
+# Makara üretim ölçüsü (milimetre)
+reel_min_mm: 550
+reel_max_mm: 3200
+
+# ---------------------------------------------------------------
+# Şirket bilgileri. Boş bırakılan alan sitede görünmez.
+# ---------------------------------------------------------------
+company:
+  founded: ""            # örn. "1998"
+  facility_area_m2: ""   # örn. "12.000"
+  lumber_m3_year: ""     # yıllık kereste, örn. "15.000"
+  reels_year: ""         # yıllık makara adedi, örn. "40.000"
+  employees: ""          # örn. "60"
+  phone: ""
+  email: ""
+  address: ""
+  city: "Gebze, Kocaeli"
+  # Belgeler: her biri için kısa ad ve (varsa) görsel yolu
+  certificates: []
+  #  - name: "ISPM-15"
+  #  - name: "ISO 9001:2015"
+
+# ---------------------------------------------------------------
+# Ürünler: sıra, kategori ve görsel. Metinler dil dosyalarında.
+# ---------------------------------------------------------------
+products:
+  - key: makara
+    category: makaralar
+    image: assets/img/render-makara.webp
+    detail_image: assets/img/render-makara-parca.webp
+    detail_wide: true
+  - key: karton
+    category: makaralar
+    image: assets/img/render-karton.webp
+  - key: palet
+    category: ambalaj
+    image: assets/img/render-palet.webp
+  - key: sandik
+    category: ambalaj
+    image: assets/img/render-sandik.webp
+  - key: mermer
+    category: ambalaj
+    image: assets/img/render-mermer.webp
+
+categories: [makaralar, ambalaj]
+
+# ---------------------------------------------------------------
+# Kurumsal bölümünde akan görseller.
+# Gerçek fotoğrafları assets/img/kurumsal/ klasörüne yükleyip
+# aşağıdaki "src" satırlarını değiştirmeniz yeterli.
+# Önerilen ölçü: 1800 × 1200 px, JPG. Açıklamalar dil dosyalarında (gallery).
+# ---------------------------------------------------------------
+gallery:
+  - key: tomruk
+    src: assets/img/kurumsal/01-tomruk.jpg
+  - key: kereste
+    src: assets/img/kurumsal/02-kereste.jpg
+  - key: imalat
+    src: assets/img/kurumsal/03-imalat.jpg
+  - key: saha
+    src: assets/img/kurumsal/04-makara-saha.jpg
+  - key: palet
+    src: assets/img/kurumsal/05-palet-stok.jpg
+  - key: sevkiyat
+    src: assets/img/kurumsal/06-sevkiyat.jpg

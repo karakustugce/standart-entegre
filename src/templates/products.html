@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "_macros.html" import card with context %}
+{% block main %}
+<section class="pp-hero px">
+  <nav class="crumb" aria-label="breadcrumb"><a href="{{ link(home_path) }}">{{ L.nav.home }}</a><span>/</span><span>{{ L.products_page_h }}</span></nav>
+  <div class="pp-top">
+    <h1>{{ L.products_page_h }}</h1>
+    <div class="pp-side"><p>{{ L.products_page_lead }}</p></div>
+  </div>
+</section>
+{% for c in S.categories %}
+<section class="sec px cat" id="{{ c }}" {% if loop.first %}style="padding-top:clamp(40px,5vw,72px)"{% else %}style="padding-top:0"{% endif %}>
+  <div class="head" style="margin-bottom:clamp(28px,4vw,56px)">
+    <p class="eyebrow">{{ loop.index }} / {{ S.categories|length }}</p>
+    <div class="head-main"><h2>{{ L.categories[c].name }}</h2><p class="intro-p">{{ L.categories[c].desc }}</p></div>
+  </div>
+  <div class="cgrid cgrid-{{ products|selectattr('category','equalto',c)|list|length }}">
+    {% for p in products if p.category == c %}{{ card(p, 'side') }}{% endfor %}
+  </div>
+</section>
+{% endfor %}
+<section class="sec px rfq" style="padding-block:clamp(72px,9vw,140px)">
+  <div class="rfq-grid">
+    <div class="rfq-intro"><h2>{{ L.rfq.short_h }}</h2></div>
+    <div class="rfq-intro" style="align-content:end">
+      <p>{{ L.rfq.short_p }}</p>
+      <div><a class="btn btn-solid" href="{{ link(home_path) }}#teklif"><span>{{ L.rfq.short_cta }}</span> <i>{{ L.arrow }}</i></a></div>
+    </div>
+  </div>
+</section>
+{% endblock %}

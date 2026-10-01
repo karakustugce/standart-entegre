@@ -338,3 +338,210 @@ export function shadowFloor(size = 12, opacity = 0.28) {
   m.rotation.x = -Math.PI / 2; m.receiveShadow = true;
   return m;
 }
+
+// ---------------------------------------------------------------------------
+// Additional products and production scenes
+// ---------------------------------------------------------------------------
+function canvasTex(size, draw, repeat = [1, 1]) {
+  const c = document.createElement("canvas");
+  c.width = c.height = size;
+  draw(c.getContext("2d"), size);
+  const t = new THREE.CanvasTexture(c);
+  t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  t.repeat.set(repeat[0], repeat[1]);
+  t.colorSpace = THREE.SRGBColorSpace;
+  t.anisotropy = 8;
+  return t;
+}
+
+export function kraftTexture(seed = 2, base = [176, 132, 86]) {
+  const r = rng(seed);
+  return canvasTex(512, (g, s) => {
+    g.fillStyle = `rgb(${base})`; g.fillRect(0, 0, s, s);
+    for (let i = 0; i < 9000; i++) {
+      const v = r() < 0.5 ? "60,36,14" : "255,236,205";
+      g.fillStyle = `rgba(${v},${0.04 + r() * 0.08})`;
+      g.fillRect(r() * s, r() * s, 1 + r() * 3, 1);
+    }
+  });
+}
+
+// Fibre/cardboard reel: kraft tube + pressed board flanges.
+export function buildCardboardReel(opts = {}) {
+  const { D = 0.62, drum = 0.26, traverse = 0.42, t = 0.018, seed = 4 } = opts;
+  const R = D / 2, rd = drum / 2;
+  const flangeMat = new THREE.MeshStandardMaterial({ map: kraftTexture(seed, [150, 108, 68]), roughness: 0.95 });
+  const edgeMat = new THREE.MeshStandardMaterial({ color: 0x6e4a2a, roughness: 1 });
+  const tubeTex = canvasTex(512, (g, s) => {
+    g.fillStyle = "rgb(190,148,98)"; g.fillRect(0, 0, s, s);
+    g.strokeStyle = "rgba(90,58,26,.45)"; g.lineWidth = 3;
+    for (let k = -4; k < 8; k++) { g.beginPath(); g.moveTo(0, k * 80); g.lineTo(s, k * 80 + 140); g.stroke(); }
+    const r = rng(seed + 9);
+    for (let i = 0; i < 6000; i++) { g.fillStyle = `rgba(70,40,14,${r() * 0.06})`; g.fillRect(r() * s, r() * s, 2, 1); }
+  }, [2, 1]);
+  const tubeMat = new THREE.MeshStandardMaterial({ map: tubeTex, roughness: 0.9 });
+  const g = new THREE.Group();
+  const shape = new THREE.Shape(); shape.absarc(0, 0, R, 0, Math.PI * 2, false);
+  const hole = new THREE.Path(); hole.absarc(0, 0, 0.026, 0, Math.PI * 2, true); shape.holes.push(hole);
+  for (const s of [-1, 1]) {
+    const geo = new THREE.ExtrudeGeometry(shape, { depth: t, bevelEnabled: true, bevelThickness: 0.002, bevelSize: 0.002, bevelSegments: 1, curveSegments: 64 });
+    const m = new THREE.Mesh(geo, [flangeMat, edgeMat]);
+    m.position.z = s > 0 ? traverse / 2 : -traverse / 2 - t;
+    m.castShadow = m.receiveShadow = true; g.add(m);
+    // drive holes
+    for (let i = 0; i < 2; i++) {
+      const a = i * Math.PI + 0.4;
+      const dh = new THREE.Mesh(new THREE.CylinderGeometry(0.012, 0.012, t + 0.004, 16), new THREE.MeshBasicMaterial({ color: 0x120c06 }));
+      dh.rotation.x = Math.PI / 2; dh.position.set(Math.cos(a) * rd * 0.6, Math.sin(a) * rd * 0.6, m.position.z + t / 2); g.add(dh);
+    }
+  }
+  const tube = new THREE.Mesh(new THREE.CylinderGeometry(rd, rd, traverse, 64, 1, true), tubeMat);
+  tube.rotation.x = Math.PI / 2; tube.castShadow = tube.receiveShadow = true; g.add(tube);
+  const holeCore = new THREE.Mesh(new THREE.CylinderGeometry(0.026, 0.026, traverse + 2 * t + 0.01, 24), new THREE.MeshBasicMaterial({ color: 0x0d0905 }));
+  holeCore.rotation.x = Math.PI / 2; g.add(holeCore);
+  g.userData = { R, halfW: traverse / 2 + t };
+  return g;
+}
+
+export function marbleTexture(seed = 7) {
+  const r = rng(seed);
+  return canvasTex(1024, (g, s) => {
+    const grd = g.createLinearGradient(0, 0, s, s);
+    grd.addColorStop(0, "#e4e2dc"); grd.addColorStop(1, "#cfccc4");
+    g.fillStyle = grd; g.fillRect(0, 0, s, s);
+    for (let i = 0; i < 26; i++) {
+      g.strokeStyle = `rgba(${70 + r() * 40},${72 + r() * 40},${80 + r() * 40},${0.22 + r() * 0.4})`;
+      g.lineWidth = 0.6 + r() * 2.6;
+      g.beginPath();
+      let x = r() * s, y = -20;
+      g.moveTo(x, y);
+      while (y < s + 20) { x += (r() - 0.45) * 60; y += 20 + r() * 50; g.lineTo(x, y); }
+      g.stroke();
+    }
+    
+  });
+}
+
+// Open slatted marble crate (mermer kasası) with slabs standing inside.
+export function buildMarbleCrate(seed = 12) {
+  const r = rng(seed);
+  const mats = woodMaterials(6, seed + 80);
+  const g = new THREE.Group();
+  const add = (w, h, d, x, y, z, rz = 0) => {
+    const m = new THREE.Mesh(woodBox(w, h, d), pick(mats, r));
+    m.position.set(x, y, z); m.rotation.z = rz; m.castShadow = m.receiveShadow = true; g.add(m); return m;
+  };
+  const L = 2.0, W = 0.55, H = 1.25, sk = 0.1, post = 0.08;
+  for (const z of [-(W / 2 - 0.05), W / 2 - 0.05]) add(L + 0.1, sk, 0.1, 0, sk / 2, z);
+  for (const x of [-(L / 2 - 0.25), 0, L / 2 - 0.25]) add(0.1, 0.03, W + 0.08, x, sk + 0.015, 0);
+  const y0 = sk + 0.03;
+  for (const s of [1, -1]) {
+    const z = s * (W / 2 + 0.02);
+    for (const x of [-(L / 2 - post / 2), -L / 6, L / 6, L / 2 - post / 2]) add(post, H, 0.04, x, y0 + H / 2, z);
+    for (const y of [y0 + 0.08, y0 + H * 0.55, y0 + H - 0.05]) add(L, 0.1, 0.03, 0, y, z + s * 0.035);
+    const hh = H * 0.47, ww = L / 3 - post;
+    add(Math.hypot(hh, ww), 0.08, 0.03, -L / 3, y0 + 0.08 + hh / 2, z + s * 0.065, Math.atan2(hh, ww));
+    add(Math.hypot(hh, ww), 0.08, 0.03, L / 3, y0 + 0.08 + hh / 2, z + s * 0.065, -Math.atan2(hh, ww));
+  }
+  for (const x of [-(L / 2 - post / 2), L / 2 - post / 2]) add(0.04, H, W + 0.04, x, y0 + H / 2, 0).visible = false;
+  for (const x of [-(L / 2 - post / 2), L / 2 - post / 2]) {
+    add(0.03, 0.1, W + 0.1, x, y0 + H - 0.05, 0);
+    add(0.03, 0.1, W + 0.1, x, y0 + 0.08, 0);
+  }
+  const mt = marbleTexture(seed);
+  mt.repeat.set(0.8, 0.6);
+  const slabMat = new THREE.MeshStandardMaterial({ map: mt, roughness: 0.3, metalness: 0, color: 0xdedbd4 });
+  const edge = new THREE.MeshStandardMaterial({ color: 0xd8d6d0, roughness: 0.7 });
+  const n = 9, th = 0.03;
+  for (let i = 0; i < n; i++) {
+    const slab = new THREE.Mesh(new THREE.BoxGeometry(L - 0.2, H - 0.12, th), [edge, edge, edge, edge, slabMat, slabMat]);
+    slab.position.set((r() - 0.5) * 0.02, y0 + (H - 0.12) / 2 + 0.01, -W / 2 + 0.08 + i * ((W - 0.16) / (n - 1)));
+    slab.castShadow = slab.receiveShadow = true; g.add(slab);
+  }
+  g.userData.size = new THREE.Vector3(L, y0 + H, W);
+  return g;
+}
+
+export function barkTexture(seed = 3) {
+  const r = rng(seed);
+  return canvasTex(512, (g, s) => {
+    g.fillStyle = "#4a3624"; g.fillRect(0, 0, s, s);
+    for (let i = 0; i < 260; i++) {
+      const x = r() * s, w = 4 + r() * 14;
+      g.fillStyle = `rgba(${r() < 0.5 ? "28,18,10" : "120,92,64"},${0.25 + r() * 0.4})`;
+      g.beginPath(); g.ellipse(x, r() * s, w / 2, 20 + r() * 70, 0, 0, 6.29); g.fill();
+    }
+  }, [3, 1]);
+}
+export function endGrainTexture(seed = 5) {
+  const r = rng(seed);
+  return canvasTex(512, (g, s) => {
+    g.fillStyle = "#d9b585"; g.fillRect(0, 0, s, s);
+    const cx = s / 2 + (r() - 0.5) * 40, cy = s / 2 + (r() - 0.5) * 40;
+    for (let k = 4; k < s * 0.5; k += 5 + r() * 7) {
+      g.strokeStyle = `rgba(140,92,48,${0.25 + r() * 0.35})`; g.lineWidth = 1 + r() * 2;
+      g.beginPath(); g.ellipse(cx, cy, k, k * (0.96 + r() * 0.06), r(), 0, 6.29); g.stroke();
+    }
+    g.strokeStyle = "rgba(90,58,26,.5)"; g.lineWidth = 2;
+    for (let i = 0; i < 3; i++) { const a = r() * 6.28; g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + Math.cos(a) * s * 0.4, cy + Math.sin(a) * s * 0.4); g.stroke(); }
+  });
+}
+
+export function buildLogPile(seed = 21, { rows = 4, len = 3.2, rMin = 0.16, rMax = 0.22 } = {}) {
+  const r = rng(seed);
+  const bark = new THREE.MeshStandardMaterial({ map: barkTexture(seed), roughness: 1 });
+  const ends = [0, 1, 2].map((i) => new THREE.MeshStandardMaterial({ map: endGrainTexture(seed + i), roughness: 0.9 }));
+  const g = new THREE.Group();
+  const base = 7;
+  for (let row = 0; row < rows; row++) {
+    const count = base - row;
+    for (let i = 0; i < count; i++) {
+      const rr = rMin + r() * (rMax - rMin);
+      const e = ends[Math.floor(r() * 3)];
+      const m = new THREE.Mesh(new THREE.CylinderGeometry(rr, rr * 1.04, len + (r() - 0.5) * 0.3, 28), [bark, e, e]);
+      m.rotation.x = Math.PI / 2;
+      m.position.set((i - (count - 1) / 2) * 0.42, 0.2 + row * 0.36, (r() - 0.5) * 0.25);
+      m.castShadow = m.receiveShadow = true; g.add(m);
+    }
+  }
+  return g;
+}
+
+export function buildLumberStack(seed = 31, { layers = 9, perLayer = 8, len = 3.0 } = {}) {
+  const r = rng(seed);
+  const mats = woodMaterials(7, seed + 3);
+  const g = new THREE.Group();
+  const bw = 0.15, bt = 0.045, stick = 0.025;
+  let y = 0.06;
+  for (const x of [-len / 2 + 0.2, 0, len / 2 - 0.2]) {
+    const s = new THREE.Mesh(woodBox(0.1, 0.06, perLayer * (bw + 0.02) + 0.1), mats[0]); s.position.set(x, 0.03, 0); s.castShadow = true; g.add(s);
+  }
+  for (let l = 0; l < layers; l++) {
+    for (let i = 0; i < perLayer; i++) {
+      const m = new THREE.Mesh(woodBox(len + (r() - 0.5) * 0.06, bt, bw), pick(mats, r));
+      m.position.set((r() - 0.5) * 0.03, y + bt / 2, (i - (perLayer - 1) / 2) * (bw + 0.02));
+      m.castShadow = m.receiveShadow = true; g.add(m);
+    }
+    y += bt;
+    if (l < layers - 1) {
+      for (const x of [-len / 2 + 0.2, 0, len / 2 - 0.2]) {
+        const s = new THREE.Mesh(woodBox(0.04, stick, perLayer * (bw + 0.02)), mats[3]); s.position.set(x, y + stick / 2, 0); s.castShadow = true; g.add(s);
+      }
+      y += stick;
+    }
+  }
+  return g;
+}
+
+export function concreteFloor(size = 30, seed = 41) {
+  const r = rng(seed);
+  const tex = canvasTex(1024, (g, s) => {
+    g.fillStyle = "#7a766f"; g.fillRect(0, 0, s, s);
+    for (let i = 0; i < 40000; i++) { g.fillStyle = `rgba(${r() < 0.5 ? "40,40,40" : "220,218,212"},${r() * 0.08})`; g.fillRect(r() * s, r() * s, 2, 2); }
+    g.strokeStyle = "rgba(50,50,50,.35)"; g.lineWidth = 2;
+    for (let k = 1; k < 4; k++) { g.beginPath(); g.moveTo(0, (k * s) / 4); g.lineTo(s, (k * s) / 4 + 6); g.stroke(); g.beginPath(); g.moveTo((k * s) / 4, 0); g.lineTo((k * s) / 4 - 4, s); g.stroke(); }
+  }, [size / 6, size / 6]);
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(size, size), new THREE.MeshStandardMaterial({ map: tex, roughness: 0.95 }));
+  m.rotation.x = -Math.PI / 2; m.receiveShadow = true;
+  return m;
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="{{ L.lang }}" dir="{{ L.dir }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.desc }}">
+<link rel="canonical" href="{{ page.abs }}">
+{% for a in page.alternates %}<link rel="alternate" hreflang="{{ a.lang }}" href="{{ a.abs }}">
+{% endfor %}<link rel="alternate" hreflang="x-default" href="{{ page.x_default }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ S.brand }}">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.desc }}">
+<meta property="og:url" content="{{ page.abs }}">
+<meta property="og:image" content="{{ S.base_url }}{{ page.og_image }}">
+<meta property="og:locale" content="{{ L.og_locale }}">
+<meta name="theme-color" content="{% if page.kind in ['home', 'about'] %}#12110e{% else %}#e7e5e0{% endif %}">
+<link rel="icon" href="{{ root }}assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:wght@300..800&family=Geist+Mono:wght@400;500{% if L.dir == 'rtl' %}&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600{% endif %}&display=swap">
+<link rel="stylesheet" href="{{ root }}assets/css/site.css">
+{% block head %}{% endblock %}
+<script type="application/ld+json">{{ page.jsonld | safe }}</script>
+</head>
+<body class="page-{{ page.kind }}">
+
+<header class="hdr{% if page.kind not in ['home', 'about'] %} is-solid{% endif %}" id="hdr">
+  <div class="hdr-in px">
+    <a class="logo" href="{{ link(home_path) }}">{{ S.brand }}</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" data-open="{{ L.nav.menu }}" data-close="{{ L.nav.close }}">{{ L.nav.menu }}</button>
+    <nav class="nav" id="nav" aria-label="{{ L.nav.menu }}">
+      <a href="{{ link(products_path) }}"{% if page.kind in ['products','product'] %} aria-current="page"{% endif %}>{{ L.nav.products }}</a>
+      <a href="{{ link(about_path) }}"{% if page.kind == 'about' %} aria-current="page"{% endif %}>{{ L.nav.about }}</a>
+      <a href="{{ link(home_path) }}#olcu">{{ L.nav.tool }}</a>
+      <a href="{{ link(home_path) }}#teklif" class="nav-contact">{{ L.nav.contact }}</a>
+      <div class="langs" role="group" aria-label="{{ L.nav.language }}">
+        {% for a in page.alternates %}<a href="{{ a.rel }}" hreflang="{{ a.lang }}" lang="{{ a.lang }}"{% if a.lang == L.lang %} aria-current="true"{% endif %} title="{{ a.name }}">{{ a.label }}</a>{% endfor %}
+      </div>
+      <a class="btn btn-nav" href="{{ link(home_path) }}{% if page.key %}?urun={{ page.key }}{% endif %}#teklif"><span>{{ L.nav.quote }}</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+{% block main %}{% endblock %}
+</main>
+
+<footer class="ftr">
+  <div class="ftr-grid px">
+    <div class="ftr-brand"><a class="logo" href="{{ link(home_path) }}">{{ S.brand }}</a>
+      <div class="langs ftr-langs">{% for a in page.alternates %}<a href="{{ a.rel }}" hreflang="{{ a.lang }}" lang="{{ a.lang }}"{% if a.lang == L.lang %} aria-current="true"{% endif %}>{{ a.name }}</a>{% endfor %}</div>
+    </div>
+    <div><h4>{{ L.footer.products }}</h4><ul>{% for p in products %}<li><a href="{{ link(p.path) }}">{{ p.t.name }}</a></li>{% endfor %}</ul></div>
+    <div><h4>{{ L.footer.company }}</h4><ul><li><a href="{{ link(about_path) }}">{{ L.nav.about }}</a></li><li><a href="{{ link(home_path) }}#olcu">{{ L.nav.tool }}</a></li><li><a href="{{ link(home_path) }}#teklif">{{ L.nav.quote }}</a></li></ul></div>
+    <div><h4>{{ L.footer.facility }}</h4><ul>
+      <li>{{ S.company.city }}</li>
+      {% if S.company.address %}<li>{{ S.company.address }}</li>{% endif %}
+      {% if S.company.phone %}<li dir="ltr">{{ S.company.phone }}</li>{% endif %}
+      {% if S.company.email %}<li>{{ S.company.email }}</li>{% endif %}
+    </ul></div>
+  </div>
+  <div class="ftr-base px"><span>© <span id="yr">2026</span> {{ S.brand }}</span><span>{{ L.footer.design }}</span></div>
+</footer>
+
+<a class="qpill{% if page.kind == 'home' %} in-hero{% endif %}" id="qpill" href="{{ link(home_path) }}{% if page.key %}?urun={{ page.key }}{% endif %}#teklif">{{ L.hero.cta_quote }} <i>{{ L.arrow }}</i></a>
+
+<script type="application/json" id="i18n">{{ js_strings | safe }}</script>
+<script src="{{ root }}assets/js/main.js" defer></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

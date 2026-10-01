@@ -1,0 +1,331 @@
+# Contenido en español · Standart Entegre
+lang: es
+dir: ltr
+label: ES
+name: Español
+locale: es-ES
+og_locale: es_ES
+slugs: { products: productos, about: empresa }
+arrow: "→"
+
+nav:
+  products: Productos
+  about: Empresa
+  tool: Tamaño de bobina
+  contact: Contacto
+  quote: Pedir presupuesto
+  menu: Menú
+  close: Cerrar
+  home: Inicio
+  language: Idioma
+
+meta:
+  home_title: "Standart Entegre · Bobinas de madera para cable, bobinas de cartón, palets y cajas para mármol"
+  home_desc: "Fabricante turco de bobinas de madera para cable, bobinas de cartón, palets, cajas de exportación y cajas para mármol. Diámetros de ala de 55 cm a 3,20 m."
+  products_title: "Productos · Bobinas para cable, bobinas de cartón, palets, cajas, cajas para mármol"
+  products_desc: "Productos de Standart Entegre: bobinas de madera para cable (55 cm – 3,20 m), bobinas de cartón, palets de madera, cajas de transporte y exportación, cajas para mármol."
+  about_title: "Empresa · Standart Entegre"
+  about_desc: "Standart Entegre: producción integrada de embalaje de madera, del tronco al envío. Bobinas, palets, cajas y cajas para mármol fabricados en Gebze, Turquía."
+
+hero:
+  kicker: "Bobinas de madera · Bobinas de cartón · Palets · Cajas · Cajas para mármol"
+  place: "Gebze, Turquía"
+  h1: "Soluciones de madera para el envío industrial"
+  lead: "De bobinas para cable y bobinas de cartón a palets, cajas de exportación y cajas para mármol. En medidas estándar o a medida de su carga."
+  cta_products: "Ver productos"
+  cta_quote: "Pedir presupuesto"
+  scroll: "Desmonte la bobina"
+  parts_h: "Cada bobina se dimensiona para su cable."
+  parts_p: "El diámetro del ala, el diámetro del tambor y el ancho útil dependen de la sección del cable, su longitud y el modo de envío."
+  callouts:
+    flange: ["Ala", "Ø 55 cm – 3,20 m"]
+    drum: ["Tambor", "El cuerpo donde se enrolla el cable"]
+    rod: ["Varillas de unión", "Fijan las alas al tambor"]
+    hole: ["Orificio central", "Para equipos de enrollado y tendido"]
+  canvas_label: "Modelo 3D de una bobina de madera para cable"
+
+home:
+  products_eyebrow: "Productos"
+  products_h: ["De la bobina a la caja para mármol,", "una sola cadena de producción."]
+  products_intro: "Fabricamos bobinas de madera y bobinas de cartón para fabricantes de cable, y palets, cajas de transporte y cajas para mármol para el envío industrial y la exportación. Nuestras bobinas de madera van de 55 cm a 3,20 m de diámetro de ala."
+  all_products: "Todos los productos"
+  tool_eyebrow: "Tamaño de bobina"
+  tool_h: ["Vea el tamaño,", "planifique el envío."]
+  uses:
+    - ["Energía", "Cables de media y alta tensión"]
+    - ["Telecomunicaciones", "Cables de comunicación y datos"]
+    - ["Fibra óptica", "Cables de enrollado delicado"]
+    - ["Mármol y piedra", "Envío de tablas y bloques"]
+  about_eyebrow: "Empresa"
+  about_h: "Del tronco al envío, bajo un mismo techo."
+  about_more: "Conozca la empresa"
+
+categories:
+  makaralar:
+    name: "Bobinas"
+    desc: "Bobinas de madera y de cartón para cable, alambre y cuerda."
+  ambalaj:
+    name: "Embalaje de madera"
+    desc: "Palets, cajas y cajas para mármol para almacenaje, logística y exportación."
+
+products:
+  makara:
+    slug: bobinas-de-madera-para-cable
+    name: "Bobinas de madera para cable"
+    card: "Bobinas de envío de cable. Ø 55 cm – 3,20 m. Para cable de energía, telecomunicaciones, fibra óptica y cable de acero."
+    tag: "Línea principal · Ø 55 cm – 3,20 m"
+    title: "Bobinas de madera para cable · 55 cm – 3,20 m | Standart Entegre"
+    desc: "Bobinas de madera para cable con alas de 55 cm a 3,20 m. Bobinas estándar y a medida para cable de energía, telecomunicaciones, fibra óptica y cable de acero."
+    h1: "Bobinas de madera para cable"
+    lead: "Bobinas de madera con alas de 55 cm hasta 3,20 m de diámetro, para enrollar, almacenar y transportar cables de energía, telecomunicaciones y fibra óptica y cables de acero."
+    image_alt: "Partes de una bobina de madera para cable: dos alas, el tambor y las varillas de unión"
+    card_alt: "Bobina de madera para cable"
+    facts:
+      - ["Ø 55 cm – 3,20 m", "Diámetro de ala"]
+      - ["4", "Tipos de cable: energía, telecom, fibra óptica, acero"]
+      - ["Estándar y a medida", "Series y fabricación por proyecto"]
+    spec:
+      - ["Diámetro de ala", "55 cm – 3,20 m (550 – 3200 mm)"]
+      - ["Uso", "Cables de energía, telecomunicaciones y fibra óptica; cable y alambre de acero"]
+      - ["Medidas", "Medidas estándar o a medida del cable"]
+      - ["Dimensionado", "Sección del cable, longitud total, radio de curvatura y modo de envío"]
+      - ["Producción", "Planta de Gebze"]
+    sections:
+      - id: enerji
+        h: "Bobinas para cable de energía"
+        p: "Los cables de media y alta tensión son pesados y de gran sección. Para ellos fabricamos bobinas de madera de alta capacidad con alas de hasta 3,20 m."
+      - id: telekom
+        h: "Bobinas para cable de telecomunicaciones"
+        p: "Bobinas de madera de tamaño medio para cables de comunicación y datos. Desde 55 cm de diámetro de ala, dimensionadas según la longitud del cable."
+      - id: fiber
+        h: "Bobinas para cable de fibra óptica"
+        p: "La fibra óptica es sensible a la curvatura. El diámetro del tambor se define por el radio de curvatura mínimo, con una superficie de enrollado uniforme."
+      - id: celik-halat
+        h: "Bobinas para cable y alambre de acero"
+        p: "Bobinas de madera con alas y tambor reforzados para enrollados densos y pesados."
+      - id: standart-makara
+        h: "Bobinas estándar y medidas a medida"
+        p: "Las series de bobinas estándar en medidas habituales acortan los plazos en pedidos repetidos. Si su cable no encaja en una medida estándar, alas, tambor y ancho se definen para el proyecto."
+      - id: agac-makara
+        h: "Bobina, carrete, tambor de cable"
+        p: "El sector usa varios nombres para el mismo producto: bobina, carrete o tambor de cable, formado por alas y un tambor de madera unidos con varillas."
+    faq:
+      - ["¿Qué medidas de bobina fabrican?", "Fabricamos bobinas de madera para cable con alas de 55 cm hasta 3,20 m de diámetro."]
+      - ["¿Qué datos necesitan para un presupuesto?", "Tipo de cable, diámetro exterior, longitud total, diámetro de ala deseado si lo conoce, y cantidad. Adjunte un plano si lo tiene."]
+      - ["¿Caben las bobinas grandes en un contenedor?", "La puerta de un contenedor estándar mide unos 2,28 m de alto y la de un high-cube unos 2,58 m. Diámetros mayores pueden requerir envío open-top o flat-rack."]
+    tool_link: "Abrir la herramienta de medidas"
+
+  karton:
+    slug: bobinas-de-carton
+    name: "Bobinas de cartón"
+    card: "Bobinas de cartón para cable ligero, alambre y manguera."
+    tag: "Para enrollados ligeros"
+    title: "Bobinas de cartón · Carretes de cartón | Standart Entegre"
+    desc: "Bobinas de cartón con tambor de tubo de cartón para cable ligero, alambre, manguera y cinta. Una alternativa ligera y económica a las bobinas de madera."
+    h1: "Bobinas de cartón"
+    lead: "Bobinas con tambor de cartón para enrollar cable ligero, alambre, manguera y cinta. Más ligeras que una bobina de madera y económicas para envíos sin retorno."
+    image_alt: "Dos bobinas de cartón con tambor de tubo de cartón y alas de cartón prensado"
+    card_alt: "Bobina de cartón"
+    facts:
+      - ["Ligera", "Bajo peso de embalaje"]
+      - ["Económica", "Para envíos sin retorno"]
+      - ["A medida", "Tambor y alas según el producto"]
+    spec:
+      - ["Tambor", "Tubo de cartón"]
+      - ["Uso", "Cable ligero, alambre, manguera, cinta y productos similares"]
+      - ["Dimensionado", "Diámetro, longitud y peso del producto enrollado"]
+      - ["Producción", "Planta de Gebze"]
+    sections:
+      - id: kullanim
+        h: "¿Dónde se usan las bobinas de cartón?"
+        p: "En productos ligeros y largos: cables finos, alambres, mangueras y cintas. Los cables de energía pesados viajan en bobinas de madera."
+      - id: ahsap-karsilastirma
+        h: "¿Cartón o madera?"
+        p: "Las bobinas de cartón son ligeras y económicas; las de madera son para cargas pesadas, grandes diámetros y reutilización. Le ayudamos a elegir."
+    faq: []
+
+  palet:
+    slug: palets-de-madera
+    name: "Palets de madera"
+    card: "Palets EUR y palets a medida para almacenaje, logística y exportación."
+    tag: "EUR y a medida"
+    title: "Palets de madera · Palets EUR y a medida | Standart Entegre"
+    desc: "Fabricación de palets de madera: palets EUR de 1200 × 800 mm y palets a medida para almacenaje, logística interna y exportación."
+    h1: "Palets de madera"
+    lead: "Palets de madera en medida EUR y a medida de su carga. Para almacenaje, logística interna y envíos de exportación."
+    image_alt: "Palet EUR de madera"
+    card_alt: "Palet EUR de madera"
+    facts:
+      - ["1200 × 800 mm", "Medida EUR"]
+      - ["A medida", "Según la base y el peso de la carga"]
+      - ["Carretilla", "Entrada por cuatro lados"]
+    spec:
+      - ["Tipos", "Palet EUR, palet a medida"]
+      - ["Medida EUR", "1200 × 800 × 144 mm"]
+      - ["Uso", "Almacenaje, logística interna, exportación"]
+      - ["Producción", "Planta de Gebze"]
+    sections:
+      - id: ozel-olcu
+        h: "Palets a medida"
+        p: "Además de la medida EUR, fabricamos palets según el peso de la carga, su base y la dirección de entrada de la carretilla."
+    faq: []
+
+  sandik:
+    slug: cajas-de-exportacion
+    name: "Cajas de transporte y exportación"
+    card: "Cajas de madera a medida para maquinaria, equipos y cargas de exportación."
+    tag: "A medida"
+    title: "Cajas de madera para exportación · Cajas de transporte | Standart Entegre"
+    desc: "Cajas de madera de transporte y exportación para maquinaria, equipos y mercancía: con patines, bastidor y fabricadas a la medida de la carga."
+    h1: "Cajas de transporte y exportación"
+    lead: "Cajas de madera fabricadas a medida para maquinaria, equipos y cargas de exportación. Protegen la carga y facilitan el apilado y la manipulación con carretilla."
+    image_alt: "Caja de madera cerrada sobre patines, con bastidor y diagonales"
+    card_alt: "Caja de madera para exportación"
+    facts:
+      - ["A medida", "Según medidas y peso de la carga"]
+      - ["Patines", "Manipulación con carretilla"]
+      - ["Cerrada / jaula", "Tipo de caja según la carga"]
+    spec:
+      - ["Producción", "A la medida y peso de la carga"]
+      - ["Tipos", "Caja cerrada, caja tipo jaula"]
+      - ["Uso", "Maquinaria, equipos y cargas de exportación"]
+      - ["Manipulación", "Patines aptos para carretilla"]
+    sections:
+      - id: olculendirme
+        h: "¿Cómo se dimensiona una caja?"
+        p: "La medida y la estructura dependen de las dimensiones, el peso, el centro de gravedad de la carga y la ruta. Comparta las medidas y un plano si lo tiene."
+    faq: []
+
+  mermer:
+    slug: cajas-para-marmol
+    name: "Cajas para mármol"
+    card: "Cajas de madera para el envío seguro de tablas de mármol y piedra natural."
+    tag: "Envío de piedra natural"
+    title: "Cajas para mármol · Cajas de madera para tablas | Standart Entegre"
+    desc: "Fabricación de cajas para mármol: cajas de madera con patines y diagonales para enviar tablas de mármol, granito y piedra natural."
+    h1: "Cajas para mármol"
+    lead: "Cajas de madera para el envío de tablas de mármol, granito y piedra natural. Mantienen las tablas en vertical y permiten carga y descarga con carretilla."
+    image_alt: "Caja abierta de madera para mármol con tablas de mármol en vertical"
+    card_alt: "Caja de madera para mármol"
+    facts:
+      - ["Según la tabla", "Longitud y altura de la caja"]
+      - ["Patines", "Carga con carretilla"]
+      - ["Bastidor arriostrado", "Mantiene la forma bajo carga"]
+    spec:
+      - ["Uso", "Tablas de mármol, granito y piedra natural"]
+      - ["Estructura", "Patines, montantes, largueros y diagonales"]
+      - ["Dimensionado", "Medida, espesor y número de tablas"]
+      - ["Envío", "Nacional y exportación"]
+    sections:
+      - id: mermer-sandigi
+        h: "Caja para mármol abierta o cerrada"
+        p: "La caja para mármol suele ser un bastidor abierto tipo jaula que lleva las tablas en vertical. La caja cerrada se elige para superficies sensibles y rutas largas. Fabricamos ambas a la medida de sus tablas."
+    faq:
+      - ["¿Qué datos necesitan para una caja para mármol?", "Longitud, altura y espesor de las tablas, tablas por caja y modo de envío (nacional, contenedor, camión abierto)."]
+
+tool:
+  label: "Diámetro de ala"
+  aria: "Diámetro de ala en milímetros"
+  cable_legend: "Tipo de cable"
+  cables: ["Energía", "Telecom", "Fibra óptica", "Cable de acero"]
+  cable_values: ["Cable de energía", "Cable de telecomunicaciones", "Cable de fibra óptica", "Cable / alambre de acero"]
+  cta: "Pedir presupuesto para esta medida"
+  svg_title: "Diámetro de bobina elegido, a escala con una persona de 1,75 m y las puertas de contenedor"
+  fine: "Dibujo a escala. Las medidas de las puertas de contenedor son aproximadas; consulte a nuestro equipo para planificar el envío."
+
+about:
+  h1: "Del tronco al envío, bajo un mismo techo."
+  lead: "Standart Entegre es un fabricante integrado de embalaje de madera: bobinas para cable, bobinas de cartón, palets, cajas y cajas para mármol."
+  story_eyebrow: "Nuestra historia"
+  story:
+    - "«Entegre» significa integrado y describe nuestra forma de trabajar. El aserrado de troncos, la preparación de la madera, la fabricación de bobinas y cajas y el envío se realizan dentro de una misma estructura. Preparamos la materia prima aserrando nosotros mismos los troncos y también importamos tablas y tacos prensados."
+    - "En nuestra planta de Gebze fabricamos bobinas de madera para cable, bobinas de cartón, palets, cajas de transporte y exportación y cajas para mármol. Nuestros clientes son fabricantes de cable de energía y telecomunicaciones, de cable y alambre de acero, empresas de mármol y piedra natural e industrias exportadoras."
+    - "Cada pedido empieza por la carga: la sección y longitud del cable, la medida de la tabla, el peso de la máquina. Fabricamos bobinas de madera de 55 cm a 3,20 m de diámetro de ala, en medidas estándar y a medida de cada proyecto."
+  facility_eyebrow: "Planta y capacidad"
+  facts_fixed:
+    - ["Ø 55 cm – 3,20 m", "Diámetro de ala"]
+    - ["5", "Familias de producto"]
+    - ["Gebze", "Planta de producción"]
+  facts_labels:
+    founded: "Fundación"
+    facility_area_m2: "Superficie (m²)"
+    lumber_m3_year: "Madera al año (m³)"
+    reels_year: "Bobinas al año"
+    employees: "Empleados"
+  process_eyebrow: "Proceso de producción"
+  process:
+    - ["Troncos y materia prima", "Recepción y clasificación de troncos; tablas y tacos prensados importados."]
+    - ["Aserrado", "Troncos cortados a medida; preparación de la madera."]
+    - ["Fabricación", "Alas, tambores, palets, cajas y cajas para mármol; montaje."]
+    - ["Control", "Control de medidas, uniones y montaje."]
+    - ["Envío", "Entrega lista para cargar, nacional y exportación."]
+  certs_eyebrow: "Certificados"
+  cta_h: "Encontremos juntos el producto adecuado para su proyecto."
+
+gallery:
+  tomruk: "Patio de troncos"
+  kereste: "Madera apilada para secado"
+  imalat: "Detalle de ala y unión"
+  saha: "Bobinas listas para el envío"
+  palet: "Stock de palets"
+  sevkiyat: "Caja, caja para mármol y bobina de cartón"
+gallery_note: "Imágenes ilustrativas."
+
+rfq:
+  eyebrow: "Pedir presupuesto"
+  h: "Encontremos juntos el producto adecuado para su proyecto."
+  p: "Indique el grupo de producto, la medida y la cantidad. Adjunte un plano si lo tiene; le responderemos con precio y plazo."
+  short_h: "Pida un presupuesto."
+  short_p: "Indique medida, cantidad y lugar de entrega; le responderemos con precio y plazo."
+  short_cta: "Ir al formulario"
+  product_cta: "Pedir presupuesto de este producto"
+  group_legend: "Grupo de producto"
+  groups:
+    makara: "Bobina de madera"
+    karton: "Bobina de cartón"
+    palet: "Palet"
+    sandik: "Caja"
+    mermer: "Caja para mármol"
+    diger: "A medida"
+  f_size: "Medida o necesidad técnica"
+  f_size_ph: "Ø 1600 mm · Cable de energía"
+  f_qty: "Cantidad"
+  f_qty_ph: "250"
+  f_name: "Nombre y apellidos"
+  f_company: "Empresa"
+  f_phone: "Teléfono"
+  f_email: "Correo electrónico"
+  f_note: "Notas"
+  f_note_ph: "Lugar de entrega, plazo, aplicación"
+  f_file: "Adjuntar un plano"
+  f_file_hint: "PDF, DWG, DXF o imagen · opcional"
+  privacy: "Sus datos solo se usan para preparar el presupuesto."
+  submit: "Enviar solicitud"
+  facility: "Planta de producción"
+
+footer:
+  products: "Productos"
+  company: "Empresa"
+  facility: "Planta"
+  design: "Diseño: TCM Global"
+
+related: ["Otros productos", "De la misma cadena de producción."]
+tech_eyebrow: "Especificaciones"
+detail_eyebrow: "Detalles"
+faq_eyebrow: "Preguntas frecuentes"
+products_page_h: "Productos"
+products_page_lead: "Soluciones de madera y cartón para cada etapa del envío, de la bobina para cable a la caja para mármol. Nuestras bobinas de madera van de 55 cm a 3,20 m de diámetro de ala."
+
+js:
+  note_std: "<b>Cabe en un contenedor estándar.</b> Se puede cargar en contenedores con puerta de unos 2,28 m."
+  note_hc: "<b>Puede requerir un contenedor high-cube.</b> Supera la puerta estándar; considere contenedores con puerta de ≈ 2,58 m."
+  note_open: "<b>Envío open-top o flat-rack.</b> Las bobinas de este diámetro no suelen pasar por la puerta de un contenedor cerrado."
+  person: "1,75 m"
+  door_hc: "Puerta de contenedor high-cube ≈ 2,58 m"
+  door_std: "Puerta estándar ≈ 2,28 m"
+  err_required: "Complete nombre, empresa, teléfono y correo electrónico."
+  err_email: "Revise el correo electrónico, por ejemplo nombre@empresa.com"
+  preview: "Vista previa: el formulario aún no está conectado a un destinatario."
+  sent: "Su solicitud se ha enviado. Nuestro equipo le responderá en breve."
+  failed: "No se pudo enviar la solicitud. Revise su conexión e inténtelo de nuevo."
+  file_hint: "PDF, DWG, DXF o imagen · opcional"

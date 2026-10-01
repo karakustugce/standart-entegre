@@ -1,0 +1,52 @@
+{% macro card(p, cls='') -%}
+<a class="pcard {{ cls }}" href="{{ link(p.path) }}">
+  <p class="spec">{{ p.t.tag }}</p>
+  <figure><img src="{{ root }}{{ p.image }}" alt="{{ p.t.card_alt }}" width="1600" height="1200" loading="lazy"></figure>
+  <div class="meta">
+    <h3>{{ p.t.name }}</h3>
+    <p>{{ p.t.card }}</p>
+    <span class="arrow" aria-hidden="true">{{ L.arrow }}</span>
+  </div>
+</a>
+{%- endmacro %}
+
+{% macro show(cls='') -%}
+<div class="show {{ cls }}" data-show>
+  {% for g in S.gallery %}<figure class="show-item{% if loop.first %} is-on{% endif %}">
+    <img src="{{ root }}{{ g.src }}" alt="{{ L.gallery[g.key] }}" width="1800" height="1200"{% if not loop.first %} loading="lazy"{% endif %}>
+  </figure>{% endfor %}
+  <div class="show-bar">
+    <span class="show-cap"><span data-show-cap>{{ L.gallery[S.gallery[0].key] }}</span>{% if L.gallery_note %}<small>{{ L.gallery_note }}</small>{% endif %}</span>
+    <span class="show-dots">{% for g in S.gallery %}<button type="button" aria-label="{{ L.gallery[g.key] }}"{% if loop.first %} aria-current="true"{% endif %}></button>{% endfor %}</span>
+  </div>
+</div>
+{%- endmacro %}
+
+{% macro rfq_form() -%}
+<form class="q" id="rfqForm" novalidate data-endpoint="{{ S.form_endpoint }}">
+  <fieldset class="chips">
+    <legend>{{ L.rfq.group_legend }}</legend>
+    {% for k, v in L.rfq.groups.items() %}<label><input type="radio" name="urun_grubu" id="ug-{{ k }}" value="{{ v }}"{% if loop.first %} checked{% endif %}><span>{{ v }}</span></label>{% endfor %}
+  </fieldset>
+  <div class="fields">
+    <div class="fld"><label for="f-olcu">{{ L.rfq.f_size }}</label><input id="f-olcu" name="olcu" placeholder="{{ L.rfq.f_size_ph }}"></div>
+    <div class="fld"><label for="f-adet">{{ L.rfq.f_qty }}</label><input id="f-adet" name="adet" inputmode="numeric" placeholder="{{ L.rfq.f_qty_ph }}"></div>
+    <div class="fld"><label for="f-ad">{{ L.rfq.f_name }}</label><input id="f-ad" name="ad_soyad" autocomplete="name" required></div>
+    <div class="fld"><label for="f-firma">{{ L.rfq.f_company }}</label><input id="f-firma" name="firma" autocomplete="organization" required></div>
+    <div class="fld"><label for="f-tel">{{ L.rfq.f_phone }}</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" required dir="ltr"></div>
+    <div class="fld"><label for="f-mail">{{ L.rfq.f_email }}</label><input id="f-mail" name="eposta" type="email" autocomplete="email" required dir="ltr"></div>
+    <div class="fld wide"><label for="f-not">{{ L.rfq.f_note }}</label><textarea id="f-not" name="not" placeholder="{{ L.rfq.f_note_ph }}"></textarea></div>
+    <label class="file fld wide" for="f-dosya"><input id="f-dosya" name="dosya" type="file" accept=".pdf,.dwg,.dxf,.jpg,.jpeg,.png"><b>{{ L.rfq.f_file }}</b><span id="fileName">{{ L.rfq.f_file_hint }}</span></label>
+  </div>
+  <input type="hidden" name="dil" value="{{ L.lang }}">
+  <p class="status" id="formStatus" hidden></p>
+  <div class="q-foot">
+    <small>{{ L.rfq.privacy }}</small>
+    <button class="btn btn-solid" type="submit"><span>{{ L.rfq.submit }}</span> <i>{{ L.arrow }}</i></button>
+  </div>
+</form>
+{%- endmacro %}
+
+{% macro facts_list(items) -%}
+<div class="facts">{% for f in items %}<div class="fact"><strong>{{ f[0] }}</strong><span>{{ f[1] }}</span></div>{% endfor %}</div>
+{%- endmacro %}

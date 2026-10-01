@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% from "_macros.html" import card, facts_list with context %}
+{% set t = prod.t %}
+{% block main %}
+<section class="pp-hero px">
+  <nav class="crumb" aria-label="breadcrumb"><a href="{{ link(home_path) }}">{{ L.nav.home }}</a><span>/</span><a href="{{ link(products_path) }}">{{ L.nav.products }}</a><span>/</span><span>{{ t.name }}</span></nav>
+  <div class="pp-top">
+    <h1>{{ t.h1 }}</h1>
+    <div class="pp-side">
+      <p>{{ t.lead }}</p>
+      <div class="row"><a class="btn btn-ink" href="{{ link(home_path) }}?urun={{ prod.key }}#teklif"><span>{{ L.rfq.product_cta }}</span> <i>{{ L.arrow }}</i></a></div>
+    </div>
+  </div>
+  <div class="pp-visual"><img src="{{ root }}{{ prod.detail_image or prod.image }}" alt="{{ t.image_alt }}" {% if prod.detail_wide %}width="1920" height="1080" style="aspect-ratio:16/9"{% else %}width="1600" height="1200"{% endif %}></div>
+  {{ facts_list(t.facts) }}
+</section>
+
+<section class="sec px" style="padding-top:clamp(56px,7vw,110px)">
+  <div class="pp-body">
+    <p class="eyebrow">{{ L.tech_eyebrow }}</p>
+    <table class="spec">
+      {% for r in t.spec %}<tr><th scope="row">{{ r[0] }}</th><td>{{ r[1] }}</td></tr>{% endfor %}
+    </table>
+  </div>
+  {% if t.sections %}
+  <div class="pp-body">
+    <p class="eyebrow">{{ L.detail_eyebrow }}</p>
+    <div class="subs">
+      {% for s in t.sections %}<article class="sub" id="{{ s.id }}"><h2>{{ s.h }}</h2><p>{{ s.p }}</p></article>{% endfor %}
+      {% if t.tool_link %}<p><a class="lnk" href="{{ link(home_path) }}#olcu">{{ t.tool_link }} {{ L.arrow }}</a></p>{% endif %}
+    </div>
+  </div>
+  {% endif %}
+  {% if t.faq %}
+  <div class="pp-body">
+    <p class="eyebrow">{{ L.faq_eyebrow }}</p>
+    <div class="faq">{% for f in t.faq %}<details{% if loop.first %} open{% endif %}><summary>{{ f[0] }}</summary><p>{{ f[1] }}</p></details>{% endfor %}</div>
+  </div>
+  {% endif %}
+</section>
+
+<section class="sec px rfq" style="padding-block:clamp(72px,9vw,140px)">
+  <div class="rfq-grid">
+    <div class="rfq-intro"><h2>{{ L.rfq.short_h }}</h2></div>
+    <div class="rfq-intro" style="align-content:end">
+      <p>{{ L.rfq.short_p }}</p>
+      <div><a class="btn btn-solid" href="{{ link(home_path) }}?urun={{ prod.key }}#teklif"><span>{{ L.rfq.short_cta }}</span> <i>{{ L.arrow }}</i></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec px">
+  <div class="head" style="margin-bottom:clamp(28px,4vw,56px)"><p class="eyebrow">{{ L.related[0] }}</p><h2 style="font-size:clamp(2rem,4vw,3.6rem)">{{ L.related[1] }}</h2></div>
+  <div class="others">{% for p in products if p.key != prod.key %}{{ card(p, 'side') }}{% endfor %}</div>
+</section>
+{% endblock %}

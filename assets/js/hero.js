@@ -61,7 +61,8 @@ function init() {
     renderer.setSize(W, H, false);
     cam.aspect = W / H;
     // push the reel to the right on wide screens, up on tall screens
-    const ox = mobile ? 0 : -W * 0.21;
+    const rtl = document.documentElement.dir === "rtl";
+    const ox = mobile ? 0 : (rtl ? W * 0.21 : -W * 0.21);
     const oy = mobile ? H * 0.15 : H * 0.075;
     cam.setViewOffset(W, H, ox, oy, W, H);
     cam.fov = mobile ? 36 : 28;

@@ -1,0 +1,331 @@
+# Contenu français · Standart Entegre
+lang: fr
+dir: ltr
+label: FR
+name: Français
+locale: fr-FR
+og_locale: fr_FR
+slugs: { products: produits, about: entreprise }
+arrow: "→"
+
+nav:
+  products: Produits
+  about: Entreprise
+  tool: Taille de bobine
+  contact: Contact
+  quote: Demander un devis
+  menu: Menu
+  close: Fermer
+  home: Accueil
+  language: Langue
+
+meta:
+  home_title: "Standart Entegre · Tourets de câble en bois, bobines en carton, palettes et caisses à marbre"
+  home_desc: "Fabricant turc de tourets de câble en bois, bobines en carton, palettes, caisses d’exportation et caisses à marbre. Joues de 55 cm à 3,20 m de diamètre."
+  products_title: "Produits · Tourets de câble, bobines en carton, palettes, caisses, caisses à marbre"
+  products_desc: "Produits Standart Entegre : tourets de câble en bois (55 cm – 3,20 m), bobines en carton, palettes en bois, caisses de transport et d’exportation, caisses à marbre."
+  about_title: "Entreprise · Standart Entegre"
+  about_desc: "Standart Entegre : production intégrée d’emballages en bois, de la grume à l’expédition. Tourets, palettes, caisses et caisses à marbre fabriqués à Gebze, Turquie."
+
+hero:
+  kicker: "Tourets en bois · Bobines en carton · Palettes · Caisses · Caisses à marbre"
+  place: "Gebze, Turquie"
+  h1: "Des solutions en bois pour l’expédition industrielle"
+  lead: "Des tourets de câble et bobines en carton aux palettes, caisses d’exportation et caisses à marbre. En dimensions standard ou sur mesure selon votre charge."
+  cta_products: "Voir les produits"
+  cta_quote: "Demander un devis"
+  scroll: "Démontez le touret"
+  parts_h: "Chaque touret est dimensionné pour votre câble."
+  parts_p: "Le diamètre des joues, le diamètre du fût et la largeur utile dépendent de la section du câble, de sa longueur et du mode d’expédition."
+  callouts:
+    flange: ["Joue", "Ø 55 cm – 3,20 m"]
+    drum: ["Fût", "Le corps sur lequel s’enroule le câble"]
+    rod: ["Tiges de serrage", "Fixent les joues au fût"]
+    hole: ["Alésage central", "Pour l’enrouleur et le dérouleur"]
+  canvas_label: "Modèle 3D d’un touret de câble en bois"
+
+home:
+  products_eyebrow: "Produits"
+  products_h: ["Du touret à la caisse à marbre,", "une seule chaîne de production."]
+  products_intro: "Nous fabriquons des tourets de câble en bois et des bobines en carton pour les câbliers, ainsi que des palettes, caisses de transport et caisses à marbre pour l’expédition industrielle et l’export. Nos tourets en bois vont de 55 cm à 3,20 m de diamètre de joue."
+  all_products: "Tous les produits"
+  tool_eyebrow: "Taille de bobine"
+  tool_h: ["Visualisez la taille,", "planifiez l’expédition."]
+  uses:
+    - ["Énergie", "Câbles moyenne et haute tension"]
+    - ["Télécoms", "Câbles de communication et de données"]
+    - ["Fibre optique", "Câbles à enroulement délicat"]
+    - ["Marbre et pierre", "Expédition de tranches et de blocs"]
+  about_eyebrow: "Entreprise"
+  about_h: "De la grume à l’expédition, sous un même toit."
+  about_more: "Découvrir l’entreprise"
+
+categories:
+  makaralar:
+    name: "Tourets et bobines"
+    desc: "Tourets en bois et bobines en carton pour câbles, fils et cordages."
+  ambalaj:
+    name: "Emballage bois"
+    desc: "Palettes, caisses et caisses à marbre pour le stockage, la logistique et l’export."
+
+products:
+  makara:
+    slug: tourets-de-cable-en-bois
+    name: "Tourets de câble en bois"
+    card: "Tourets d’expédition de câble. Ø 55 cm – 3,20 m. Pour câbles d’énergie, télécoms, fibre optique et câbles d’acier."
+    tag: "Gamme principale · Ø 55 cm – 3,20 m"
+    title: "Tourets de câble en bois · 55 cm – 3,20 m | Standart Entegre"
+    desc: "Tourets de câble en bois, joues de 55 cm à 3,20 m. Tourets standard et sur mesure pour câbles d’énergie, télécoms, fibre optique et câbles d’acier."
+    h1: "Tourets de câble en bois"
+    lead: "Tourets en bois avec des joues de 55 cm jusqu’à 3,20 m de diamètre, pour l’enroulement, le stockage et le transport des câbles d’énergie, télécoms et fibre optique et des câbles d’acier."
+    image_alt: "Éléments d’un touret de câble en bois : deux joues, le fût et les tiges de serrage"
+    card_alt: "Touret de câble en bois"
+    facts:
+      - ["Ø 55 cm – 3,20 m", "Diamètre des joues"]
+      - ["4", "Types de câble : énergie, télécoms, fibre optique, acier"]
+      - ["Standard et sur mesure", "Séries et fabrication par projet"]
+    spec:
+      - ["Diamètre des joues", "55 cm – 3,20 m (550 – 3200 mm)"]
+      - ["Usage", "Câbles d’énergie, télécoms et fibre optique ; câbles et fils d’acier"]
+      - ["Dimensions", "Tailles standard ou sur mesure selon le câble"]
+      - ["Dimensionnement", "Section du câble, longueur totale, rayon de courbure et mode d’expédition"]
+      - ["Production", "Usine de Gebze"]
+    sections:
+      - id: enerji
+        h: "Tourets pour câbles d’énergie"
+        p: "Les câbles moyenne et haute tension sont lourds et de forte section. Nous fabriquons pour eux des tourets en bois à haute capacité, jusqu’à 3,20 m de diamètre de joue."
+      - id: telekom
+        h: "Tourets pour câbles télécoms"
+        p: "Tourets en bois de taille moyenne pour câbles de communication et de données. À partir de 55 cm de diamètre de joue, dimensionnés selon la longueur du câble."
+      - id: fiber
+        h: "Tourets pour câbles à fibre optique"
+        p: "La fibre optique est sensible à la courbure. Le diamètre du fût est défini selon le rayon de courbure minimal, avec une surface d’enroulement régulière."
+      - id: celik-halat
+        h: "Tourets pour câbles et fils d’acier"
+        p: "Tourets en bois à joues et fût renforcés pour les enroulements denses et lourds."
+      - id: standart-makara
+        h: "Tourets standard et dimensions sur mesure"
+        p: "Les séries de tourets standard dans les tailles courantes réduisent les délais pour les commandes répétées. Si votre câble sort des tailles standard, joues, fût et largeur sont définis pour le projet."
+      - id: agac-makara
+        h: "Touret, bobine, tambour de câble"
+        p: "Le secteur emploie plusieurs noms pour le même produit : touret, bobine ou tambour de câble, composé de joues et d’un fût en bois assemblés par des tiges."
+    faq:
+      - ["Quelles tailles de tourets fabriquez-vous ?", "Nous fabriquons des tourets de câble en bois avec des joues de 55 cm jusqu’à 3,20 m de diamètre."]
+      - ["De quelles informations avez-vous besoin pour un devis ?", "Type de câble, diamètre extérieur, longueur totale, diamètre de joue souhaité s’il est connu, et quantité. Joignez un plan si vous en avez un."]
+      - ["Les grands tourets entrent-ils dans un conteneur ?", "La porte d’un conteneur standard mesure environ 2,28 m de haut, celle d’un high-cube environ 2,58 m. Au-delà, un transport open-top ou flat-rack peut être nécessaire."]
+    tool_link: "Ouvrir l’outil de dimensionnement"
+
+  karton:
+    slug: bobines-en-carton
+    name: "Bobines en carton"
+    card: "Bobines en carton pour câbles légers, fils et tuyaux."
+    tag: "Pour enroulements légers"
+    title: "Bobines en carton · Tourets carton | Standart Entegre"
+    desc: "Bobines en carton à fût en tube carton pour câbles légers, fils, tuyaux et bandes. Une alternative légère et économique aux tourets en bois."
+    h1: "Bobines en carton"
+    lead: "Bobines à fût en carton pour l’enroulement de câbles légers, fils, tuyaux et bandes. Plus légères qu’un touret en bois et économiques pour les envois sans retour."
+    image_alt: "Deux bobines en carton avec fût en tube carton et joues en carton pressé"
+    card_alt: "Bobine en carton"
+    facts:
+      - ["Légère", "Faible poids d’emballage"]
+      - ["Économique", "Pour les envois sans retour"]
+      - ["Sur mesure", "Fût et joues selon le produit"]
+    spec:
+      - ["Fût", "Tube en carton"]
+      - ["Usage", "Câbles légers, fils, tuyaux, bandes et produits similaires"]
+      - ["Dimensionnement", "Diamètre, longueur et poids du produit enroulé"]
+      - ["Production", "Usine de Gebze"]
+    sections:
+      - id: kullanim
+        h: "Où utilise-t-on les bobines en carton ?"
+        p: "Pour les produits légers et longs : câbles fins, fils, tuyaux et bandes. Les câbles d’énergie lourds voyagent sur des tourets en bois."
+      - id: ahsap-karsilastirma
+        h: "Carton ou bois ?"
+        p: "Les bobines en carton sont légères et économiques ; les tourets en bois conviennent aux charges lourdes, aux grands diamètres et à la réutilisation. Nous vous aidons à choisir."
+    faq: []
+
+  palet:
+    slug: palettes-en-bois
+    name: "Palettes en bois"
+    card: "Palettes EUR et palettes sur mesure pour le stockage, la logistique et l’export."
+    tag: "EUR et sur mesure"
+    title: "Palettes en bois · Palettes EUR et sur mesure | Standart Entegre"
+    desc: "Fabrication de palettes en bois : palettes EUR 1200 × 800 mm et palettes sur mesure pour le stockage, la logistique interne et l’export."
+    h1: "Palettes en bois"
+    lead: "Palettes en bois au format EUR et sur mesure selon votre charge. Pour le stockage, la logistique interne et l’expédition à l’export."
+    image_alt: "Palette EUR en bois"
+    card_alt: "Palette EUR en bois"
+    facts:
+      - ["1200 × 800 mm", "Format EUR"]
+      - ["Sur mesure", "Selon l’empreinte et le poids de la charge"]
+      - ["Chariot élévateur", "Entrée quatre côtés"]
+    spec:
+      - ["Types", "Palette EUR, palette sur mesure"]
+      - ["Format EUR", "1200 × 800 × 144 mm"]
+      - ["Usage", "Stockage, logistique interne, export"]
+      - ["Production", "Usine de Gebze"]
+    sections:
+      - id: ozel-olcu
+        h: "Palettes sur mesure"
+        p: "En plus du format EUR, nous fabriquons des palettes selon le poids de la charge, son empreinte et le sens d’entrée des fourches."
+    faq: []
+
+  sandik:
+    slug: caisses-export
+    name: "Caisses de transport et d’exportation"
+    card: "Caisses en bois sur mesure pour machines, équipements et charges à l’export."
+    tag: "Sur mesure"
+    title: "Caisses en bois d’exportation · Caisses de transport | Standart Entegre"
+    desc: "Caisses en bois de transport et d’exportation pour machines, équipements et marchandises : sur patins, cadrées et fabriquées aux dimensions de la charge."
+    h1: "Caisses de transport et d’exportation"
+    lead: "Caisses en bois fabriquées sur mesure pour machines, équipements et charges à l’export. Elles protègent la charge et facilitent le gerbage et la manutention."
+    image_alt: "Caisse en bois fermée sur patins, avec cadre et contreventements"
+    card_alt: "Caisse en bois d’exportation"
+    facts:
+      - ["Sur mesure", "Selon dimensions et poids de la charge"]
+      - ["Patins", "Manutention au chariot"]
+      - ["Fermée / claire-voie", "Type de caisse selon la charge"]
+    spec:
+      - ["Production", "Aux dimensions et au poids de la charge"]
+      - ["Types", "Caisse fermée, caisse à claire-voie"]
+      - ["Usage", "Machines, équipements et charges à l’export"]
+      - ["Manutention", "Patins compatibles chariot élévateur"]
+    sections:
+      - id: olculendirme
+        h: "Comment dimensionner une caisse ?"
+        p: "La taille et la structure dépendent des dimensions, du poids, du centre de gravité de la charge et de l’itinéraire. Communiquez-nous les dimensions et un plan si possible."
+    faq: []
+
+  mermer:
+    slug: caisses-a-marbre
+    name: "Caisses à marbre"
+    card: "Caisses en bois pour l’expédition sûre des tranches de marbre et de pierre."
+    tag: "Expédition de pierre naturelle"
+    title: "Caisses à marbre · Caisses en bois pour tranches | Standart Entegre"
+    desc: "Fabrication de caisses à marbre : caisses en bois sur patins et contreventées pour l’expédition de tranches de marbre, granit et pierre naturelle."
+    h1: "Caisses à marbre"
+    lead: "Caisses en bois pour l’expédition de tranches de marbre, de granit et de pierre naturelle. Elles maintiennent les tranches debout et se manutentionnent au chariot."
+    image_alt: "Caisse à marbre ouverte en bois avec des tranches de marbre debout"
+    card_alt: "Caisse à marbre en bois"
+    facts:
+      - ["Selon la tranche", "Longueur et hauteur de caisse"]
+      - ["Patins", "Chargement au chariot"]
+      - ["Cadre contreventé", "Garde sa forme sous charge"]
+    spec:
+      - ["Usage", "Tranches de marbre, granit et pierre naturelle"]
+      - ["Structure", "Patins, montants, lisses et contreventements"]
+      - ["Dimensionnement", "Taille, épaisseur et nombre de tranches"]
+      - ["Expédition", "National et export"]
+    sections:
+      - id: mermer-sandigi
+        h: "Caisse à marbre ouverte ou fermée"
+        p: "La caisse à marbre est généralement un cadre ouvert à claire-voie qui transporte les tranches debout. La caisse fermée convient aux surfaces sensibles et aux longs trajets. Nous fabriquons les deux à la taille de vos tranches."
+    faq:
+      - ["De quoi avez-vous besoin pour un devis de caisse à marbre ?", "Longueur, hauteur et épaisseur des tranches, nombre de tranches par caisse et mode d’expédition (national, conteneur, camion ouvert)."]
+
+tool:
+  label: "Diamètre des joues"
+  aria: "Diamètre des joues en millimètres"
+  cable_legend: "Type de câble"
+  cables: ["Énergie", "Télécoms", "Fibre optique", "Câble d’acier"]
+  cable_values: ["Câble d’énergie", "Câble télécom", "Câble à fibre optique", "Câble / fil d’acier"]
+  cta: "Demander un devis pour cette taille"
+  svg_title: "Diamètre de touret choisi, à l’échelle d’une personne de 1,75 m et des portes de conteneur"
+  fine: "Dessin à l’échelle. Les dimensions des portes de conteneur sont approximatives ; consultez notre équipe pour planifier l’expédition."
+
+about:
+  h1: "De la grume à l’expédition, sous un même toit."
+  lead: "Standart Entegre est un fabricant intégré d’emballages en bois : tourets de câble, bobines en carton, palettes, caisses et caisses à marbre."
+  story_eyebrow: "Notre histoire"
+  story:
+    - "« Entegre » signifie intégré, et décrit notre façon de travailler. Le sciage des grumes, la préparation du bois, la fabrication des tourets et des caisses et l’expédition se font au sein d’une même structure. Nous préparons notre matière première en sciant nous-mêmes les grumes, et importons aussi des planches et des blocs compressés."
+    - "Dans notre usine de Gebze, nous fabriquons des tourets de câble en bois, des bobines en carton, des palettes, des caisses de transport et d’exportation et des caisses à marbre. Nos clients sont des câbliers énergie et télécoms, des fabricants de câbles et fils d’acier, des entreprises du marbre et de la pierre naturelle et des industriels exportateurs."
+    - "Chaque commande part de la charge : la section et la longueur du câble, la taille des tranches, le poids de la machine. Nous fabriquons des tourets en bois de 55 cm à 3,20 m de diamètre de joue, en tailles standard comme sur mesure."
+  facility_eyebrow: "Usine et capacité"
+  facts_fixed:
+    - ["Ø 55 cm – 3,20 m", "Diamètre des joues"]
+    - ["5", "Familles de produits"]
+    - ["Gebze", "Site de production"]
+  facts_labels:
+    founded: "Création"
+    facility_area_m2: "Surface (m²)"
+    lumber_m3_year: "Bois par an (m³)"
+    reels_year: "Tourets par an"
+    employees: "Salariés"
+  process_eyebrow: "Processus de production"
+  process:
+    - ["Grumes et matière première", "Réception et tri des grumes ; planches et blocs compressés importés."]
+    - ["Sciage", "Grumes débitées à dimension ; préparation du bois."]
+    - ["Fabrication", "Joues, fûts, palettes, caisses et caisses à marbre ; assemblage."]
+    - ["Contrôle", "Contrôle des dimensions, des assemblages et du montage."]
+    - ["Expédition", "Livraison prête au chargement, en national et à l’export."]
+  certs_eyebrow: "Certificats"
+  cta_h: "Trouvons ensemble le bon produit pour votre projet."
+
+gallery:
+  tomruk: "Parc à grumes"
+  kereste: "Bois empilé pour le séchage"
+  imalat: "Détail de joue et d’assemblage"
+  saha: "Tourets prêts à l’expédition"
+  palet: "Stock de palettes"
+  sevkiyat: "Caisse, caisse à marbre et bobine en carton"
+gallery_note: "Images d’illustration."
+
+rfq:
+  eyebrow: "Demander un devis"
+  h: "Trouvons ensemble le bon produit pour votre projet."
+  p: "Indiquez le groupe de produits, les dimensions et la quantité. Joignez un plan si vous en avez un ; nous répondrons avec prix et délai."
+  short_h: "Demandez un devis."
+  short_p: "Indiquez dimensions, quantité et lieu de livraison ; nous répondrons avec prix et délai."
+  short_cta: "Aller au formulaire"
+  product_cta: "Demander un devis pour ce produit"
+  group_legend: "Groupe de produits"
+  groups:
+    makara: "Touret en bois"
+    karton: "Bobine en carton"
+    palet: "Palette"
+    sandik: "Caisse"
+    mermer: "Caisse à marbre"
+    diger: "Sur mesure"
+  f_size: "Dimension ou besoin technique"
+  f_size_ph: "Ø 1600 mm · Câble d’énergie"
+  f_qty: "Quantité"
+  f_qty_ph: "250"
+  f_name: "Nom et prénom"
+  f_company: "Société"
+  f_phone: "Téléphone"
+  f_email: "E-mail"
+  f_note: "Remarques"
+  f_note_ph: "Lieu de livraison, délai, application"
+  f_file: "Joindre un plan"
+  f_file_hint: "PDF, DWG, DXF ou image · facultatif"
+  privacy: "Vos données servent uniquement à préparer votre devis."
+  submit: "Envoyer la demande"
+  facility: "Site de production"
+
+footer:
+  products: "Produits"
+  company: "Entreprise"
+  facility: "Usine"
+  design: "Design : TCM Global"
+
+related: ["Autres produits", "De la même chaîne de production."]
+tech_eyebrow: "Caractéristiques"
+detail_eyebrow: "Détails"
+faq_eyebrow: "Questions fréquentes"
+products_page_h: "Produits"
+products_page_lead: "Des solutions en bois et en carton pour chaque étape de l’expédition, du touret de câble à la caisse à marbre. Nos tourets en bois vont de 55 cm à 3,20 m de diamètre de joue."
+
+js:
+  note_std: "<b>Compatible conteneur standard.</b> Peut être chargé dans un conteneur dont la porte mesure environ 2,28 m."
+  note_hc: "<b>Conteneur high-cube possible.</b> Dépasse la porte standard ; envisagez un conteneur à porte de ≈ 2,58 m."
+  note_open: "<b>Transport open-top ou flat-rack.</b> Les tourets de ce diamètre passent rarement par une porte de conteneur fermé."
+  person: "1,75 m"
+  door_hc: "Porte conteneur high-cube ≈ 2,58 m"
+  door_std: "Porte standard ≈ 2,28 m"
+  err_required: "Renseignez nom, société, téléphone et e-mail."
+  err_email: "Vérifiez l’adresse e-mail, par exemple nom@societe.com"
+  preview: "Aperçu : le formulaire n’est pas encore relié à un destinataire."
+  sent: "Votre demande a été envoyée. Notre équipe vous répondra rapidement."
+  failed: "La demande n’a pas pu être envoyée. Vérifiez votre connexion et réessayez."
+  file_hint: "PDF, DWG, DXF ou image · facultatif"
